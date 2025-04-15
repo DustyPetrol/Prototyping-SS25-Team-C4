@@ -45,6 +45,7 @@
         </ownedComment>
       </packagedElement>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ow5swBkpEfCrYs1QZAix4Q" name="Trace6" client="_Nf3_MBkoEfCrYs1QZAix4Q" supplier="_XDULsBklEfCrYs1QZAix4Q"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_L_wkIBnUEfCvsIPUv0BC6g" name="Requirement7"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Rq3psBkMEfCrYs1QZAix4Q" name="Structure"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour "/>
@@ -136,4 +137,5 @@
   <Requirements:Requirement xmi:id="_ANw9ABk1EfCrYs1QZAix4Q" base_NamedElement="_ANugwBk1EfCrYs1QZAix4Q" id="R1.1.1.4.1" text="The model shall be propelled by electrical motors." base_Class="_ANugwBk1EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_TQCUEBk1EfCrYs1QZAix4Q" base_NamedElement="_TP_30Bk1EfCrYs1QZAix4Q" id="R1.1.1.01" base_Class="_TP_30Bk1EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_rmQRABk1EfCrYs1QZAix4Q" base_NamedElement="_rmN0wBk1EfCrYs1QZAix4Q" id="R1.1.02.0" text="The wiring should be solderless breadboard wiring " base_Class="_rmN0wBk1EfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_L_0OgBnUEfCvsIPUv0BC6g" base_NamedElement="_L_wkIBnUEfCvsIPUv0BC6g" base_Class="_L_wkIBnUEfCvsIPUv0BC6g"/>
 </xmi:XMI>
