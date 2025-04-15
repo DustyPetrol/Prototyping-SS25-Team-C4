@@ -8,13 +8,16 @@
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_eFInwBoZEfCaR-l3_gphwQ">
+        <body>Professors reqs</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_MRxBkBkNEfCrYs1QZAix4Q" name="Hardware" visibility="package">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_MRxBkBkNEfCrYs1QZAix4Q" name="Hardware" visibility="public">
           <nestedClassifier xmi:type="uml:Class" xmi:id="_wubK4BkYEfCrYs1QZAix4Q" name="3D printed and modeled by students">
             <nestedClassifier xmi:type="uml:Class" xmi:id="_g3K9UBkjEfCrYs1QZAix4Q" name="Time to print"/>
             <nestedClassifier xmi:type="uml:Class" xmi:id="_5l_ngBkjEfCrYs1QZAix4Q" name="Motor Holders"/>
             <nestedClassifier xmi:type="uml:Class" xmi:id="_52RfMBkjEfCrYs1QZAix4Q" name="IR sensor Holders"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_6KdmgBkjEfCrYs1QZAix4Q" name="Requirement6"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_6KdmgBkjEfCrYs1QZAix4Q" name="Battery and breadboard holders"/>
             <nestedClassifier xmi:type="uml:Class" xmi:id="_UrCFsBklEfCrYs1QZAix4Q" name="Space"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_o7iS0BkXEfCrYs1QZAix4Q" name="Provided">
@@ -24,18 +27,21 @@
               <nestedClassifier xmi:type="uml:Class" xmi:id="_csBi0Bk0EfCrYs1QZAix4Q" name="IR sensor"/>
               <nestedClassifier xmi:type="uml:Class" xmi:id="_dsCOUBk0EfCrYs1QZAix4Q" name="UltraSonic sensor"/>
             </nestedClassifier>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_wwaOQBkgEfCrYs1QZAix4Q" name="Actuators">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_ANugwBk1EfCrYs1QZAix4Q" name="Motor With a wheel"/>
+            </nestedClassifier>
             <nestedClassifier xmi:type="uml:Class" xmi:id="_TP_30Bk1EfCrYs1QZAix4Q" name="Third wheel "/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_rmN0wBk1EfCrYs1QZAix4Q" name="Wiring"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_Mj6hgBkNEfCrYs1QZAix4Q" name="What the model must do">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_mO7ioBkXEfCrYs1QZAix4Q" name="Obsticle Detection"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_mO7ioBkXEfCrYs1QZAix4Q" name="Obstacle Detection"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_WeOC8BkXEfCrYs1QZAix4Q" name="Follow line"/>
         </nestedClassifier>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_wwaOQBkgEfCrYs1QZAix4Q" name="Actuators">
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_ANugwBk1EfCrYs1QZAix4Q" name="Motor With a wheel"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_a6whABoaEfCaR-l3_gphwQ" name="Git Usage"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_bkHAABoaEfCaR-l3_gphwQ" name="Documentation"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_EGNVsBobEfCaR-l3_gphwQ" name="Software"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_wI7IwBkmEfCrYs1QZAix4Q" name="Screws nuts and bolts"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_FyaZsBknEfCrYs1QZAix4Q" name="Refine" client="_XDULsBklEfCrYs1QZAix4Q" supplier="_wI7IwBkmEfCrYs1QZAix4Q"/>
@@ -45,7 +51,9 @@
         </ownedComment>
       </packagedElement>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ow5swBkpEfCrYs1QZAix4Q" name="Trace6" client="_Nf3_MBkoEfCrYs1QZAix4Q" supplier="_XDULsBklEfCrYs1QZAix4Q"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_L_wkIBnUEfCvsIPUv0BC6g" name="Requirement7"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_pLsM0BoWEfCaR-l3_gphwQ" name="IR Holders Flexibility"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_pycq0BoWEfCaR-l3_gphwQ" name="Modularity" client="_52RfMBkjEfCrYs1QZAix4Q" supplier="_pLsM0BoWEfCaR-l3_gphwQ"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Rq3psBkMEfCrYs1QZAix4Q" name="Structure"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour "/>
@@ -114,8 +122,8 @@
   <Requirements:Requirement xmi:id="_7DFIABkMEfCrYs1QZAix4Q" base_NamedElement="_7C9MMBkMEfCrYs1QZAix4Q" id="R1.0.0.0" text="A model car shall be made out of the &quot;Standard&quot; parts and follow a line autonomosly, while awoiding collisions.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" base_Class="_7C9MMBkMEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_MRxBkRkNEfCrYs1QZAix4Q" base_NamedElement="_MRxBkBkNEfCrYs1QZAix4Q" id="R1.1.0.0" text="The model shall consist of mandatory standart and 3D printed parts." base_Class="_MRxBkBkNEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_Mj6hgRkNEfCrYs1QZAix4Q" base_NamedElement="_Mj6hgBkNEfCrYs1QZAix4Q" id="R1.2.0.0" text="The model shall follow a line, avoid or move and defferentiate obstacles." base_Class="_Mj6hgBkNEfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_WeOC8RkXEfCrYs1QZAix4Q" base_NamedElement="_WeOC8BkXEfCrYs1QZAix4Q" id="R1.2.1.0" base_Class="_WeOC8BkXEfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_mO7ioRkXEfCrYs1QZAix4Q" base_NamedElement="_mO7ioBkXEfCrYs1QZAix4Q" id="R1.2.2.0" base_Class="_mO7ioBkXEfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_WeOC8RkXEfCrYs1QZAix4Q" base_NamedElement="_WeOC8BkXEfCrYs1QZAix4Q" id="R1.2.1.0" text="The model shall follow a dark line on the white surface" base_Class="_WeOC8BkXEfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_mO7ioRkXEfCrYs1QZAix4Q" base_NamedElement="_mO7ioBkXEfCrYs1QZAix4Q" id="R1.2.2.0" text="The Model shall avoid or move aside obstacles, depending on their colour" base_Class="_mO7ioBkXEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_o7rcwBkXEfCrYs1QZAix4Q" base_NamedElement="_o7iS0BkXEfCrYs1QZAix4Q" id="R1.1.1.0" text="Model shall contain parts provided." base_Class="_o7iS0BkXEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_aN7ZcRkYEfCrYs1QZAix4Q" base_NamedElement="_aN7ZcBkYEfCrYs1QZAix4Q" id="R1.1.1.1" text="The model shall be housed on provided frame." base_Class="_aN7ZcBkYEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_wubK4RkYEfCrYs1QZAix4Q" base_NamedElement="_wubK4BkYEfCrYs1QZAix4Q" id="R1.1.2.0." text="The part shall have parts modeled by students" base_Class="_wubK4BkYEfCrYs1QZAix4Q"/>
@@ -123,9 +131,9 @@
   <Requirements:Requirement xmi:id="_p4i-kBkgEfCrYs1QZAix4Q" base_NamedElement="_p4fUMBkgEfCrYs1QZAix4Q" id="R1.1.1.3" text="A model shall house and utilise a predetermined list of sensors" base_Class="_p4fUMBkgEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_wwcqgBkgEfCrYs1QZAix4Q" base_NamedElement="_wwaOQBkgEfCrYs1QZAix4Q" id="R1.1.1.4" text="A model shall house and utilise a predetermined list of actuators." base_Class="_wwaOQBkgEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_g3OnsBkjEfCrYs1QZAix4Q" base_NamedElement="_g3K9UBkjEfCrYs1QZAix4Q" id="R1.1.2.01" text="Total time for printing shall not exceed 190 minutes." base_Class="_g3K9UBkjEfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_5mEgABkjEfCrYs1QZAix4Q" base_NamedElement="_5l_ngBkjEfCrYs1QZAix4Q" id="R1.1.2.1" base_Class="_5l_ngBkjEfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_52UigBkjEfCrYs1QZAix4Q" base_NamedElement="_52RfMBkjEfCrYs1QZAix4Q" id="R1.1.2.2" base_Class="_52RfMBkjEfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_6KifABkjEfCrYs1QZAix4Q" base_NamedElement="_6KdmgBkjEfCrYs1QZAix4Q" id="R1.1.2.3" base_Class="_6KdmgBkjEfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_5mEgABkjEfCrYs1QZAix4Q" base_NamedElement="_5l_ngBkjEfCrYs1QZAix4Q" id="R1.1.2.1" text="Shall be 3D printed and secure both motors on the platform in a way that allows movement." base_Class="_5l_ngBkjEfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_52UigBkjEfCrYs1QZAix4Q" base_NamedElement="_52RfMBkjEfCrYs1QZAix4Q" id="R1.1.2.2" text="Shall be 3D printed and secure IR sensor on the platform" base_Class="_52RfMBkjEfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_6KifABkjEfCrYs1QZAix4Q" base_NamedElement="_6KdmgBkjEfCrYs1QZAix4Q" id="R1.1.2.3" text="Shall be 3D printed and secure battery and breadboard on the platform" base_Class="_6KdmgBkjEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_UrFJABklEfCrYs1QZAix4Q" base_NamedElement="_UrCFsBklEfCrYs1QZAix4Q" id="R1.1.2.02" text="All fo the components shall fit on the platform&#xD;&#xA;" base_Class="_UrCFsBklEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_XDXPABklEfCrYs1QZAix4Q" base_NamedElement="_XDULsBklEfCrYs1QZAix4Q" id="R1.1.01.0" text="The Mechanical connections shall be made without using &quot;unreliable&quot; mechanical connections: E.g. Hot Glue, Sticky tape, Zipties etc." base_Class="_XDULsBklEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_wI9lABkmEfCrYs1QZAix4Q" base_NamedElement="_wI7IwBkmEfCrYs1QZAix4Q" id="R1.1.01.1" text="The model for mechanical connections shall use screews of M3x16mm, M3x20mm, M3x10mm" base_Class="_wI7IwBkmEfCrYs1QZAix4Q"/>
@@ -135,7 +143,13 @@
   <Requirements:Requirement xmi:id="_csD_EBk0EfCrYs1QZAix4Q" base_NamedElement="_csBi0Bk0EfCrYs1QZAix4Q" id="R1.1.1.2.1" text="A model shall house and utilise two(2) IR sensors" base_Class="_csBi0Bk0EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_dsEqkBk0EfCrYs1QZAix4Q" base_NamedElement="_dsCOUBk0EfCrYs1QZAix4Q" id="R1.1.1.2.1" text="A model shall house and utilise two(2) UltraSonic sensors" base_Class="_dsCOUBk0EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_ANw9ABk1EfCrYs1QZAix4Q" base_NamedElement="_ANugwBk1EfCrYs1QZAix4Q" id="R1.1.1.4.1" text="The model shall be propelled by electrical motors." base_Class="_ANugwBk1EfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_TQCUEBk1EfCrYs1QZAix4Q" base_NamedElement="_TP_30Bk1EfCrYs1QZAix4Q" id="R1.1.1.01" base_Class="_TP_30Bk1EfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_TQCUEBk1EfCrYs1QZAix4Q" base_NamedElement="_TP_30Bk1EfCrYs1QZAix4Q" id="R1.1.1.01" text="It shall be there" base_Class="_TP_30Bk1EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_rmQRABk1EfCrYs1QZAix4Q" base_NamedElement="_rmN0wBk1EfCrYs1QZAix4Q" id="R1.1.02.0" text="The wiring should be solderless breadboard wiring " base_Class="_rmN0wBk1EfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_L_0OgBnUEfCvsIPUv0BC6g" base_NamedElement="_L_wkIBnUEfCvsIPUv0BC6g" base_Class="_L_wkIBnUEfCvsIPUv0BC6g"/>
+  <Requirements:Requirement xmi:id="_pMI4wBoWEfCaR-l3_gphwQ" base_NamedElement="_pLsM0BoWEfCaR-l3_gphwQ" id="R1.1.2.2.1" text="IR Holders shall be Flexible or modular for adjustment in case of innability of line detection" base_Class="_pLsM0BoWEfCaR-l3_gphwQ"/>
+  <Requirements:Refine xmi:id="_pyg8QBoWEfCaR-l3_gphwQ" base_DirectedRelationship="_pycq0BoWEfCaR-l3_gphwQ" base_Abstraction="_pycq0BoWEfCaR-l3_gphwQ"/>
+  <Requirements:Satisfy xmi:id="_ZPbH8BoXEfCaR-l3_gphwQ" base_DirectedRelationship="_ZPUaQBoXEfCaR-l3_gphwQ" base_Abstraction="_ZPUaQBoXEfCaR-l3_gphwQ"/>
+  <ModelElements:ElementGroup xmi:id="_eFRxsBoZEfCaR-l3_gphwQ" base_Comment="_eFInwBoZEfCaR-l3_gphwQ" name="Professors reqs"/>
+  <Requirements:Requirement xmi:id="_a6zkUBoaEfCaR-l3_gphwQ" base_NamedElement="_a6whABoaEfCaR-l3_gphwQ" id="R1.3.0.0" text="The development of the model shall be documented and managed with git" base_Class="_a6whABoaEfCaR-l3_gphwQ"/>
+  <Requirements:Requirement xmi:id="_bkHAARoaEfCaR-l3_gphwQ" base_NamedElement="_bkHAABoaEfCaR-l3_gphwQ" id="R1.4.0.0" text="The model shall be documented thoroughly using sysml language" base_Class="_bkHAABoaEfCaR-l3_gphwQ"/>
+  <Requirements:Requirement xmi:id="_EGQZABobEfCaR-l3_gphwQ" base_NamedElement="_EGNVsBobEfCaR-l3_gphwQ" id="R1.3.5.0" text="I dont even want to start with that" base_Class="_EGNVsBobEfCaR-l3_gphwQ"/>
 </xmi:XMI>
