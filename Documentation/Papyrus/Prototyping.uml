@@ -8,9 +8,6 @@
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_eFInwBoZEfCaR-l3_gphwQ">
-        <body>Professors reqs</body>
-      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
         <nestedClassifier xmi:type="uml:Class" xmi:id="_MRxBkBkNEfCrYs1QZAix4Q" name="Hardware" visibility="public">
           <nestedClassifier xmi:type="uml:Class" xmi:id="_wubK4BkYEfCrYs1QZAix4Q" name="3D printed and modeled by students">
@@ -32,7 +29,6 @@
             </nestedClassifier>
             <nestedClassifier xmi:type="uml:Class" xmi:id="_TP_30Bk1EfCrYs1QZAix4Q" name="Third wheel "/>
           </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_rmN0wBk1EfCrYs1QZAix4Q" name="Wiring"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_Mj6hgBkNEfCrYs1QZAix4Q" name="What the model must do">
@@ -54,6 +50,7 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_pLsM0BoWEfCaR-l3_gphwQ" name="IR Holders Flexibility"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_pycq0BoWEfCaR-l3_gphwQ" name="Modularity" client="_52RfMBkjEfCrYs1QZAix4Q" supplier="_pLsM0BoWEfCaR-l3_gphwQ"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Rq3psBkMEfCrYs1QZAix4Q" name="Structure"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour "/>
@@ -148,7 +145,6 @@
   <Requirements:Requirement xmi:id="_pMI4wBoWEfCaR-l3_gphwQ" base_NamedElement="_pLsM0BoWEfCaR-l3_gphwQ" id="R1.1.2.2.1" text="IR Holders shall be Flexible or modular for adjustment in case of innability of line detection" base_Class="_pLsM0BoWEfCaR-l3_gphwQ"/>
   <Requirements:Refine xmi:id="_pyg8QBoWEfCaR-l3_gphwQ" base_DirectedRelationship="_pycq0BoWEfCaR-l3_gphwQ" base_Abstraction="_pycq0BoWEfCaR-l3_gphwQ"/>
   <Requirements:Satisfy xmi:id="_ZPbH8BoXEfCaR-l3_gphwQ" base_DirectedRelationship="_ZPUaQBoXEfCaR-l3_gphwQ" base_Abstraction="_ZPUaQBoXEfCaR-l3_gphwQ"/>
-  <ModelElements:ElementGroup xmi:id="_eFRxsBoZEfCaR-l3_gphwQ" base_Comment="_eFInwBoZEfCaR-l3_gphwQ" name="Professors reqs"/>
   <Requirements:Requirement xmi:id="_a6zkUBoaEfCaR-l3_gphwQ" base_NamedElement="_a6whABoaEfCaR-l3_gphwQ" id="R1.3.0.0" text="The development of the model shall be documented and managed with git" base_Class="_a6whABoaEfCaR-l3_gphwQ"/>
   <Requirements:Requirement xmi:id="_bkHAARoaEfCaR-l3_gphwQ" base_NamedElement="_bkHAABoaEfCaR-l3_gphwQ" id="R1.4.0.0" text="The model shall be documented thoroughly using sysml language" base_Class="_bkHAABoaEfCaR-l3_gphwQ"/>
   <Requirements:Requirement xmi:id="_EGQZABobEfCaR-l3_gphwQ" base_NamedElement="_EGNVsBobEfCaR-l3_gphwQ" id="R1.3.5.0" text="I dont even want to start with that" base_Class="_EGNVsBobEfCaR-l3_gphwQ"/>
