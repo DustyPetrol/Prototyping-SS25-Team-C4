@@ -4,7 +4,7 @@
 
 | №     | Task                 | Short summary                                                                                                           | Responsible person | Deadline       |    Status     |
 |:------|:---------------------|:------------------------------------------------------------------------------------------------------------------------|:-------------------|:---------------|:-------------:|
-| **1** | 3D-modelling         | Model and submit parts for 3D-printing: <br/> - motor holders<br/> - IR-sensor holders<br/> - battery/breadboard holder | Oleg Kelner        | 24.04.25 00:00 | *In process*  |
+| **1** | 3D-modelling         | Model and submit parts for 3D-printing: <br/> - motor holders<br/> - IR-sensor holders<br/> - battery/breadboard holder | Oleg Kelner        | 24.04.25 00:00 | *Done (20.04.25)*  |
 | **2** | Requirements Diagram | Create Requirements Diagram for the prototype                                                                           | Petr Lavrenov      | 27.04.25       | *In process*  |
 | **3** | Use Case Diagram     | Create Use Case Diagram for the prototype                                                                               | Turja Barua        | 27.04.25       | *Not started* |
 
