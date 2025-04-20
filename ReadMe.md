@@ -16,11 +16,14 @@
 Documentation/
 |— Lectures/
 |— Papyrus/
+|— Assembly.png
 ```
 
 `Lectures` contain lectures and other materials given by professors.
 
 `Papyrus` contain **Papyrus** project with *SysML* diagrams.
+
+`Assembly.png` - picture of the assembled prototype in 3D-modelling software.
 
 ### 3D models
 
@@ -32,4 +35,12 @@ Documentation/
 
 `Basic components` contain 3D models of given components, such as Arduino Uno, battery, motors etc.
 
-`Assembly.iam` - an assembly of the robot made in **Autodesk Inventor**.
+`Assembly.iam` - an assembly of the prototype made in **Autodesk Inventor**.
+
+### Software
+```
+Software/
+|— src/src.ino
+```
+
+`src/src.ino` - Arduino IDE main file.
