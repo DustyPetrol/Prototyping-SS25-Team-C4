@@ -7,12 +7,12 @@
 ```
 Documentation/
 |— Lectures/
-|— Modelio/
+|— Papyrus/
 ```
 
 `Lectures` contain lectures and other materials given by professors.
 
-`Modelio` contain **Modelio** project with *SysML* diagrams.
+`Papyrus` contain **Papyrus** project with *SysML* diagrams.
 
 ### 3D models
 
