@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
   <uml:Model xmi:id="_GV4ucBkMEfCrYs1QZAix4Q" name="Prototyping">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_GaTUYBkMEfCrYs1QZAix4Q">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -28,6 +28,7 @@
               <nestedClassifier xmi:type="uml:Class" xmi:id="_ANugwBk1EfCrYs1QZAix4Q" name="Motor With a wheel"/>
             </nestedClassifier>
             <nestedClassifier xmi:type="uml:Class" xmi:id="_TP_30Bk1EfCrYs1QZAix4Q" name="Third wheel "/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_cPHTUBqzEfChy9z5XIHNKQ" name="Return of equipment"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_rmN0wBk1EfCrYs1QZAix4Q" name="Wiring"/>
         </nestedClassifier>
@@ -52,7 +53,38 @@
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_Rq3psBkMEfCrYs1QZAix4Q" name="Structure"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Rq3psBkMEfCrYs1QZAix4Q" name="Structure">
+      <packagedElement xmi:type="uml:Class" xmi:id="_i4x-0B38EfC8d89Yv0hyHQ" name="Model Car" visibility="protected" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_L9NlgB39EfC8d89Yv0hyHQ" name="MC1" visibility="protected" type="_NWo2kB39EfC8d89Yv0hyHQ" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lLnusB39EfC8d89Yv0hyHQ" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VHdukB39EfC8d89Yv0hyHQ" name="IR1" visibility="private" type="_W3JjgB39EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eziyUB39EfC8d89Yv0hyHQ" name="MM1" type="_flYe8B39EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_o9kWUB39EfC8d89Yv0hyHQ" name="US1" type="_r0xM8B39EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_u5ce4B39EfC8d89Yv0hyHQ" name="D1" type="_IdMwgB3_EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_N_KjQB4KEfC8d89Yv0hyHQ" name="MM2" type="_flYe8B39EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VJD-IB4KEfC8d89Yv0hyHQ" name="IR2" visibility="private" type="_W3JjgB39EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NHY70B4MEfC8d89Yv0hyHQ" name="B1" type="_OIQi8B4MEfC8d89Yv0hyHQ" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_--fsUB38EfC8d89Yv0hyHQ" name="Block1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BZl1wB39EfC8d89Yv0hyHQ" name="Block2"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_CPQ5gB39EfC8d89Yv0hyHQ" name="Actor1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_F4WgEB39EfC8d89Yv0hyHQ" name="Block3"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NWo2kB39EfC8d89Yv0hyHQ" name="Microcontroller"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_W3JjgB39EfC8d89Yv0hyHQ" name="IR Sensors"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_flYe8B39EfC8d89Yv0hyHQ" name="Motor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_r0xM8B39EfC8d89Yv0hyHQ" name="UltraSonicSensor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_IdMwgB3_EfC8d89Yv0hyHQ" name="Driver"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_C1WrUB4MEfC8d89Yv0hyHQ" informationSource="_L9NlgB39EfC8d89Yv0hyHQ" informationTarget="_u5ce4B39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_HdiXYB4MEfC8d89Yv0hyHQ" informationSource="_u5ce4B39EfC8d89Yv0hyHQ" informationTarget="_eziyUB39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Jfnj4B4MEfC8d89Yv0hyHQ" informationSource="_u5ce4B39EfC8d89Yv0hyHQ" informationTarget="_N_KjQB4KEfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OIQi8B4MEfC8d89Yv0hyHQ" name="Battery"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_UR7P4B4MEfC8d89Yv0hyHQ" name="Power" client="_NHY70B4MEfC8d89Yv0hyHQ" supplier="_u5ce4B39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_ct2TUB4MEfC8d89Yv0hyHQ" name="Power" client="_NHY70B4MEfC8d89Yv0hyHQ" supplier="_L9NlgB39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_qLWaQB4MEfC8d89Yv0hyHQ" informationSource="_VHdukB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_u6dNsB4MEfC8d89Yv0hyHQ" informationSource="_o9kWUB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_w2ljMB4MEfC8d89Yv0hyHQ" informationSource="_VJD-IB4KEfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour "/>
     <packagedElement xmi:type="uml:Package" xmi:id="_eFiaoBkMEfCrYs1QZAix4Q" name="Parametric"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GXVf8BkMEfCrYs1QZAix4Q">
@@ -115,6 +147,12 @@
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_EdvjQB39EfC8d89Yv0hyHQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Edx_gB39EfC8d89Yv0hyHQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
   </uml:Model>
   <Requirements:Requirement xmi:id="_7DFIABkMEfCrYs1QZAix4Q" base_NamedElement="_7C9MMBkMEfCrYs1QZAix4Q" id="R1.0.0.0" text="A model car shall be made out of the &quot;Standard&quot; parts and follow a line autonomosly, while awoiding collisions.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" base_Class="_7C9MMBkMEfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_MRxBkRkNEfCrYs1QZAix4Q" base_NamedElement="_MRxBkBkNEfCrYs1QZAix4Q" id="R1.1.0.0" text="The model shall consist of mandatory standart and 3D printed parts." base_Class="_MRxBkBkNEfCrYs1QZAix4Q"/>
@@ -148,4 +186,18 @@
   <Requirements:Requirement xmi:id="_a6zkUBoaEfCaR-l3_gphwQ" base_NamedElement="_a6whABoaEfCaR-l3_gphwQ" id="R1.3.0.0" text="The development of the model shall be documented and managed with git" base_Class="_a6whABoaEfCaR-l3_gphwQ"/>
   <Requirements:Requirement xmi:id="_bkHAARoaEfCaR-l3_gphwQ" base_NamedElement="_bkHAABoaEfCaR-l3_gphwQ" id="R1.4.0.0" text="The model shall be documented thoroughly using sysml language" base_Class="_bkHAABoaEfCaR-l3_gphwQ"/>
   <Requirements:Requirement xmi:id="_EGQZABobEfCaR-l3_gphwQ" base_NamedElement="_EGNVsBobEfCaR-l3_gphwQ" id="R1.3.5.0" text="I dont even want to start with that" base_Class="_EGNVsBobEfCaR-l3_gphwQ"/>
+  <Requirements:Requirement xmi:id="_cPj_QBqzEfChy9z5XIHNKQ" base_NamedElement="_cPHTUBqzEfChy9z5XIHNKQ" id="R1.1.1.02" text="All of the provided equipment shall be returned in full in the endo of the course" base_Class="_cPHTUBqzEfChy9z5XIHNKQ"/>
+  <Blocks:Block xmi:id="_i5DEkB38EfC8d89Yv0hyHQ" base_Class="_i4x-0B38EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_--jWsB38EfC8d89Yv0hyHQ" base_Class="_--fsUB38EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_BZpgIB39EfC8d89Yv0hyHQ" base_Class="_BZl1wB39EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_F4Y8UB39EfC8d89Yv0hyHQ" base_Class="_F4WgEB39EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_NWr54B39EfC8d89Yv0hyHQ" base_Class="_NWo2kB39EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_W3Mm0B39EfC8d89Yv0hyHQ" base_Class="_W3JjgB39EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_flbiQB39EfC8d89Yv0hyHQ" base_Class="_flYe8B39EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_r0zCIB39EfC8d89Yv0hyHQ" base_Class="_r0xM8B39EfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_IdPMwB3_EfC8d89Yv0hyHQ" base_Class="_IdMwgB3_EfC8d89Yv0hyHQ"/>
+  <PortsAndFlows:ItemFlow xmi:id="_YSEhAB4LEfC8d89Yv0hyHQ"/>
+  <PortsAndFlows:ItemFlow xmi:id="_pI-zwB4LEfC8d89Yv0hyHQ"/>
+  <PortsAndFlows:ItemFlow xmi:id="_p2TMwB4LEfC8d89Yv0hyHQ"/>
+  <Blocks:Block xmi:id="_OIS_MB4MEfC8d89Yv0hyHQ" base_Class="_OIQi8B4MEfC8d89Yv0hyHQ"/>
 </xmi:XMI>
