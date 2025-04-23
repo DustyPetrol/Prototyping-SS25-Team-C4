@@ -60,12 +60,12 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_keCSwCAoEfCVXNPQYBHXXQ" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lLnusB39EfC8d89Yv0hyHQ" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_VHdukB39EfC8d89Yv0hyHQ" name="IR1" visibility="private" type="_W3JjgB39EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VHdukB39EfC8d89Yv0hyHQ" name="IR1" visibility="public" type="_W3JjgB39EfC8d89Yv0hyHQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_eziyUB39EfC8d89Yv0hyHQ" name="MM1" type="_flYe8B39EfC8d89Yv0hyHQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_o9kWUB39EfC8d89Yv0hyHQ" name="US1" type="_r0xM8B39EfC8d89Yv0hyHQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_u5ce4B39EfC8d89Yv0hyHQ" name="D1" type="_IdMwgB3_EfC8d89Yv0hyHQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_N_KjQB4KEfC8d89Yv0hyHQ" name="MM2" type="_flYe8B39EfC8d89Yv0hyHQ" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_VJD-IB4KEfC8d89Yv0hyHQ" name="IR2" visibility="private" type="_W3JjgB39EfC8d89Yv0hyHQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VJD-IB4KEfC8d89Yv0hyHQ" name="IR2" visibility="public" type="_W3JjgB39EfC8d89Yv0hyHQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_NHY70B4MEfC8d89Yv0hyHQ" name="B1" type="_OIQi8B4MEfC8d89Yv0hyHQ" aggregation="composite"/>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_OIQi8B4MEfC8d89Yv0hyHQ" name="Battery"/>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_W3JjgB39EfC8d89Yv0hyHQ" name="IR Sensors"/>
