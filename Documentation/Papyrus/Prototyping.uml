@@ -85,7 +85,46 @@
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_u6dNsB4MEfC8d89Yv0hyHQ" informationSource="_o9kWUB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_w2ljMB4MEfC8d89Yv0hyHQ" informationSource="_VJD-IB4KEfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour "/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour ">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_1LgVoCAoEfCJ1fx2jIRNWg" name="Line">
+        <generalization xmi:type="uml:Generalization" xmi:id="_O9DSACAyEfCJ1fx2jIRNWg" general="_B-kboCAtEfCJ1fx2jIRNWg"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_QENuYCAyEfCJ1fx2jIRNWg" general="_YvvqMCApEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_YvvqMCApEfCJ1fx2jIRNWg" name="Found">
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_SctzoCAuEfCJ1fx2jIRNWg" name="ExtensionPoint1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="__FKs8CApEfCJ1fx2jIRNWg" name="Avoid Obstacle">
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_9_I00CAwEfCJ1fx2jIRNWg" name="ExtensionPoint1"/>
+        <include xmi:type="uml:Include" xmi:id="_th-CUCAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Be_EACAqEfCJ1fx2jIRNWg" name="Push Obstacles">
+        <include xmi:type="uml:Include" xmi:id="_qwhOYCAxEfCJ1fx2jIRNWg" addition="_YvvqMCApEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_YFfr8CAsEfCJ1fx2jIRNWg" name="Obstacles">
+        <generalization xmi:type="uml:Generalization" xmi:id="_K6ZKUCAxEfCJ1fx2jIRNWg" general="_4hPowCAwEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_B-kboCAtEfCJ1fx2jIRNWg" name="Follow">
+        <extend xmi:type="uml:Extend" xmi:id="_SctMkCAuEfCJ1fx2jIRNWg" extendedCase="_YvvqMCApEfCJ1fx2jIRNWg" extensionLocation="_SctzoCAuEfCJ1fx2jIRNWg"/>
+        <include xmi:type="uml:Include" xmi:id="_RSd0wCAzEfCJ1fx2jIRNWg" addition="_4hPowCAwEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_4hPowCAwEfCJ1fx2jIRNWg" name="Detect">
+        <include xmi:type="uml:Include" xmi:id="_CYYF8CAxEfCJ1fx2jIRNWg" addition="__FKs8CApEfCJ1fx2jIRNWg"/>
+        <include xmi:type="uml:Include" xmi:id="_FPBi8CAxEfCJ1fx2jIRNWg" addition="_Be_EACAqEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_xnOAcCAxEfCJ1fx2jIRNWg" name="Motor">
+        <generalization xmi:type="uml:Generalization" xmi:id="_o08dECAyEfCJ1fx2jIRNWg" general="_gormQCAyEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_zafU4CAxEfCJ1fx2jIRNWg" name="Turn on">
+        <include xmi:type="uml:Include" xmi:id="_9iuJICAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_0l0fkCAxEfCJ1fx2jIRNWg" name="Turn off">
+        <include xmi:type="uml:Include" xmi:id="_-vuu0CAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_gormQCAyEfCJ1fx2jIRNWg" name="Motor">
+        <include xmi:type="uml:Include" xmi:id="_mKaJcCAyEfCJ1fx2jIRNWg" addition="_zafU4CAxEfCJ1fx2jIRNWg"/>
+        <include xmi:type="uml:Include" xmi:id="_nSa6YCAyEfCJ1fx2jIRNWg" addition="_0l0fkCAxEfCJ1fx2jIRNWg"/>
+      </packagedElement>
+    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_eFiaoBkMEfCrYs1QZAix4Q" name="Parametric"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GXVf8BkMEfCrYs1QZAix4Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GXZKUBkMEfCrYs1QZAix4Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
