@@ -65,10 +65,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_N_KjQB4KEfC8d89Yv0hyHQ" name="MM2" type="_flYe8B39EfC8d89Yv0hyHQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_VJD-IB4KEfC8d89Yv0hyHQ" name="IR2" visibility="private" type="_W3JjgB39EfC8d89Yv0hyHQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_NHY70B4MEfC8d89Yv0hyHQ" name="B1" type="_OIQi8B4MEfC8d89Yv0hyHQ" aggregation="composite"/>
-        <ownedConnector xmi:type="uml:Connector" xmi:id="_M3auICAlEfCVXNPQYBHXXQ" name="Connector9">
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_M3kfICAlEfCVXNPQYBHXXQ" role="_L9NlgB39EfC8d89Yv0hyHQ"/>
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_M3kfISAlEfCVXNPQYBHXXQ" role="_VJD-IB4KEfC8d89Yv0hyHQ"/>
-        </ownedConnector>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_--fsUB38EfC8d89Yv0hyHQ" name="Block1"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_BZl1wB39EfC8d89Yv0hyHQ" name="Block2"/>

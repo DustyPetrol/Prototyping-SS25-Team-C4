@@ -2026,24 +2026,13 @@
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_GoTghyAlEfCVXNPQYBHXXQ"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_GoTgiCAlEfCVXNPQYBHXXQ"/>
     </edges>
-    <edges xsi:type="notation:Connector" xmi:id="_M36dYCAlEfCVXNPQYBHXXQ" type="Connector_Edge" source="_NWzOoB39EfC8d89Yv0hyHQ" target="_VJGaYB4KEfC8d89Yv0hyHQ">
-      <children xsi:type="notation:DecorationNode" xmi:id="_M37EcCAlEfCVXNPQYBHXXQ" type="Connector_StereotypeLabel">
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_M37EcSAlEfCVXNPQYBHXXQ" y="60"/>
-      </children>
-      <children xsi:type="notation:DecorationNode" xmi:id="_M37EciAlEfCVXNPQYBHXXQ" type="Connector_NameLabel">
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_M37EcyAlEfCVXNPQYBHXXQ" y="-20"/>
-      </children>
-      <children xsi:type="notation:DecorationNode" xmi:id="_M37EdCAlEfCVXNPQYBHXXQ" type="Connector_SourceMultiplicityLabel">
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_M37EdSAlEfCVXNPQYBHXXQ" y="20"/>
-      </children>
-      <children xsi:type="notation:DecorationNode" xmi:id="_M37EdiAlEfCVXNPQYBHXXQ" type="Connector_TargetMultiplicityLabel">
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_M37EdyAlEfCVXNPQYBHXXQ" y="20"/>
-      </children>
-      <styles xsi:type="notation:FontStyle" xmi:id="_M36dYSAlEfCVXNPQYBHXXQ"/>
-      <element href="Prototyping.uml#_M3auICAlEfCVXNPQYBHXXQ"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_M36dYiAlEfCVXNPQYBHXXQ" points="[580, 351, -643984, -643984]$[640, 451, -643984, -643984]"/>
-      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_M4aMoCAlEfCVXNPQYBHXXQ" id="(0.8324324324324325,1.0)"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_M4aMoSAlEfCVXNPQYBHXXQ" id="(0.5522388059701493,0.0)"/>
-    </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_odkKwCAlEfCVXNPQYBHXXQ" type="UseCase" name="NewSysML1.6UseCaseDiagram" measurementUnit="Pixel">
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_odkKwSAlEfCVXNPQYBHXXQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_odkKwiAlEfCVXNPQYBHXXQ"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_odkKwyAlEfCVXNPQYBHXXQ" diagramKindId="org.eclipse.papyrus.sysml16.diagram.useCase">
+      <owner href="Prototyping.uml#_UuoVoBkMEfCrYs1QZAix4Q"/>
+    </styles>
+    <element href="Prototyping.uml#_UuoVoBkMEfCrYs1QZAix4Q"/>
   </notation:Diagram>
 </xmi:XMI>
