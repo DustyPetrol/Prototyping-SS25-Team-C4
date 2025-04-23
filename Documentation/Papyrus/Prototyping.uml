@@ -7,52 +7,6 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_GalBMBkMEfCrYs1QZAix4Q">
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
-    <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
-      <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_MRxBkBkNEfCrYs1QZAix4Q" name="Hardware" visibility="public">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_wubK4BkYEfCrYs1QZAix4Q" name="3D printed and modeled by students">
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_g3K9UBkjEfCrYs1QZAix4Q" name="Time to print"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_5l_ngBkjEfCrYs1QZAix4Q" name="Motor Holders"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_52RfMBkjEfCrYs1QZAix4Q" name="IR sensor Holders"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_6KdmgBkjEfCrYs1QZAix4Q" name="Battery and breadboard holders"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_UrCFsBklEfCrYs1QZAix4Q" name="Space"/>
-          </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_o7iS0BkXEfCrYs1QZAix4Q" name="Provided">
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_aN7ZcBkYEfCrYs1QZAix4Q" name="Frame"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_mvh_MBkgEfCrYs1QZAix4Q" name="Microcontroller"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_p4fUMBkgEfCrYs1QZAix4Q" name="Sensors">
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_csBi0Bk0EfCrYs1QZAix4Q" name="IR sensor"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_dsCOUBk0EfCrYs1QZAix4Q" name="UltraSonic sensor"/>
-            </nestedClassifier>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_wwaOQBkgEfCrYs1QZAix4Q" name="Actuators">
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_ANugwBk1EfCrYs1QZAix4Q" name="Motor With a wheel"/>
-            </nestedClassifier>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_TP_30Bk1EfCrYs1QZAix4Q" name="Third wheel "/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_cPHTUBqzEfChy9z5XIHNKQ" name="Return of equipment"/>
-          </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_rmN0wBk1EfCrYs1QZAix4Q" name="Wiring"/>
-        </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_Mj6hgBkNEfCrYs1QZAix4Q" name="What the model must do">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_mO7ioBkXEfCrYs1QZAix4Q" name="Obstacle Detection"/>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_WeOC8BkXEfCrYs1QZAix4Q" name="Follow line"/>
-        </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_a6whABoaEfCaR-l3_gphwQ" name="Git Usage"/>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_bkHAABoaEfCaR-l3_gphwQ" name="Documentation"/>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_EGNVsBobEfCaR-l3_gphwQ" name="Software"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_wI7IwBkmEfCrYs1QZAix4Q" name="Screws nuts and bolts"/>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_FyaZsBknEfCrYs1QZAix4Q" name="Refine" client="_XDULsBklEfCrYs1QZAix4Q" supplier="_wI7IwBkmEfCrYs1QZAix4Q"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Nf3_MBkoEfCrYs1QZAix4Q" name="Gidos reasoning">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_MTlVwBkpEfCrYs1QZAix4Q" annotatedElement="_Nf3_MBkoEfCrYs1QZAix4Q">
-          <body>We dont want parts to break on disconnect or adjustment</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ow5swBkpEfCrYs1QZAix4Q" name="Trace6" client="_Nf3_MBkoEfCrYs1QZAix4Q" supplier="_XDULsBklEfCrYs1QZAix4Q"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_pLsM0BoWEfCaR-l3_gphwQ" name="IR Holders Flexibility"/>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_pycq0BoWEfCaR-l3_gphwQ" name="Modularity" client="_52RfMBkjEfCrYs1QZAix4Q" supplier="_pLsM0BoWEfCaR-l3_gphwQ"/>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Rq3psBkMEfCrYs1QZAix4Q" name="Structure">
       <packagedElement xmi:type="uml:Class" xmi:id="_i4x-0B38EfC8d89Yv0hyHQ" name="Model Car Wiring" visibility="public">
         <generalization xmi:type="uml:Generalization" xmi:id="_7QjWYCAqEfCVXNPQYBHXXQ" general="_S8JbQCAmEfCVXNPQYBHXXQ"/>
@@ -142,6 +96,52 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_3v7kwCApEfCVXNPQYBHXXQ" client="_CF2sMCApEfCVXNPQYBHXXQ" supplier="_x98C4CAnEfCVXNPQYBHXXQ"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_3F7wECAqEfCVXNPQYBHXXQ" name="Software">
         <generalization xmi:type="uml:Generalization" xmi:id="_52oWECAqEfCVXNPQYBHXXQ" general="_S8JbQCAmEfCVXNPQYBHXXQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
+        <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_MRxBkBkNEfCrYs1QZAix4Q" name="Hardware" visibility="public">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_wubK4BkYEfCrYs1QZAix4Q" name="3D printed and modeled by students">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_g3K9UBkjEfCrYs1QZAix4Q" name="Time to print"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_5l_ngBkjEfCrYs1QZAix4Q" name="Motor Holders"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_52RfMBkjEfCrYs1QZAix4Q" name="IR sensor Holders"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_6KdmgBkjEfCrYs1QZAix4Q" name="Battery and breadboard holders"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_UrCFsBklEfCrYs1QZAix4Q" name="Space"/>
+            </nestedClassifier>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_o7iS0BkXEfCrYs1QZAix4Q" name="Provided">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_aN7ZcBkYEfCrYs1QZAix4Q" name="Frame"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_mvh_MBkgEfCrYs1QZAix4Q" name="Microcontroller"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_p4fUMBkgEfCrYs1QZAix4Q" name="Sensors">
+                <nestedClassifier xmi:type="uml:Class" xmi:id="_csBi0Bk0EfCrYs1QZAix4Q" name="IR sensor"/>
+                <nestedClassifier xmi:type="uml:Class" xmi:id="_dsCOUBk0EfCrYs1QZAix4Q" name="UltraSonic sensor"/>
+              </nestedClassifier>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_wwaOQBkgEfCrYs1QZAix4Q" name="Actuators">
+                <nestedClassifier xmi:type="uml:Class" xmi:id="_ANugwBk1EfCrYs1QZAix4Q" name="Motor With a wheel"/>
+              </nestedClassifier>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_TP_30Bk1EfCrYs1QZAix4Q" name="Third wheel "/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_cPHTUBqzEfChy9z5XIHNKQ" name="Return of equipment"/>
+            </nestedClassifier>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_rmN0wBk1EfCrYs1QZAix4Q" name="Wiring"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_Mj6hgBkNEfCrYs1QZAix4Q" name="What the model must do">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_mO7ioBkXEfCrYs1QZAix4Q" name="Obstacle Detection"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_WeOC8BkXEfCrYs1QZAix4Q" name="Follow line"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_a6whABoaEfCaR-l3_gphwQ" name="Git Usage"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_bkHAABoaEfCaR-l3_gphwQ" name="Documentation"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_EGNVsBobEfCaR-l3_gphwQ" name="Software"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_wI7IwBkmEfCrYs1QZAix4Q" name="Screws nuts and bolts"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_FyaZsBknEfCrYs1QZAix4Q" name="Refine" client="_XDULsBklEfCrYs1QZAix4Q" supplier="_wI7IwBkmEfCrYs1QZAix4Q"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Nf3_MBkoEfCrYs1QZAix4Q" name="Gidos reasoning">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_MTlVwBkpEfCrYs1QZAix4Q" annotatedElement="_Nf3_MBkoEfCrYs1QZAix4Q">
+            <body>We dont want parts to break on disconnect or adjustment</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ow5swBkpEfCrYs1QZAix4Q" name="Trace6" client="_Nf3_MBkoEfCrYs1QZAix4Q" supplier="_XDULsBklEfCrYs1QZAix4Q"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_pLsM0BoWEfCaR-l3_gphwQ" name="IR Holders Flexibility"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_pycq0BoWEfCaR-l3_gphwQ" name="Modularity" client="_52RfMBkjEfCrYs1QZAix4Q" supplier="_pLsM0BoWEfCaR-l3_gphwQ"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour ">
