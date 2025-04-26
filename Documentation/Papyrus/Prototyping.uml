@@ -27,15 +27,22 @@
         <nestedClassifier xmi:type="uml:Class" xmi:id="_r0xM8B39EfC8d89Yv0hyHQ" name="UltraSonicSensor"/>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_IdMwgB3_EfC8d89Yv0hyHQ" name="Driver"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_C1WrUB4MEfC8d89Yv0hyHQ" informationSource="_L9NlgB39EfC8d89Yv0hyHQ" informationTarget="_u5ce4B39EfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_HdiXYB4MEfC8d89Yv0hyHQ" informationSource="_u5ce4B39EfC8d89Yv0hyHQ" informationTarget="_eziyUB39EfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Jfnj4B4MEfC8d89Yv0hyHQ" informationSource="_u5ce4B39EfC8d89Yv0hyHQ" informationTarget="_N_KjQB4KEfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_UR7P4B4MEfC8d89Yv0hyHQ" name="Power" client="_NHY70B4MEfC8d89Yv0hyHQ" supplier="_u5ce4B39EfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_ct2TUB4MEfC8d89Yv0hyHQ" name="Power" client="_NHY70B4MEfC8d89Yv0hyHQ" supplier="_L9NlgB39EfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_qLWaQB4MEfC8d89Yv0hyHQ" informationSource="_VHdukB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_u6dNsB4MEfC8d89Yv0hyHQ" informationSource="_o9kWUB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_w2ljMB4MEfC8d89Yv0hyHQ" informationSource="_VJD-IB4KEfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_S8JbQCAmEfCVXNPQYBHXXQ" name="Model Car Project"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_C1WrUB4MEfC8d89Yv0hyHQ" informationSource="_L9NlgB39EfC8d89Yv0hyHQ _u5ce4B39EfC8d89Yv0hyHQ" informationTarget="_u5ce4B39EfC8d89Yv0hyHQ _L9NlgB39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_HdiXYB4MEfC8d89Yv0hyHQ" informationSource="_u5ce4B39EfC8d89Yv0hyHQ _eziyUB39EfC8d89Yv0hyHQ" informationTarget="_eziyUB39EfC8d89Yv0hyHQ _u5ce4B39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Jfnj4B4MEfC8d89Yv0hyHQ" informationSource="_u5ce4B39EfC8d89Yv0hyHQ _N_KjQB4KEfC8d89Yv0hyHQ" informationTarget="_N_KjQB4KEfC8d89Yv0hyHQ _u5ce4B39EfC8d89Yv0hyHQ _i4x-0B38EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_UR7P4B4MEfC8d89Yv0hyHQ" name="Power" client="_u5ce4B39EfC8d89Yv0hyHQ" supplier="_NHY70B4MEfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_ct2TUB4MEfC8d89Yv0hyHQ" name="Power" client="_L9NlgB39EfC8d89Yv0hyHQ" supplier="_NHY70B4MEfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_qLWaQB4MEfC8d89Yv0hyHQ" informationSource="_VHdukB39EfC8d89Yv0hyHQ _L9NlgB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ _VHdukB39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_u6dNsB4MEfC8d89Yv0hyHQ" informationSource="_o9kWUB39EfC8d89Yv0hyHQ _L9NlgB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ _i4x-0B38EfC8d89Yv0hyHQ _o9kWUB39EfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_w2ljMB4MEfC8d89Yv0hyHQ" informationSource="_VJD-IB4KEfC8d89Yv0hyHQ _L9NlgB39EfC8d89Yv0hyHQ" informationTarget="_L9NlgB39EfC8d89Yv0hyHQ _VJD-IB4KEfC8d89Yv0hyHQ"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_S8JbQCAmEfCVXNPQYBHXXQ" name="Model Car Project">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Cf1ZoCJyEfCrcavl5iePQg" name="FollowLine"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_F4EgwCJyEfCrcavl5iePQg" name="FindLine"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_NiufUCJyEfCrcavl5iePQg" name="DetectObject"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_PXaJACJyEfCrcavl5iePQg" name="AvoidObject"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tf4aQCJyEfCrcavl5iePQg" name="PushObject"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_YHv9QCJyEfCrcavl5iePQg" name="TurnOff"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bm2hkCAmEfCVXNPQYBHXXQ" name="Model Car Mechanical">
         <generalization xmi:type="uml:Generalization" xmi:id="_6Z6pUCAqEfCVXNPQYBHXXQ" general="_S8JbQCAmEfCVXNPQYBHXXQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_vGgiwCAnEfCVXNPQYBHXXQ" name="F1" type="_wN5BkCAnEfCVXNPQYBHXXQ" aggregation="composite"/>
