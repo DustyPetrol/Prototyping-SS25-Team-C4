@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
   <uml:Model xmi:id="_GV4ucBkMEfCrYs1QZAix4Q" name="Prototyping">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_GaTUYBkMEfCrYs1QZAix4Q">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -153,21 +153,15 @@
         <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="StateMachine">
           <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_UKqKsCJ0EfCrcavl5iePQg" name="TurnOn" kind="entryPoint"/>
           <region xmi:type="uml:Region" xmi:id="_PDTEwCJzEfCrcavl5iePQg" name="Region1">
-            <transition xmi:type="uml:Transition" xmi:id="_uYz5oCJ0EfCrcavl5iePQg" source="_UKqKsCJ0EfCrcavl5iePQg" target="_XEQ1ECJ0EfCrcavl5iePQg">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_wJ3AgCJ0EfCrcavl5iePQg">
-                <body>TurnOn</body>
-              </ownedComment>
+            <transition xmi:type="uml:Transition" xmi:id="_uYz5oCJ0EfCrcavl5iePQg" source="_UKqKsCJ0EfCrcavl5iePQg" target="_XEQ1ECJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_xG7FsCJ0EfCrcavl5iePQg" name="FoundLine" kind="local" source="_XEQ1ECJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_24O9ACJ0EfCrcavl5iePQg" name="DetectObject" kind="local" source="_aixjUCJ0EfCrcavl5iePQg" target="_hvPKACJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_QPQPoCJ1EfCrcavl5iePQg" name="Color2" kind="local" source="_hvPKACJ0EfCrcavl5iePQg" target="_mmB50CJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_TsGJ8CJ1EfCrcavl5iePQg" name="Color1" kind="local" source="_hvPKACJ0EfCrcavl5iePQg" target="_n1sK4CJ0EfCrcavl5iePQg">
+              <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_5dtfkCJ2EfCrcavl5iePQg" name="Color2"/>
             </transition>
-            <transition xmi:type="uml:Transition" xmi:id="_xG7FsCJ0EfCrcavl5iePQg" name="FoundLine" source="_XEQ1ECJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
-            <transition xmi:type="uml:Transition" xmi:id="_24O9ACJ0EfCrcavl5iePQg" source="_aixjUCJ0EfCrcavl5iePQg" target="_hvPKACJ0EfCrcavl5iePQg">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_4C4LMCJ0EfCrcavl5iePQg">
-                <body>DetectObject</body>
-              </ownedComment>
-            </transition>
-            <transition xmi:type="uml:Transition" xmi:id="_QPQPoCJ1EfCrcavl5iePQg" name="Color2" source="_hvPKACJ0EfCrcavl5iePQg" target="_mmB50CJ0EfCrcavl5iePQg"/>
-            <transition xmi:type="uml:Transition" xmi:id="_TsGJ8CJ1EfCrcavl5iePQg" name="Color1" source="_hvPKACJ0EfCrcavl5iePQg" target="_n1sK4CJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_jDyFoCJ1EfCrcavl5iePQg" name="ObjectPushed" source="_mmB50CJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
-            <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="ObjectAvoided" source="_n1sK4CJ0EfCrcavl5iePQg" target="_XEQ1ECJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="ObjectAvoided" kind="local" source="_n1sK4CJ0EfCrcavl5iePQg" target="_XEQ1ECJ0EfCrcavl5iePQg"/>
             <subvertex xmi:type="uml:State" xmi:id="_XEQ1ECJ0EfCrcavl5iePQg" name="FindLine"/>
             <subvertex xmi:type="uml:State" xmi:id="_aixjUCJ0EfCrcavl5iePQg" name="Follow Line"/>
             <subvertex xmi:type="uml:State" xmi:id="_hvPKACJ0EfCrcavl5iePQg" name="RecogniseObject"/>
@@ -350,6 +344,4 @@
   <Blocks:Block xmi:id="_kCfJwCApEfCVXNPQYBHXXQ" base_Class="_kCdUkCApEfCVXNPQYBHXXQ"/>
   <Blocks:Block xmi:id="_3F9lQCAqEfCVXNPQYBHXXQ" base_Class="_3F7wECAqEfCVXNPQYBHXXQ"/>
   <ModelElements:ElementGroup xmi:id="_vtQZgCJzEfCrcavl5iePQg" base_Comment="_vtGogCJzEfCrcavl5iePQg"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_wKDNwCJ0EfCrcavl5iePQg" base_Comment="_wJ3AgCJ0EfCrcavl5iePQg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_4C71kCJ0EfCrcavl5iePQg" base_Comment="_4C4LMCJ0EfCrcavl5iePQg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
 </xmi:XMI>

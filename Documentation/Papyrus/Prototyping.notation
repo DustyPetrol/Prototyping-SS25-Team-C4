@@ -4744,6 +4744,10 @@
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_QP03YSJ1EfCrcavl5iePQg" id="(0.8850574712643678,0.0)"/>
     </edges>
     <edges xsi:type="notation:Connector" xmi:id="_TsUMYCJ1EfCrcavl5iePQg" type="Transition_Edge" source="_hvY7ACJ0EfCrcavl5iePQg" target="_n1sK4SJ0EfCrcavl5iePQg">
+      <eAnnotations xmi:id="_rW25oCJ2EfCrcavl5iePQg" source="PapyrusCSSForceValue">
+        <details xmi:id="_rXADkCJ2EfCrcavl5iePQg" key="routing" value="true"/>
+        <details xmi:id="_ue62wCJ2EfCrcavl5iePQg" key="roundedBendpointsRadius" value="true"/>
+      </eAnnotations>
       <children xsi:type="notation:DecorationNode" xmi:id="_TsUMYyJ1EfCrcavl5iePQg" type="Transition_NameLabel">
         <styles xsi:type="notation:BooleanValueStyle" xmi:id="_c3WYkCJ1EfCrcavl5iePQg" name="IS_UPDATED_POSITION" booleanValue="true"/>
         <layoutConstraint xsi:type="notation:Location" xmi:id="_TsUMZCJ1EfCrcavl5iePQg" x="3" y="16"/>
@@ -4760,7 +4764,7 @@
       <element href="Prototyping.uml#_TsGJ8CJ1EfCrcavl5iePQg"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_TsUMYiJ1EfCrcavl5iePQg" points="[520, 341, -643984, -643984]$[420, 412, -643984, -643984]"/>
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_Tsw4UCJ1EfCrcavl5iePQg" id="(0.096,1.0)"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_Tsw4USJ1EfCrcavl5iePQg" id="(0.625,0.0)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_Tsw4USJ1EfCrcavl5iePQg" id="(0.8333333333333334,0.0)"/>
     </edges>
     <edges xsi:type="notation:Connector" xmi:id="_jEDLYCJ1EfCrcavl5iePQg" type="Transition_Edge" source="_mmLDwCJ0EfCrcavl5iePQg" target="_ai6tQCJ0EfCrcavl5iePQg">
       <children xsi:type="notation:DecorationNode" xmi:id="_jEDLYyJ1EfCrcavl5iePQg" type="Transition_NameLabel">
