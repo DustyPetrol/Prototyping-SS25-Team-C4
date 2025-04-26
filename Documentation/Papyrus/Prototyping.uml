@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
   <uml:Model xmi:id="_GV4ucBkMEfCrYs1QZAix4Q" name="Prototyping">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_GaTUYBkMEfCrYs1QZAix4Q">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -104,92 +104,126 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_3F7wECAqEfCVXNPQYBHXXQ" name="Software">
         <generalization xmi:type="uml:Generalization" xmi:id="_52oWECAqEfCVXNPQYBHXXQ" general="_S8JbQCAmEfCVXNPQYBHXXQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
-        <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_MRxBkBkNEfCrYs1QZAix4Q" name="Hardware" visibility="public">
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_wubK4BkYEfCrYs1QZAix4Q" name="3D printed and modeled by students">
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_g3K9UBkjEfCrYs1QZAix4Q" name="Time to print"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_5l_ngBkjEfCrYs1QZAix4Q" name="Motor Holders"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_52RfMBkjEfCrYs1QZAix4Q" name="IR sensor Holders"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_6KdmgBkjEfCrYs1QZAix4Q" name="Battery and breadboard holders"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_UrCFsBklEfCrYs1QZAix4Q" name="Space"/>
-            </nestedClassifier>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_o7iS0BkXEfCrYs1QZAix4Q" name="Provided">
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_aN7ZcBkYEfCrYs1QZAix4Q" name="Frame"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_mvh_MBkgEfCrYs1QZAix4Q" name="Microcontroller"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_p4fUMBkgEfCrYs1QZAix4Q" name="Sensors">
-                <nestedClassifier xmi:type="uml:Class" xmi:id="_csBi0Bk0EfCrYs1QZAix4Q" name="IR sensor"/>
-                <nestedClassifier xmi:type="uml:Class" xmi:id="_dsCOUBk0EfCrYs1QZAix4Q" name="UltraSonic sensor"/>
-              </nestedClassifier>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_wwaOQBkgEfCrYs1QZAix4Q" name="Actuators">
-                <nestedClassifier xmi:type="uml:Class" xmi:id="_ANugwBk1EfCrYs1QZAix4Q" name="Motor With a wheel"/>
-              </nestedClassifier>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_TP_30Bk1EfCrYs1QZAix4Q" name="Third wheel "/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_cPHTUBqzEfChy9z5XIHNKQ" name="Return of equipment"/>
-            </nestedClassifier>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_rmN0wBk1EfCrYs1QZAix4Q" name="Wiring"/>
-          </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_Mj6hgBkNEfCrYs1QZAix4Q" name="What the model must do">
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_mO7ioBkXEfCrYs1QZAix4Q" name="Obstacle Detection"/>
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_WeOC8BkXEfCrYs1QZAix4Q" name="Follow line"/>
-          </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_a6whABoaEfCaR-l3_gphwQ" name="Git Usage"/>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_bkHAABoaEfCaR-l3_gphwQ" name="Documentation"/>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_EGNVsBobEfCaR-l3_gphwQ" name="Software"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_wI7IwBkmEfCrYs1QZAix4Q" name="Screws nuts and bolts"/>
-        <packagedElement xmi:type="uml:Abstraction" xmi:id="_FyaZsBknEfCrYs1QZAix4Q" name="Refine" client="_XDULsBklEfCrYs1QZAix4Q" supplier="_wI7IwBkmEfCrYs1QZAix4Q"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_Nf3_MBkoEfCrYs1QZAix4Q" name="Gidos reasoning">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_MTlVwBkpEfCrYs1QZAix4Q" annotatedElement="_Nf3_MBkoEfCrYs1QZAix4Q">
-            <body>We dont want parts to break on disconnect or adjustment</body>
-          </ownedComment>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ow5swBkpEfCrYs1QZAix4Q" name="Trace6" client="_Nf3_MBkoEfCrYs1QZAix4Q" supplier="_XDULsBklEfCrYs1QZAix4Q"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_pLsM0BoWEfCaR-l3_gphwQ" name="IR Holders Flexibility"/>
-        <packagedElement xmi:type="uml:Abstraction" xmi:id="_pycq0BoWEfCaR-l3_gphwQ" name="Modularity" client="_52RfMBkjEfCrYs1QZAix4Q" supplier="_pLsM0BoWEfCaR-l3_gphwQ"/>
-        <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
-      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour ">
-      <packagedElement xmi:type="uml:Actor" xmi:id="_1LgVoCAoEfCJ1fx2jIRNWg" name="Line">
-        <generalization xmi:type="uml:Generalization" xmi:id="_O9DSACAyEfCJ1fx2jIRNWg" general="_B-kboCAtEfCJ1fx2jIRNWg"/>
-        <generalization xmi:type="uml:Generalization" xmi:id="_QENuYCAyEfCJ1fx2jIRNWg" general="_YvvqMCApEfCJ1fx2jIRNWg"/>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_vtGogCJzEfCrcavl5iePQg">
+        <body>Behaviour diagrams</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Package" xmi:id="_ccGR4CJzEfCrcavl5iePQg" name="UseCases">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_gormQCAyEfCJ1fx2jIRNWg" name="Motor">
+          <include xmi:type="uml:Include" xmi:id="_mKaJcCAyEfCJ1fx2jIRNWg" addition="_zafU4CAxEfCJ1fx2jIRNWg"/>
+          <include xmi:type="uml:Include" xmi:id="_nSa6YCAyEfCJ1fx2jIRNWg" addition="_0l0fkCAxEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_B-kboCAtEfCJ1fx2jIRNWg" name="Follow">
+          <extend xmi:type="uml:Extend" xmi:id="_SctMkCAuEfCJ1fx2jIRNWg" extendedCase="_YvvqMCApEfCJ1fx2jIRNWg" extensionLocation="_SctzoCAuEfCJ1fx2jIRNWg"/>
+          <include xmi:type="uml:Include" xmi:id="_RSd0wCAzEfCJ1fx2jIRNWg" addition="_4hPowCAwEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_0l0fkCAxEfCJ1fx2jIRNWg" name="Turn off">
+          <include xmi:type="uml:Include" xmi:id="_-vuu0CAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_zafU4CAxEfCJ1fx2jIRNWg" name="Turn on">
+          <include xmi:type="uml:Include" xmi:id="_9iuJICAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_xnOAcCAxEfCJ1fx2jIRNWg" name="Motor">
+          <generalization xmi:type="uml:Generalization" xmi:id="_o08dECAyEfCJ1fx2jIRNWg" general="_gormQCAyEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_4hPowCAwEfCJ1fx2jIRNWg" name="Detect">
+          <include xmi:type="uml:Include" xmi:id="_CYYF8CAxEfCJ1fx2jIRNWg" addition="__FKs8CApEfCJ1fx2jIRNWg"/>
+          <include xmi:type="uml:Include" xmi:id="_FPBi8CAxEfCJ1fx2jIRNWg" addition="_Be_EACAqEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_YFfr8CAsEfCJ1fx2jIRNWg" name="Obstacles">
+          <generalization xmi:type="uml:Generalization" xmi:id="_K6ZKUCAxEfCJ1fx2jIRNWg" general="_4hPowCAwEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_Be_EACAqEfCJ1fx2jIRNWg" name="Push Obstacles">
+          <include xmi:type="uml:Include" xmi:id="_qwhOYCAxEfCJ1fx2jIRNWg" addition="_YvvqMCApEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="__FKs8CApEfCJ1fx2jIRNWg" name="Avoid Obstacle">
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_9_I00CAwEfCJ1fx2jIRNWg" name="ExtensionPoint1"/>
+          <include xmi:type="uml:Include" xmi:id="_th-CUCAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_YvvqMCApEfCJ1fx2jIRNWg" name="Found">
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_SctzoCAuEfCJ1fx2jIRNWg" name="ExtensionPoint1"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_1LgVoCAoEfCJ1fx2jIRNWg" name="Line">
+          <generalization xmi:type="uml:Generalization" xmi:id="_O9DSACAyEfCJ1fx2jIRNWg" general="_B-kboCAtEfCJ1fx2jIRNWg"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="_QENuYCAyEfCJ1fx2jIRNWg" general="_YvvqMCApEfCJ1fx2jIRNWg"/>
+        </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_YvvqMCApEfCJ1fx2jIRNWg" name="Found">
-        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_SctzoCAuEfCJ1fx2jIRNWg" name="ExtensionPoint1"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_ddh5sCJzEfCrcavl5iePQg" name="StateMachines">
+        <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="StateMachine">
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_UKqKsCJ0EfCrcavl5iePQg" name="TurnOn" kind="entryPoint"/>
+          <region xmi:type="uml:Region" xmi:id="_PDTEwCJzEfCrcavl5iePQg" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_uYz5oCJ0EfCrcavl5iePQg" source="_UKqKsCJ0EfCrcavl5iePQg" target="_XEQ1ECJ0EfCrcavl5iePQg">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_wJ3AgCJ0EfCrcavl5iePQg">
+                <body>TurnOn</body>
+              </ownedComment>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_xG7FsCJ0EfCrcavl5iePQg" name="FoundLine" source="_XEQ1ECJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_24O9ACJ0EfCrcavl5iePQg" source="_aixjUCJ0EfCrcavl5iePQg" target="_hvPKACJ0EfCrcavl5iePQg">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_4C4LMCJ0EfCrcavl5iePQg">
+                <body>DetectObject</body>
+              </ownedComment>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_QPQPoCJ1EfCrcavl5iePQg" name="Color2" source="_hvPKACJ0EfCrcavl5iePQg" target="_mmB50CJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_TsGJ8CJ1EfCrcavl5iePQg" name="Color1" source="_hvPKACJ0EfCrcavl5iePQg" target="_n1sK4CJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_jDyFoCJ1EfCrcavl5iePQg" name="ObjectPushed" source="_mmB50CJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="ObjectAvoided" source="_n1sK4CJ0EfCrcavl5iePQg" target="_XEQ1ECJ0EfCrcavl5iePQg"/>
+            <subvertex xmi:type="uml:State" xmi:id="_XEQ1ECJ0EfCrcavl5iePQg" name="FindLine"/>
+            <subvertex xmi:type="uml:State" xmi:id="_aixjUCJ0EfCrcavl5iePQg" name="Follow Line"/>
+            <subvertex xmi:type="uml:State" xmi:id="_hvPKACJ0EfCrcavl5iePQg" name="RecogniseObject"/>
+            <subvertex xmi:type="uml:State" xmi:id="_mmB50CJ0EfCrcavl5iePQg" name="PushObject"/>
+            <subvertex xmi:type="uml:State" xmi:id="_n1sK4CJ0EfCrcavl5iePQg" name="AvoidObject"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_KyiIQCJ1EfCrcavl5iePQg" name="TurnOff" kind="terminate"/>
+          </region>
+        </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="__FKs8CApEfCJ1fx2jIRNWg" name="Avoid Obstacle">
-        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_9_I00CAwEfCJ1fx2jIRNWg" name="ExtensionPoint1"/>
-        <include xmi:type="uml:Include" xmi:id="_th-CUCAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gK6F8CJzEfCrcavl5iePQg" name="Activity"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
+      <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_MRxBkBkNEfCrYs1QZAix4Q" name="Hardware" visibility="public">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_wubK4BkYEfCrYs1QZAix4Q" name="3D printed and modeled by students">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_g3K9UBkjEfCrYs1QZAix4Q" name="Time to print"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_5l_ngBkjEfCrYs1QZAix4Q" name="Motor Holders"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_52RfMBkjEfCrYs1QZAix4Q" name="IR sensor Holders"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_6KdmgBkjEfCrYs1QZAix4Q" name="Battery and breadboard holders"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_UrCFsBklEfCrYs1QZAix4Q" name="Space"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_o7iS0BkXEfCrYs1QZAix4Q" name="Provided">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_aN7ZcBkYEfCrYs1QZAix4Q" name="Frame"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_mvh_MBkgEfCrYs1QZAix4Q" name="Microcontroller"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_p4fUMBkgEfCrYs1QZAix4Q" name="Sensors">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_csBi0Bk0EfCrYs1QZAix4Q" name="IR sensor"/>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_dsCOUBk0EfCrYs1QZAix4Q" name="UltraSonic sensor"/>
+            </nestedClassifier>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_wwaOQBkgEfCrYs1QZAix4Q" name="Actuators">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_ANugwBk1EfCrYs1QZAix4Q" name="Motor With a wheel"/>
+            </nestedClassifier>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_TP_30Bk1EfCrYs1QZAix4Q" name="Third wheel "/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_cPHTUBqzEfChy9z5XIHNKQ" name="Return of equipment"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_rmN0wBk1EfCrYs1QZAix4Q" name="Wiring"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Mj6hgBkNEfCrYs1QZAix4Q" name="What the model must do">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_mO7ioBkXEfCrYs1QZAix4Q" name="Obstacle Detection"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_WeOC8BkXEfCrYs1QZAix4Q" name="Follow line"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_a6whABoaEfCaR-l3_gphwQ" name="Git Usage"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_bkHAABoaEfCaR-l3_gphwQ" name="Documentation"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_EGNVsBobEfCaR-l3_gphwQ" name="Software"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_Be_EACAqEfCJ1fx2jIRNWg" name="Push Obstacles">
-        <include xmi:type="uml:Include" xmi:id="_qwhOYCAxEfCJ1fx2jIRNWg" addition="_YvvqMCApEfCJ1fx2jIRNWg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wI7IwBkmEfCrYs1QZAix4Q" name="Screws nuts and bolts"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_FyaZsBknEfCrYs1QZAix4Q" name="Refine" client="_XDULsBklEfCrYs1QZAix4Q" supplier="_wI7IwBkmEfCrYs1QZAix4Q"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Nf3_MBkoEfCrYs1QZAix4Q" name="Gidos reasoning">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_MTlVwBkpEfCrYs1QZAix4Q" annotatedElement="_Nf3_MBkoEfCrYs1QZAix4Q">
+          <body>We dont want parts to break on disconnect or adjustment</body>
+        </ownedComment>
       </packagedElement>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_YFfr8CAsEfCJ1fx2jIRNWg" name="Obstacles">
-        <generalization xmi:type="uml:Generalization" xmi:id="_K6ZKUCAxEfCJ1fx2jIRNWg" general="_4hPowCAwEfCJ1fx2jIRNWg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_B-kboCAtEfCJ1fx2jIRNWg" name="Follow">
-        <extend xmi:type="uml:Extend" xmi:id="_SctMkCAuEfCJ1fx2jIRNWg" extendedCase="_YvvqMCApEfCJ1fx2jIRNWg" extensionLocation="_SctzoCAuEfCJ1fx2jIRNWg"/>
-        <include xmi:type="uml:Include" xmi:id="_RSd0wCAzEfCJ1fx2jIRNWg" addition="_4hPowCAwEfCJ1fx2jIRNWg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_4hPowCAwEfCJ1fx2jIRNWg" name="Detect">
-        <include xmi:type="uml:Include" xmi:id="_CYYF8CAxEfCJ1fx2jIRNWg" addition="__FKs8CApEfCJ1fx2jIRNWg"/>
-        <include xmi:type="uml:Include" xmi:id="_FPBi8CAxEfCJ1fx2jIRNWg" addition="_Be_EACAqEfCJ1fx2jIRNWg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_xnOAcCAxEfCJ1fx2jIRNWg" name="Motor">
-        <generalization xmi:type="uml:Generalization" xmi:id="_o08dECAyEfCJ1fx2jIRNWg" general="_gormQCAyEfCJ1fx2jIRNWg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_zafU4CAxEfCJ1fx2jIRNWg" name="Turn on">
-        <include xmi:type="uml:Include" xmi:id="_9iuJICAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_0l0fkCAxEfCJ1fx2jIRNWg" name="Turn off">
-        <include xmi:type="uml:Include" xmi:id="_-vuu0CAxEfCJ1fx2jIRNWg" addition="_B-kboCAtEfCJ1fx2jIRNWg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_gormQCAyEfCJ1fx2jIRNWg" name="Motor">
-        <include xmi:type="uml:Include" xmi:id="_mKaJcCAyEfCJ1fx2jIRNWg" addition="_zafU4CAxEfCJ1fx2jIRNWg"/>
-        <include xmi:type="uml:Include" xmi:id="_nSa6YCAyEfCJ1fx2jIRNWg" addition="_0l0fkCAxEfCJ1fx2jIRNWg"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_Ow5swBkpEfCrYs1QZAix4Q" name="Trace6" client="_Nf3_MBkoEfCrYs1QZAix4Q" supplier="_XDULsBklEfCrYs1QZAix4Q"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_pLsM0BoWEfCaR-l3_gphwQ" name="IR Holders Flexibility"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_pycq0BoWEfCaR-l3_gphwQ" name="Modularity" client="_52RfMBkjEfCrYs1QZAix4Q" supplier="_pLsM0BoWEfCaR-l3_gphwQ"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_eFiaoBkMEfCrYs1QZAix4Q" name="Parametric"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GXVf8BkMEfCrYs1QZAix4Q">
@@ -315,4 +349,7 @@
   <Blocks:Block xmi:id="_SXJJYCApEfCVXNPQYBHXXQ" base_Class="_SXHUMCApEfCVXNPQYBHXXQ"/>
   <Blocks:Block xmi:id="_kCfJwCApEfCVXNPQYBHXXQ" base_Class="_kCdUkCApEfCVXNPQYBHXXQ"/>
   <Blocks:Block xmi:id="_3F9lQCAqEfCVXNPQYBHXXQ" base_Class="_3F7wECAqEfCVXNPQYBHXXQ"/>
+  <ModelElements:ElementGroup xmi:id="_vtQZgCJzEfCrcavl5iePQg" base_Comment="_vtGogCJzEfCrcavl5iePQg"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_wKDNwCJ0EfCrcavl5iePQg" base_Comment="_wJ3AgCJ0EfCrcavl5iePQg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_4C71kCJ0EfCrcavl5iePQg" base_Comment="_4C4LMCJ0EfCrcavl5iePQg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
 </xmi:XMI>
