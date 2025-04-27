@@ -106,6 +106,7 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_3v7kwCApEfCVXNPQYBHXXQ" client="_CF2sMCApEfCVXNPQYBHXXQ" supplier="_x98C4CAnEfCVXNPQYBHXXQ"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_3F7wECAqEfCVXNPQYBHXXQ" name="Software">
         <generalization xmi:type="uml:Generalization" xmi:id="_52oWECAqEfCVXNPQYBHXXQ" general="_S8JbQCAmEfCVXNPQYBHXXQ"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_K8TJYCNTEfCveNFJIopQxg" name="Software Abstraction or smth" method="_Ob5GgCJzEfCrcavl5iePQg"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour ">
@@ -153,7 +154,7 @@
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_ddh5sCJzEfCrcavl5iePQg" name="StateMachines">
-        <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="StateMachine">
+        <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="StateMachine" specification="_K8TJYCNTEfCveNFJIopQxg">
           <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_UKqKsCJ0EfCrcavl5iePQg" name="TurnOn" kind="entryPoint"/>
           <region xmi:type="uml:Region" xmi:id="_PDTEwCJzEfCrcavl5iePQg" name="Region1">
             <transition xmi:type="uml:Transition" xmi:id="_jDyFoCJ1EfCrcavl5iePQg" name="ObjectPushed" source="_mmB50CJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
