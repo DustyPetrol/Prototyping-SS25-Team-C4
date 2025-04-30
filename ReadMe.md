@@ -23,12 +23,15 @@
 Documentation/
 |— Lectures/
 |— Papyrus/
+|— TinkerCad/
 |— Assembly.png
 ```
 
 `Lectures` contain lectures and other materials given by professors.
 
 `Papyrus` contain **Papyrus** project with *SysML* diagrams.
+
+`TinkerCad` contain **TinkerCad** simulation files (pic of the circuit and code).
 
 `Assembly.png` - picture of the assembled prototype in 3D-modelling software.
 
@@ -37,10 +40,13 @@ Documentation/
 ```
 3D models/
 |— Basic components/
+|— Details to print/
 |— Assembly.iam 
 ```
 
 `Basic components` contain 3D models of given components, such as Arduino Uno, battery, motors etc.
+
+`Details to print` contain 3D-modeled parts for the printing (motor holder, IR-sensor holder etc.).
 
 `Assembly.iam` - an assembly of the prototype made in **Autodesk Inventor**.
 
