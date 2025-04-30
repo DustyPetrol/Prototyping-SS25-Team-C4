@@ -253,27 +253,13 @@
         <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="ModelCarStateMachine" specification="_K8TJYCNTEfCveNFJIopQxg">
           <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_UKqKsCJ0EfCrcavl5iePQg" name="TurnOn" kind="entryPoint"/>
           <region xmi:type="uml:Region" xmi:id="_PDTEwCJzEfCrcavl5iePQg" name="Region1">
-            <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="ObjectAvoided" kind="local" source="__tZoACXDEfCvmdPbc739SQ" target="_XEQ1ECJ0EfCrcavl5iePQg"/>
-            <transition xmi:type="uml:Transition" xmi:id="_BYp84CJ3EfCrcavl5iePQg" source="_UKqKsCJ0EfCrcavl5iePQg" target="_b0Cp8CXBEfCvmdPbc739SQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_Db0HcCJ3EfCrcavl5iePQg" name="FoundLine" source="_YTFrsCXBEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="ObjectAvoided" kind="local" source="__tZoACXDEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_BYp84CJ3EfCrcavl5iePQg" source="_UKqKsCJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_FzXNoCJ3EfCrcavl5iePQg" name="DetectObject" source="_aixjUCJ0EfCrcavl5iePQg" target="_7AwaECXAEfCvmdPbc739SQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_M74vgCJ3EfCrcavl5iePQg" name="Color2" source="_-KH-wCXAEfCvmdPbc739SQ" target="_B66BYCXEEfCvmdPbc739SQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_AekYgCW_EfCvmdPbc739SQ" name="FoundLine" source="_LQJhMCW-EfCvmdPbc739SQ" target="_cI61ICW-EfCvmdPbc739SQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_9Hmx0CXAEfCvmdPbc739SQ" source="_7AwaECXAEfCvmdPbc739SQ" target="_mjUFgCXAEfCvmdPbc739SQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_c8L9wCXBEfCvmdPbc739SQ" source="_b0Cp8CXBEfCvmdPbc739SQ" target="_LQJhMCW-EfCvmdPbc739SQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_A9ArMCXDEfCvmdPbc739SQ" source="_36LDoCXAEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
-            <subvertex xmi:type="uml:State" xmi:id="_XEQ1ECJ0EfCrcavl5iePQg" name="FindLine">
-              <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_YTFrsCXBEfCvmdPbc739SQ" name="FoundLine" kind="exitPoint"/>
-              <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_b0Cp8CXBEfCvmdPbc739SQ" name="LineLost" kind="entryPoint"/>
-              <region xmi:type="uml:Region" xmi:id="_ESucECW-EfCvmdPbc739SQ" name="Region1">
-                <transition xmi:type="uml:Transition" xmi:id="_CwrlECW_EfCvmdPbc739SQ" name="timePasses" source="_LQJhMCW-EfCvmdPbc739SQ" target="_YbCOICW-EfCvmdPbc739SQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_FwsZcCW_EfCvmdPbc739SQ" name="FoundLine" source="_YbCOICW-EfCvmdPbc739SQ" target="_LQJhMCW-EfCvmdPbc739SQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_Zv7dICXBEfCvmdPbc739SQ" name="FoundLine" source="_cI61ICW-EfCvmdPbc739SQ" target="_YTFrsCXBEfCvmdPbc739SQ"/>
-                <subvertex xmi:type="uml:State" xmi:id="_LQJhMCW-EfCvmdPbc739SQ" name="SlowSpiningInCircles"/>
-                <subvertex xmi:type="uml:State" xmi:id="_YbCOICW-EfCvmdPbc739SQ" name="FastSpiningInCircles"/>
-                <subvertex xmi:type="uml:State" xmi:id="_cI61ICW-EfCvmdPbc739SQ" name="GetOnTheLine"/>
-              </region>
-            </subvertex>
+            <transition xmi:type="uml:Transition" xmi:id="_T9HDwCXeEfClJ_1O2Xa4LA" source="_B66BYCXEEfCvmdPbc739SQ" target="_uqgI4CXdEfClJ_1O2Xa4LA"/>
             <subvertex xmi:type="uml:State" xmi:id="_aixjUCJ0EfCrcavl5iePQg" name="Follow Line">
               <region xmi:type="uml:Region" xmi:id="_QtSp4CW_EfCvmdPbc739SQ" name="Region1">
                 <transition xmi:type="uml:Transition" xmi:id="_m2TvcCW_EfCvmdPbc739SQ" source="_WfTEwCW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
@@ -305,11 +291,17 @@
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="__tZoACXDEfCvmdPbc739SQ" name="ExitPoint2" kind="exitPoint"/>
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_B66BYCXEEfCvmdPbc739SQ" name="EntryPoint3" kind="entryPoint"/>
               <region xmi:type="uml:Region" xmi:id="_mgeskCXDEfCvmdPbc739SQ" name="Region1">
-                <transition xmi:type="uml:Transition" xmi:id="_yJc60CXDEfCvmdPbc739SQ" name="time" source="_qc10cCXDEfCvmdPbc739SQ" target="_tBe7cCXDEfCvmdPbc739SQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_ynlBQCXDEfCvmdPbc739SQ" name="timeXn" source="_tBe7cCXDEfCvmdPbc739SQ" target="_vwXjkCXDEfCvmdPbc739SQ"/>
-                <subvertex xmi:type="uml:State" xmi:id="_qc10cCXDEfCvmdPbc739SQ" name="turnLeftForAWhile"/>
-                <subvertex xmi:type="uml:State" xmi:id="_tBe7cCXDEfCvmdPbc739SQ" name="TurnRightForALongerWhile"/>
-                <subvertex xmi:type="uml:State" xmi:id="_vwXjkCXDEfCvmdPbc739SQ" name="Pray"/>
+                <transition xmi:type="uml:Transition" xmi:id="_U8T28CXeEfClJ_1O2Xa4LA" name="time" source="_uqgI4CXdEfClJ_1O2Xa4LA" target="_z4nzkCXdEfClJ_1O2Xa4LA"/>
+                <transition xmi:type="uml:Transition" xmi:id="_VYUdgCXeEfClJ_1O2Xa4LA" name="time" source="_z4nzkCXdEfClJ_1O2Xa4LA" target="_2wLPgCXdEfClJ_1O2Xa4LA"/>
+                <transition xmi:type="uml:Transition" xmi:id="_X0FVUCXeEfClJ_1O2Xa4LA" name="Completion" source="_2wLPgCXdEfClJ_1O2Xa4LA" target="_9GTEECXdEfClJ_1O2Xa4LA"/>
+                <transition xmi:type="uml:Transition" xmi:id="_YhkGYCXeEfClJ_1O2Xa4LA" name="DetectionOfObstacle" source="_9GTEECXdEfClJ_1O2Xa4LA" target="_QH5FsCXeEfClJ_1O2Xa4LA"/>
+                <transition xmi:type="uml:Transition" xmi:id="_bQqJ4CXeEfClJ_1O2Xa4LA" name="LineDetected" source="_QH5FsCXeEfClJ_1O2Xa4LA" target="__tZoACXDEfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_Lfh-ACXfEfClJ_1O2Xa4LA" name="time" source="_QH5FsCXeEfClJ_1O2Xa4LA" target="_9GTEECXdEfClJ_1O2Xa4LA"/>
+                <subvertex xmi:type="uml:State" xmi:id="_uqgI4CXdEfClJ_1O2Xa4LA" name="TurnRight"/>
+                <subvertex xmi:type="uml:State" xmi:id="_z4nzkCXdEfClJ_1O2Xa4LA" name="GoForward"/>
+                <subvertex xmi:type="uml:State" xmi:id="_2wLPgCXdEfClJ_1O2Xa4LA" name="TurnUltrasonicToTheLeft"/>
+                <subvertex xmi:type="uml:State" xmi:id="_9GTEECXdEfClJ_1O2Xa4LA" name="TurnLeft"/>
+                <subvertex xmi:type="uml:State" xmi:id="_QH5FsCXeEfClJ_1O2Xa4LA" name="GoForward"/>
               </region>
             </subvertex>
             <subvertex xmi:type="uml:Pseudostate" xmi:id="_KyiIQCJ1EfCrcavl5iePQg" name="TurnOff" kind="terminate"/>
