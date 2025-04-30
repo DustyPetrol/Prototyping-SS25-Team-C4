@@ -114,6 +114,9 @@
         <body>Behaviour diagrams</body>
       </ownedComment>
       <packagedElement xmi:type="uml:Package" xmi:id="_ccGR4CJzEfCrcavl5iePQg" name="UseCases">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_zRFNECXKEfCvmdPbc739SQ">
+          <body>ModelCar</body>
+        </ownedComment>
         <packagedElement xmi:type="uml:UseCase" xmi:id="_gormQCAyEfCJ1fx2jIRNWg" name="Motor">
           <include xmi:type="uml:Include" xmi:id="_mKaJcCAyEfCJ1fx2jIRNWg" addition="_zafU4CAxEfCJ1fx2jIRNWg"/>
           <include xmi:type="uml:Include" xmi:id="_nSa6YCAyEfCJ1fx2jIRNWg" addition="_0l0fkCAxEfCJ1fx2jIRNWg"/>
@@ -153,6 +156,37 @@
           <generalization xmi:type="uml:Generalization" xmi:id="_O9DSACAyEfCJ1fx2jIRNWg" general="_B-kboCAtEfCJ1fx2jIRNWg"/>
           <generalization xmi:type="uml:Generalization" xmi:id="_QENuYCAyEfCJ1fx2jIRNWg" general="_YvvqMCApEfCJ1fx2jIRNWg"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_eopJcCXKEfCvmdPbc739SQ" name="Student"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_gKwccCXKEfCvmdPbc739SQ" name="TurnOn"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_gqWigCXKEfCvmdPbc739SQ" name="TurnOff">
+          <extend xmi:type="uml:Extend" xmi:id="_qrLHMCXKEfCvmdPbc739SQ" extendedCase="_ipS7cCXKEfCvmdPbc739SQ" extensionLocation="_qrMVUCXKEfCvmdPbc739SQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_ipS7cCXKEfCvmdPbc739SQ" name="Charge">
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_qrMVUCXKEfCvmdPbc739SQ" name="ExtensionPoint1"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_m0S8QCXKEfCvmdPbc739SQ" name="FollowLine"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_sE89kCXKEfCvmdPbc739SQ" name="TurnsOff" memberEnd="_sFAA4CXKEfCvmdPbc739SQ _sFAA4SXKEfCvmdPbc739SQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sE-ywCXKEfCvmdPbc739SQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sE_Z0CXKEfCvmdPbc739SQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_sFAA4CXKEfCvmdPbc739SQ" name="turnoff" type="_gqWigCXKEfCvmdPbc739SQ" association="_sE89kCXKEfCvmdPbc739SQ"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_sFAA4SXKEfCvmdPbc739SQ" name="student" type="_eopJcCXKEfCvmdPbc739SQ" association="_sE89kCXKEfCvmdPbc739SQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_uDnpsCXKEfCvmdPbc739SQ" name="TurnsOff" memberEnd="_uDo30CXKEfCvmdPbc739SQ _uDo30SXKEfCvmdPbc739SQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uDoQwCXKEfCvmdPbc739SQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uDoQwSXKEfCvmdPbc739SQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_uDo30CXKEfCvmdPbc739SQ" name="turnon" type="_gKwccCXKEfCvmdPbc739SQ" association="_uDnpsCXKEfCvmdPbc739SQ"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_uDo30SXKEfCvmdPbc739SQ" name="student" type="_eopJcCXKEfCvmdPbc739SQ" association="_uDnpsCXKEfCvmdPbc739SQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_wZIvkCXKEfCvmdPbc739SQ" memberEnd="_wZJWoCXKEfCvmdPbc739SQ _wZJWoSXKEfCvmdPbc739SQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wZIvkSXKEfCvmdPbc739SQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wZIvkiXKEfCvmdPbc739SQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_wZJWoCXKEfCvmdPbc739SQ" name="followline" type="_m0S8QCXKEfCvmdPbc739SQ" association="_wZIvkCXKEfCvmdPbc739SQ"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_wZJWoSXKEfCvmdPbc739SQ" name="turnon" type="_gKwccCXKEfCvmdPbc739SQ" association="_wZIvkCXKEfCvmdPbc739SQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_678nACXKEfCvmdPbc739SQ" name="Line"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_ddh5sCJzEfCrcavl5iePQg" name="StateMachines">
         <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="ModelCarStateMachine" specification="_K8TJYCNTEfCveNFJIopQxg">
@@ -221,7 +255,9 @@
           </region>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_gK6F8CJzEfCrcavl5iePQg" name="Activity"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gK6F8CJzEfCrcavl5iePQg" name="Activity">
+        <packagedElement xmi:type="uml:Activity" xmi:id="_sIwcUCXGEfCvmdPbc739SQ" name="Activity1"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
       <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
@@ -395,4 +431,5 @@
   <Blocks:Block xmi:id="_3F9lQCAqEfCVXNPQYBHXXQ" base_Class="_3F7wECAqEfCVXNPQYBHXXQ"/>
   <ModelElements:ElementGroup xmi:id="_vtQZgCJzEfCrcavl5iePQg" base_Comment="_vtGogCJzEfCrcavl5iePQg"/>
   <ModelElements:ElementGroup xmi:id="_fi2qoSJ3EfCrcavl5iePQg" base_Comment="_fi2qoCJ3EfCrcavl5iePQg"/>
+  <ModelElements:ElementGroup xmi:id="_zRHpUCXKEfCvmdPbc739SQ" base_Comment="_zRFNECXKEfCvmdPbc739SQ"/>
 </xmi:XMI>
