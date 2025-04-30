@@ -164,7 +164,15 @@
             <transition xmi:type="uml:Transition" xmi:id="_FzXNoCJ3EfCrcavl5iePQg" name="DetectObject" source="_aixjUCJ0EfCrcavl5iePQg" target="_hvPKACJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_LhMTICJ3EfCrcavl5iePQg" name="Color1" source="_hvPKACJ0EfCrcavl5iePQg" target="_mmB50CJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_M74vgCJ3EfCrcavl5iePQg" name="Color2" source="_hvPKACJ0EfCrcavl5iePQg" target="_n1sK4CJ0EfCrcavl5iePQg"/>
-            <subvertex xmi:type="uml:State" xmi:id="_XEQ1ECJ0EfCrcavl5iePQg" name="FindLine"/>
+            <subvertex xmi:type="uml:State" xmi:id="_XEQ1ECJ0EfCrcavl5iePQg" name="FindLine">
+              <region xmi:type="uml:Region" xmi:id="_ESucECW-EfCvmdPbc739SQ" name="Region1">
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_IQJ68CW-EfCvmdPbc739SQ" name="Initial1"/>
+                <subvertex xmi:type="uml:FinalState" xmi:id="_I1O98CW-EfCvmdPbc739SQ" name="FinalState2"/>
+                <subvertex xmi:type="uml:State" xmi:id="_LQJhMCW-EfCvmdPbc739SQ" name="SlowSpiningInCircles"/>
+                <subvertex xmi:type="uml:State" xmi:id="_YbCOICW-EfCvmdPbc739SQ" name="GetOnTheLine"/>
+                <subvertex xmi:type="uml:State" xmi:id="_cI61ICW-EfCvmdPbc739SQ" name="State5"/>
+              </region>
+            </subvertex>
             <subvertex xmi:type="uml:State" xmi:id="_aixjUCJ0EfCrcavl5iePQg" name="Follow Line"/>
             <subvertex xmi:type="uml:State" xmi:id="_hvPKACJ0EfCrcavl5iePQg" name="RecogniseObject"/>
             <subvertex xmi:type="uml:State" xmi:id="_mmB50CJ0EfCrcavl5iePQg" name="PushObject"/>
