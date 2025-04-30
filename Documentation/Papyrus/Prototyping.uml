@@ -117,6 +117,10 @@
         <ownedComment xmi:type="uml:Comment" xmi:id="_zRFNECXKEfCvmdPbc739SQ">
           <body>ModelCar</body>
         </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_0dQnICXcEfClJ_1O2Xa4LA">
+          <body>ModelCar</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_YBf7sCXdEfClJ_1O2Xa4LA"/>
         <packagedElement xmi:type="uml:UseCase" xmi:id="_gormQCAyEfCJ1fx2jIRNWg" name="Motor">
           <include xmi:type="uml:Include" xmi:id="_mKaJcCAyEfCJ1fx2jIRNWg" addition="_zafU4CAxEfCJ1fx2jIRNWg"/>
           <include xmi:type="uml:Include" xmi:id="_nSa6YCAyEfCJ1fx2jIRNWg" addition="_0l0fkCAxEfCJ1fx2jIRNWg"/>
@@ -187,6 +191,63 @@
           <ownedEnd xmi:type="uml:Property" xmi:id="_wZJWoSXKEfCvmdPbc739SQ" name="turnon" type="_gKwccCXKEfCvmdPbc739SQ" association="_wZIvkCXKEfCvmdPbc739SQ"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Actor" xmi:id="_678nACXKEfCvmdPbc739SQ" name="Line"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_tKYPYCXcEfClJ_1O2Xa4LA" name="FollowLine">
+          <extend xmi:type="uml:Extend" xmi:id="_y2mLUCXcEfClJ_1O2Xa4LA" extendedCase="_teZ-oCXcEfClJ_1O2Xa4LA" extensionLocation="_y2myYCXcEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_teZ-oCXcEfClJ_1O2Xa4LA" name="FindLine">
+          <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_y2myYCXcEfClJ_1O2Xa4LA" name="ExtensionPoint1"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_xykigCXcEfClJ_1O2Xa4LA" memberEnd="_xynl0CXcEfClJ_1O2Xa4LA _xynl0SXcEfClJ_1O2Xa4LA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xym-wCXcEfClJ_1O2Xa4LA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xym-wSXcEfClJ_1O2Xa4LA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_xynl0CXcEfClJ_1O2Xa4LA" name="findline" type="_teZ-oCXcEfClJ_1O2Xa4LA" association="_xykigCXcEfClJ_1O2Xa4LA"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_xynl0SXcEfClJ_1O2Xa4LA" name="line" type="_678nACXKEfCvmdPbc739SQ" association="_xykigCXcEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_yR5i0CXcEfClJ_1O2Xa4LA" memberEnd="_yR6J4iXcEfClJ_1O2Xa4LA _yR6J4yXcEfClJ_1O2Xa4LA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yR6J4CXcEfClJ_1O2Xa4LA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yR6J4SXcEfClJ_1O2Xa4LA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_yR6J4iXcEfClJ_1O2Xa4LA" name="followline" type="_tKYPYCXcEfClJ_1O2Xa4LA" association="_yR5i0CXcEfClJ_1O2Xa4LA"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_yR6J4yXcEfClJ_1O2Xa4LA" name="line" type="_678nACXKEfCvmdPbc739SQ" association="_yR5i0CXcEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_JubesCXdEfClJ_1O2Xa4LA" name="Object Colour 1"/>
+        <packagedElement xmi:type="uml:Actor" xmi:id="_NLmwMCXdEfClJ_1O2Xa4LA" name="ObjectColour2"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_PqNgoCXdEfClJ_1O2Xa4LA" name="Avoid">
+          <generalization xmi:type="uml:Generalization" xmi:id="_WZHooCXdEfClJ_1O2Xa4LA" general="_SamkoCXdEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_RDoxsCXdEfClJ_1O2Xa4LA" name="Push">
+          <generalization xmi:type="uml:Generalization" xmi:id="_WDU-0CXdEfClJ_1O2Xa4LA" general="_SamkoCXdEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_SamkoCXdEfClJ_1O2Xa4LA" name="Detect"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_TwKpYCXdEfClJ_1O2Xa4LA" memberEnd="_TwLQcCXdEfClJ_1O2Xa4LA _TwLQcSXdEfClJ_1O2Xa4LA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TwKpYSXdEfClJ_1O2Xa4LA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TwKpYiXdEfClJ_1O2Xa4LA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_TwLQcCXdEfClJ_1O2Xa4LA" name="detect" type="_SamkoCXdEfClJ_1O2Xa4LA" association="_TwKpYCXdEfClJ_1O2Xa4LA"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_TwLQcSXdEfClJ_1O2Xa4LA" name="objectcolour2" type="_NLmwMCXdEfClJ_1O2Xa4LA" association="_TwKpYCXdEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_UUQ08CXdEfClJ_1O2Xa4LA" memberEnd="_UURcAiXdEfClJ_1O2Xa4LA _UURcAyXdEfClJ_1O2Xa4LA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UURcACXdEfClJ_1O2Xa4LA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UURcASXdEfClJ_1O2Xa4LA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_UURcAiXdEfClJ_1O2Xa4LA" name="detect" type="_SamkoCXdEfClJ_1O2Xa4LA" association="_UUQ08CXdEfClJ_1O2Xa4LA"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_UURcAyXdEfClJ_1O2Xa4LA" name="object colour 1" type="_JubesCXdEfClJ_1O2Xa4LA" association="_UUQ08CXdEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_U0EWYCXdEfClJ_1O2Xa4LA" memberEnd="_U0FkgCXdEfClJ_1O2Xa4LA _U0FkgSXdEfClJ_1O2Xa4LA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U0E9cCXdEfClJ_1O2Xa4LA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_U0E9cSXdEfClJ_1O2Xa4LA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_U0FkgCXdEfClJ_1O2Xa4LA" name="avoid" type="_PqNgoCXdEfClJ_1O2Xa4LA" association="_U0EWYCXdEfClJ_1O2Xa4LA"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_U0FkgSXdEfClJ_1O2Xa4LA" name="object colour 1" type="_JubesCXdEfClJ_1O2Xa4LA" association="_U0EWYCXdEfClJ_1O2Xa4LA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_VTNJcCXdEfClJ_1O2Xa4LA" memberEnd="_VTNwgiXdEfClJ_1O2Xa4LA _VTNwgyXdEfClJ_1O2Xa4LA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VTNwgCXdEfClJ_1O2Xa4LA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VTNwgSXdEfClJ_1O2Xa4LA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_VTNwgiXdEfClJ_1O2Xa4LA" name="push" type="_RDoxsCXdEfClJ_1O2Xa4LA" association="_VTNJcCXdEfClJ_1O2Xa4LA"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_VTNwgyXdEfClJ_1O2Xa4LA" name="objectcolour2" type="_NLmwMCXdEfClJ_1O2Xa4LA" association="_VTNJcCXdEfClJ_1O2Xa4LA"/>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_ddh5sCJzEfCrcavl5iePQg" name="StateMachines">
         <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="ModelCarStateMachine" specification="_K8TJYCNTEfCveNFJIopQxg">
@@ -425,4 +486,6 @@
   <ModelElements:ElementGroup xmi:id="_vtQZgCJzEfCrcavl5iePQg" base_Comment="_vtGogCJzEfCrcavl5iePQg"/>
   <ModelElements:ElementGroup xmi:id="_fi2qoSJ3EfCrcavl5iePQg" base_Comment="_fi2qoCJ3EfCrcavl5iePQg"/>
   <ModelElements:ElementGroup xmi:id="_zRHpUCXKEfCvmdPbc739SQ" base_Comment="_zRFNECXKEfCvmdPbc739SQ"/>
+  <ModelElements:ElementGroup xmi:id="_0dU4kCXcEfClJ_1O2Xa4LA" base_Comment="_0dQnICXcEfClJ_1O2Xa4LA"/>
+  <ModelElements:ElementGroup xmi:id="_YBi_ACXdEfClJ_1O2Xa4LA" base_Comment="_YBf7sCXdEfClJ_1O2Xa4LA" name="ModelCar"/>
 </xmi:XMI>
