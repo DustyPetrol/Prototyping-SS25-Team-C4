@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
   <uml:Model xmi:id="_GV4ucBkMEfCrYs1QZAix4Q" name="Prototyping">
     <ownedComment xmi:type="uml:Comment" xmi:id="_fi2qoCJ3EfCrcavl5iePQg">
       <body>SysML Project Diagrams</body>
@@ -255,9 +255,7 @@
           </region>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_gK6F8CJzEfCrcavl5iePQg" name="Activity">
-        <packagedElement xmi:type="uml:Activity" xmi:id="_sIwcUCXGEfCvmdPbc739SQ" name="Activity1"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_wV_sQCXbEfClJ_1O2Xa4LA" name="Sequence"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
       <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
@@ -411,13 +409,8 @@
   <Blocks:Block xmi:id="_flbiQB39EfC8d89Yv0hyHQ" base_Class="_flYe8B39EfC8d89Yv0hyHQ"/>
   <Blocks:Block xmi:id="_r0zCIB39EfC8d89Yv0hyHQ" base_Class="_r0xM8B39EfC8d89Yv0hyHQ"/>
   <Blocks:Block xmi:id="_IdPMwB3_EfC8d89Yv0hyHQ" base_Class="_IdMwgB3_EfC8d89Yv0hyHQ"/>
-  <PortsAndFlows:ItemFlow xmi:id="_YSEhAB4LEfC8d89Yv0hyHQ"/>
-  <PortsAndFlows:ItemFlow xmi:id="_pI-zwB4LEfC8d89Yv0hyHQ"/>
-  <PortsAndFlows:ItemFlow xmi:id="_p2TMwB4LEfC8d89Yv0hyHQ"/>
   <Blocks:Block xmi:id="_OIS_MB4MEfC8d89Yv0hyHQ" base_Class="_OIQi8B4MEfC8d89Yv0hyHQ"/>
   <Blocks:Block xmi:id="_S8L3gCAmEfCVXNPQYBHXXQ" base_Class="_S8JbQCAmEfCVXNPQYBHXXQ"/>
-  <Blocks:Block xmi:id="_WOv0dCAmEfCVXNPQYBHXXQ"/>
-  <Blocks:Block xmi:id="_Z2Z3pCAmEfCVXNPQYBHXXQ"/>
   <Blocks:Block xmi:id="_bm4WwCAmEfCVXNPQYBHXXQ" base_Class="_bm2hkCAmEfCVXNPQYBHXXQ"/>
   <Blocks:Block xmi:id="_wN7d0CAnEfCVXNPQYBHXXQ" base_Class="_wN5BkCAnEfCVXNPQYBHXXQ"/>
   <Blocks:Block xmi:id="_zVUFgCAnEfCVXNPQYBHXXQ" base_Class="_zVRpQCAnEfCVXNPQYBHXXQ"/>
