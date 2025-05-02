@@ -341,7 +341,6 @@
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_a6whABoaEfCaR-l3_gphwQ" name="Git Usage"/>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_bkHAABoaEfCaR-l3_gphwQ" name="Documentation"/>
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_EGNVsBobEfCaR-l3_gphwQ" name="Software"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_wI7IwBkmEfCrYs1QZAix4Q" name="Screws nuts and bolts"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_FyaZsBknEfCrYs1QZAix4Q" name="Refine" client="_XDULsBklEfCrYs1QZAix4Q" supplier="_wI7IwBkmEfCrYs1QZAix4Q"/>
@@ -355,6 +354,15 @@
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_pycq0BoWEfCaR-l3_gphwQ" name="Modularity" client="_52RfMBkjEfCrYs1QZAix4Q" supplier="_pLsM0BoWEfCaR-l3_gphwQ"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_ZPUaQBoXEfCaR-l3_gphwQ" name="Satisfy10" client="_ANugwBk1EfCrYs1QZAix4Q" supplier="_5l_ngBkjEfCrYs1QZAix4Q"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_XDULsBklEfCrYs1QZAix4Q" name="Mechanical connections"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_svUjYCdCEfCu4suVTld_PQ" name="C++"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_EGNVsBobEfCaR-l3_gphwQ" name="Software">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_qkV5kCdCEfCu4suVTld_PQ" name="Modellability"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_rUZdgCdCEfCu4suVTld_PQ" name="Compatablility"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_K_Hi0CdDEfCu4suVTld_PQ" name="DeriveReqt12" client="_qkV5kCdCEfCu4suVTld_PQ" supplier="_svUjYCdCEfCu4suVTld_PQ"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_LeF90CdDEfCu4suVTld_PQ" name="DeriveReqt13" client="_rUZdgCdCEfCu4suVTld_PQ" supplier="_svUjYCdCEfCu4suVTld_PQ"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JcmDUCdHEfCu4suVTld_PQ" name="Wiring"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_LFX_ACdHEfCu4suVTld_PQ" name="Refine15" client="_rmN0wBk1EfCrYs1QZAix4Q" supplier="_JcmDUCdHEfCu4suVTld_PQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_eFiaoBkMEfCrYs1QZAix4Q" name="Parametric"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GXVf8BkMEfCrYs1QZAix4Q">
@@ -449,13 +457,13 @@
   <Requirements:Requirement xmi:id="_dsEqkBk0EfCrYs1QZAix4Q" base_NamedElement="_dsCOUBk0EfCrYs1QZAix4Q" id="R1.1.1.2.1" text="A model shall house and utilise two(2) UltraSonic sensors" base_Class="_dsCOUBk0EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_ANw9ABk1EfCrYs1QZAix4Q" base_NamedElement="_ANugwBk1EfCrYs1QZAix4Q" id="R1.1.1.4.1" text="The model shall be propelled by electrical motors." base_Class="_ANugwBk1EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_TQCUEBk1EfCrYs1QZAix4Q" base_NamedElement="_TP_30Bk1EfCrYs1QZAix4Q" id="R1.1.1.01" text="It shall be there" base_Class="_TP_30Bk1EfCrYs1QZAix4Q"/>
-  <Requirements:Requirement xmi:id="_rmQRABk1EfCrYs1QZAix4Q" base_NamedElement="_rmN0wBk1EfCrYs1QZAix4Q" id="R1.1.02.0" text="The wiring should be solderless breadboard wiring " base_Class="_rmN0wBk1EfCrYs1QZAix4Q"/>
+  <Requirements:Requirement xmi:id="_rmQRABk1EfCrYs1QZAix4Q" base_NamedElement="_rmN0wBk1EfCrYs1QZAix4Q" id="R1.1.02.0" text="The wiring shall be solderless breadboard wiring " base_Class="_rmN0wBk1EfCrYs1QZAix4Q"/>
   <Requirements:Requirement xmi:id="_pMI4wBoWEfCaR-l3_gphwQ" base_NamedElement="_pLsM0BoWEfCaR-l3_gphwQ" id="R1.1.2.2.1" text="IR Holders shall be Flexible or modular for adjustment in case of innability of line detection" base_Class="_pLsM0BoWEfCaR-l3_gphwQ"/>
   <Requirements:Refine xmi:id="_pyg8QBoWEfCaR-l3_gphwQ" base_DirectedRelationship="_pycq0BoWEfCaR-l3_gphwQ" base_Abstraction="_pycq0BoWEfCaR-l3_gphwQ"/>
   <Requirements:Satisfy xmi:id="_ZPbH8BoXEfCaR-l3_gphwQ" base_DirectedRelationship="_ZPUaQBoXEfCaR-l3_gphwQ" base_Abstraction="_ZPUaQBoXEfCaR-l3_gphwQ"/>
   <Requirements:Requirement xmi:id="_a6zkUBoaEfCaR-l3_gphwQ" base_NamedElement="_a6whABoaEfCaR-l3_gphwQ" id="R1.3.0.0" text="The development of the model shall be documented and managed with git" base_Class="_a6whABoaEfCaR-l3_gphwQ"/>
   <Requirements:Requirement xmi:id="_bkHAARoaEfCaR-l3_gphwQ" base_NamedElement="_bkHAABoaEfCaR-l3_gphwQ" id="R1.4.0.0" text="The model shall be documented thoroughly using sysml language" base_Class="_bkHAABoaEfCaR-l3_gphwQ"/>
-  <Requirements:Requirement xmi:id="_EGQZABobEfCaR-l3_gphwQ" base_NamedElement="_EGNVsBobEfCaR-l3_gphwQ" id="R1.3.5.0" text="I dont even want to start with that" base_Class="_EGNVsBobEfCaR-l3_gphwQ"/>
+  <Requirements:Requirement xmi:id="_EGQZABobEfCaR-l3_gphwQ" base_NamedElement="_EGNVsBobEfCaR-l3_gphwQ" id="R1.5.0.0" text="Software shall be modeled using SysML toolbox and work on arduino" base_Class="_EGNVsBobEfCaR-l3_gphwQ"/>
   <Requirements:Requirement xmi:id="_cPj_QBqzEfChy9z5XIHNKQ" base_NamedElement="_cPHTUBqzEfChy9z5XIHNKQ" id="R1.1.1.02" text="All of the provided equipment shall be returned in full in the endo of the course" base_Class="_cPHTUBqzEfChy9z5XIHNKQ"/>
   <Blocks:Block xmi:id="_i5DEkB38EfC8d89Yv0hyHQ" base_Class="_i4x-0B38EfC8d89Yv0hyHQ"/>
   <Blocks:Block xmi:id="_W3Mm0B39EfC8d89Yv0hyHQ" base_Class="_W3JjgB39EfC8d89Yv0hyHQ"/>
@@ -480,4 +488,11 @@
   <ModelElements:ElementGroup xmi:id="_zRHpUCXKEfCvmdPbc739SQ" base_Comment="_zRFNECXKEfCvmdPbc739SQ"/>
   <ModelElements:ElementGroup xmi:id="_0dU4kCXcEfClJ_1O2Xa4LA" base_Comment="_0dQnICXcEfClJ_1O2Xa4LA"/>
   <ModelElements:ElementGroup xmi:id="_YBi_ACXdEfClJ_1O2Xa4LA" base_Comment="_YBf7sCXdEfClJ_1O2Xa4LA" name="ModelCar"/>
+  <Requirements:Requirement xmi:id="_qkqCoCdCEfCu4suVTld_PQ" base_NamedElement="_qkV5kCdCEfCu4suVTld_PQ" id="R1.5.3.0" text="The Software shall be modellable" base_Class="_qkV5kCdCEfCu4suVTld_PQ"/>
+  <Requirements:Requirement xmi:id="_rUcg0CdCEfCu4suVTld_PQ" base_NamedElement="_rUZdgCdCEfCu4suVTld_PQ" id="R1.5.1.0" text="Software shall be compatable with arduino uno" base_Class="_rUZdgCdCEfCu4suVTld_PQ"/>
+  <Requirements:Requirement xmi:id="_svYNwCdCEfCu4suVTld_PQ" base_NamedElement="_svUjYCdCEfCu4suVTld_PQ" id="R1.3.1.1" text="Software shall be written woth C++ language" base_Class="_svUjYCdCEfCu4suVTld_PQ"/>
+  <Requirements:DeriveReqt xmi:id="_K_O3kCdDEfCu4suVTld_PQ" base_DirectedRelationship="_K_Hi0CdDEfCu4suVTld_PQ" base_Abstraction="_K_Hi0CdDEfCu4suVTld_PQ"/>
+  <Requirements:DeriveReqt xmi:id="_LeJoMCdDEfCu4suVTld_PQ" base_DirectedRelationship="_LeF90CdDEfCu4suVTld_PQ" base_Abstraction="_LeF90CdDEfCu4suVTld_PQ"/>
+  <Requirements:Requirement xmi:id="_JcptsCdHEfCu4suVTld_PQ" base_NamedElement="_JcmDUCdHEfCu4suVTld_PQ" id="R1.1.02.1" text="The wiring shallhave soldered components" base_Class="_JcmDUCdHEfCu4suVTld_PQ"/>
+  <Requirements:Refine xmi:id="_LFbCUCdHEfCu4suVTld_PQ" base_DirectedRelationship="_LFX_ACdHEfCu4suVTld_PQ" base_Abstraction="_LFX_ACdHEfCu4suVTld_PQ"/>
 </xmi:XMI>
