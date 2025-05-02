@@ -6,12 +6,12 @@
 |:-------|:----------------------|:------------------------------------------------------------------------------------------------------------------------|:-------------------|:---------|:---------------------:|
 | **1**  | 3D-modelling          | Model and submit parts for 3D-printing: <br/> - motor holders<br/> - IR-sensor holders<br/> - battery/breadboard holder | Oleg Kelner        | 24.04.25 |        *Done*         |
 | **2**  | Requirements Diagram  | Create Requirements Diagram for the prototype                                                                           | Petr Lavrenov      | 27.04.25 | *Done, to be refined* |
-| **3**  | Use Case Diagram      | Create Use Case Diagram for the prototype                                                                               | Petr Lavrenov      | 04.05.25 |     *In process*      |
+| **3**  | Use Case Diagram      | Create Use Case Diagram for the prototype                                                                               | Petr Lavrenov      | 04.05.25 |        *Done*         |
 | **4**  | Structure Diagram     | Create Structure diagram for the prototype                                                                              | Petr Lavrenov      | 04.05.25 |        *Done*         |
-| **5**  | State Machine Diagram | Create State Machine Diagram for the prototype                                                                          | Petr Lavrenov      | 04.05.25 |     *In process*      |
+| **5**  | State Machine Diagram | Create State Machine Diagram for the prototype                                                                          | Petr Lavrenov      | 04.05.25 | *Done, to be refined* |
 | **6**  | Tinkercad Simulation  | Create Tinkercad simulation of the prototype                                                                            | Oleg Kelner        | 04.05.25 |        *Done*         |
-| **7**  | Assembling            | Assemble the prototype: <br/> - fix 3D-printed parts on the chassis<br/> - solder power wires<br/> - connect everything | Oleg Kelner        | 10.05.25 |     *In process*      |
-| **8**  | 3D-modelling          | Model and submit parts for 3D-printing: <br/> - ultrasonic holder<br/> - RGB-sensor holder                              | Oleg Kelner        | 05.05.25 |     *Not started*     |
+| **7**  | Assembling            | Assemble the prototype: <br/> - fix 3D-printed parts on the chassis<br/> - solder power wires<br/> - connect everything | Oleg Kelner        | 08.05.25 |     *Almost done*     |
+| **8**  | 3D-modelling          | Model and submit parts for 3D-printing: <br/> - ultrasonic holder<br/> - RGB-sensor holder<br/> - servo holder          | Oleg Kelner        | 05.05.25 |     *Not started*     |
 | **9**  | Programming           | *to be refined*                                                                                                         | Oleg Kelner        | 15.05.25 |     *Not started*     |
 | **10** | Sequence Diagram      | Create Sequence Diagram for the prototype                                                                               | Turja Barua        | 04.05.25 |     *Not started*     |
 
