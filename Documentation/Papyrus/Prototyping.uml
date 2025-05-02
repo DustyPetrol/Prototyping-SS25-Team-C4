@@ -249,6 +249,7 @@
           <ownedEnd xmi:type="uml:Property" xmi:id="_VTNwgyXdEfClJ_1O2Xa4LA" name="objectcolour2" type="_NLmwMCXdEfClJ_1O2Xa4LA" association="_VTNJcCXdEfClJ_1O2Xa4LA"/>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_wV_sQCXbEfClJ_1O2Xa4LA" name="Sequence"/>
       <packagedElement xmi:type="uml:Package" xmi:id="_ddh5sCJzEfCrcavl5iePQg" name="StateMachines">
         <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="ModelCarStateMachine" specification="_K8TJYCNTEfCveNFJIopQxg">
           <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_UKqKsCJ0EfCrcavl5iePQg" name="TurnOn" kind="entryPoint"/>
@@ -308,7 +309,6 @@
           </region>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_wV_sQCXbEfClJ_1O2Xa4LA" name="Sequence"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_O-fjABkMEfCrYs1QZAix4Q" name="Requirements ">
       <packagedElement xmi:type="uml:Class" xmi:id="_7C9MMBkMEfCrYs1QZAix4Q" name="Model Car reqs">
