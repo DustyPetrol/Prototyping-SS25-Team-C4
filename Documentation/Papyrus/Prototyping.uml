@@ -108,6 +108,12 @@
         <generalization xmi:type="uml:Generalization" xmi:id="_52oWECAqEfCVXNPQYBHXXQ" general="_S8JbQCAmEfCVXNPQYBHXXQ"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_K8TJYCNTEfCveNFJIopQxg" name="Software Abstraction or smth" method="_Ob5GgCJzEfCrcavl5iePQg"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hBvCMCgDEfCWjeCrn96tjw" name="ModelCar" isActive="true">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_l6lngCgDEfCWjeCrn96tjw" name="RecogniseObject" isActive="true"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_mWYLoCgDEfCWjeCrn96tjw" name="AvoidObject" visibility="public" isActive="true"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_lmC64CgDEfCWjeCrn96tjw" name="FollowLine" isActive="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_o-2CsCgDEfCWjeCrn96tjw" name="TurnOn" isActive="true"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UuoVoBkMEfCrYs1QZAix4Q" name="Behaviour ">
       <ownedComment xmi:type="uml:Comment" xmi:id="_vtGogCJzEfCrcavl5iePQg">
@@ -567,4 +573,9 @@
   <PortsAndFlows:ItemFlow xmi:id="_Nl-1ICf4EfC0rvBl_8MHPA" base_InformationFlow="_Nl8_8Cf4EfC0rvBl_8MHPA"/>
   <PortsAndFlows:ItemFlow xmi:id="_cQ9b0Cf4EfC0rvBl_8MHPA" base_InformationFlow="_cQ5KYCf4EfC0rvBl_8MHPA"/>
   <PortsAndFlows:ItemFlow xmi:id="_c86i4Cf4EfC0rvBl_8MHPA" base_InformationFlow="_c824gCf4EfC0rvBl_8MHPA"/>
+  <Blocks:Block xmi:id="_hCAH8CgDEfCWjeCrn96tjw" base_Class="_hBvCMCgDEfCWjeCrn96tjw"/>
+  <Blocks:Block xmi:id="_lmK2sCgDEfCWjeCrn96tjw" base_Class="_lmC64CgDEfCWjeCrn96tjw"/>
+  <Blocks:Block xmi:id="_l6qgACgDEfCWjeCrn96tjw" base_Class="_l6lngCgDEfCWjeCrn96tjw"/>
+  <Blocks:Block xmi:id="_mWaA2igDEfCWjeCrn96tjw" base_Class="_mWYLoCgDEfCWjeCrn96tjw"/>
+  <Blocks:Block xmi:id="_o-67MCgDEfCWjeCrn96tjw" base_Class="_o-2CsCgDEfCWjeCrn96tjw"/>
 </xmi:XMI>
