@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ConstraintBlocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ConstraintBlocks" xmlns:ModelElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements" xmlns:PortsAndFlows="http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ConstraintBlocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/ModelElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/PortsAndFlows http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
   <uml:Model xmi:id="_GV4ucBkMEfCrYs1QZAix4Q" name="Prototyping">
     <ownedComment xmi:type="uml:Comment" xmi:id="_fi2qoCJ3EfCrcavl5iePQg">
       <body>SysML Project Diagrams</body>
@@ -367,7 +367,40 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_JcmDUCdHEfCu4suVTld_PQ" name="Wiring"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_LFX_ACdHEfCu4suVTld_PQ" name="Refine15" client="_rmN0wBk1EfCrYs1QZAix4Q" supplier="_JcmDUCdHEfCu4suVTld_PQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_eFiaoBkMEfCrYs1QZAix4Q" name="Parametric"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_eFiaoBkMEfCrYs1QZAix4Q" name="Parametric">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Nj48sCfzEfC0rvBl_8MHPA" name="Battery in operation">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_X23BUCfzEfC0rvBl_8MHPA" name="Voltage" visibility="public" type="_ZrRlQCfzEfC0rvBl_8MHPA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B0tRYCf2EfC0rvBl_8MHPA" value="1"/>
+          <upperValue xmi:type="uml:LiteralInteger" xmi:id="_DDy6sCf2EfC0rvBl_8MHPA" value="1"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="_gSkCUCfzEfC0rvBl_8MHPA" name="V" value="11.0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lk6FsCfzEfC0rvBl_8MHPA" name="Current" visibility="public" type="_nDzsoCfzEfC0rvBl_8MHPA" aggregation="shared">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FUDtICf2EfC0rvBl_8MHPA" value="1"/>
+          <upperValue xmi:type="uml:LiteralInteger" xmi:id="_G1VSoCf2EfC0rvBl_8MHPA" value="1"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="_p8B28CfzEfC0rvBl_8MHPA" name="A" value="1.0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ycc_4CfzEfC0rvBl_8MHPA" name="ToMicrocontroller" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_y9WGcCfzEfC0rvBl_8MHPA" name="ToMicrocontroller" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_zXlycCfzEfC0rvBl_8MHPA" name="ToDriver" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ztzTACfzEfC0rvBl_8MHPA" name="To" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZrRlQCfzEfC0rvBl_8MHPA" name="Voltage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nDzsoCfzEfC0rvBl_8MHPA" name="Current"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_u3j80CfzEfC0rvBl_8MHPA" name="Battery"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_PZn50Cf0EfC0rvBl_8MHPA" name="V" informationSource="_X23BUCfzEfC0rvBl_8MHPA" informationTarget="_y9WGcCfzEfC0rvBl_8MHPA"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WgX6ECf0EfC0rvBl_8MHPA" name="A" informationSource="_lk6FsCfzEfC0rvBl_8MHPA" informationTarget="_ycc_4CfzEfC0rvBl_8MHPA"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_cEGoYCf0EfC0rvBl_8MHPA" name="V" informationSource="_X23BUCfzEfC0rvBl_8MHPA" informationTarget="_zXlycCfzEfC0rvBl_8MHPA"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_gYZIECf0EfC0rvBl_8MHPA" name="A" informationSource="_lk6FsCfzEfC0rvBl_8MHPA" informationTarget="_ztzTACfzEfC0rvBl_8MHPA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="__SrO8Cf0EfC0rvBl_8MHPA" name="Block1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_MMpLACf1EfC0rvBl_8MHPA" name="Battery Charging">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cLNggCf1EfC0rvBl_8MHPA" name="Voltage" type="_ZrRlQCfzEfC0rvBl_8MHPA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hqsA8Cf1EfC0rvBl_8MHPA" name="Current" type="_nDzsoCfzEfC0rvBl_8MHPA"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_pJWx8Cf1EfC0rvBl_8MHPA" name="FromChargerVoltage" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_tpacwCf1EfC0rvBl_8MHPA" name="FromChargerCurrent" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_0ICGACf1EfC0rvBl_8MHPA" name="V" informationSource="_cLNggCf1EfC0rvBl_8MHPA" informationTarget="_pJWx8Cf1EfC0rvBl_8MHPA"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_2-4XUCf1EfC0rvBl_8MHPA" name="A" informationSource="_hqsA8Cf1EfC0rvBl_8MHPA" informationTarget="_tpacwCf1EfC0rvBl_8MHPA"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GXVf8BkMEfCrYs1QZAix4Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GXZKUBkMEfCrYs1QZAix4Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
@@ -499,4 +532,16 @@
   <Requirements:Requirement xmi:id="_JcptsCdHEfCu4suVTld_PQ" base_NamedElement="_JcmDUCdHEfCu4suVTld_PQ" id="R1.1.02.1" text="The wiring shallhave soldered components" base_Class="_JcmDUCdHEfCu4suVTld_PQ"/>
   <Requirements:Refine xmi:id="_LFbCUCdHEfCu4suVTld_PQ" base_DirectedRelationship="_LFX_ACdHEfCu4suVTld_PQ" base_Abstraction="_LFX_ACdHEfCu4suVTld_PQ"/>
   <ModelElements:Rationale xmi:id="_NYqPACfxEfCqKv3EvBUcHA" base_Comment="_NYWF8CfxEfCqKv3EvBUcHA"/>
+  <Blocks:Block xmi:id="_NkL3oCfzEfC0rvBl_8MHPA" base_Class="_Nj48sCfzEfC0rvBl_8MHPA"/>
+  <ConstraintBlocks:ConstraintBlock xmi:id="_ZrXr4CfzEfC0rvBl_8MHPA" base_Class="_ZrRlQCfzEfC0rvBl_8MHPA"/>
+  <ConstraintBlocks:ConstraintBlock xmi:id="_nD3XACfzEfC0rvBl_8MHPA" base_Class="_nDzsoCfzEfC0rvBl_8MHPA"/>
+  <Blocks:Block xmi:id="_u3oOQCfzEfC0rvBl_8MHPA" base_Class="_u3j80CfzEfC0rvBl_8MHPA"/>
+  <PortsAndFlows:ItemFlow xmi:id="_PZxDwCf0EfC0rvBl_8MHPA" base_InformationFlow="_PZn50Cf0EfC0rvBl_8MHPA" itemProperty="_y9WGcCfzEfC0rvBl_8MHPA"/>
+  <PortsAndFlows:ItemFlow xmi:id="_WgdZoCf0EfC0rvBl_8MHPA" base_InformationFlow="_WgX6ECf0EfC0rvBl_8MHPA" itemProperty="_ycc_4CfzEfC0rvBl_8MHPA"/>
+  <PortsAndFlows:ItemFlow xmi:id="_cELg4Cf0EfC0rvBl_8MHPA" base_InformationFlow="_cEGoYCf0EfC0rvBl_8MHPA" itemProperty="_zXlycCfzEfC0rvBl_8MHPA"/>
+  <PortsAndFlows:ItemFlow xmi:id="_gYbkUCf0EfC0rvBl_8MHPA" base_InformationFlow="_gYZIECf0EfC0rvBl_8MHPA" itemProperty="_ycc_4CfzEfC0rvBl_8MHPA"/>
+  <Blocks:Block xmi:id="__Su5UCf0EfC0rvBl_8MHPA" base_Class="__SrO8Cf0EfC0rvBl_8MHPA"/>
+  <Blocks:Block xmi:id="_MMs1YCf1EfC0rvBl_8MHPA" base_Class="_MMpLACf1EfC0rvBl_8MHPA"/>
+  <PortsAndFlows:ItemFlow xmi:id="_0IGXcCf1EfC0rvBl_8MHPA" base_InformationFlow="_0ICGACf1EfC0rvBl_8MHPA" itemProperty="_zXlycCfzEfC0rvBl_8MHPA"/>
+  <PortsAndFlows:ItemFlow xmi:id="_2-8owCf1EfC0rvBl_8MHPA" base_InformationFlow="_2-4XUCf1EfC0rvBl_8MHPA" itemProperty="_ycc_4CfzEfC0rvBl_8MHPA"/>
 </xmi:XMI>
