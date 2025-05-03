@@ -254,6 +254,9 @@
         <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ob5GgCJzEfCrcavl5iePQg" name="ModelCarStateMachine" specification="_K8TJYCNTEfCveNFJIopQxg">
           <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_UKqKsCJ0EfCrcavl5iePQg" name="TurnOn" kind="entryPoint"/>
           <region xmi:type="uml:Region" xmi:id="_PDTEwCJzEfCrcavl5iePQg" name="Region1">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_NYWF8CfxEfCqKv3EvBUcHA">
+              <body>No need to leave line to push</body>
+            </ownedComment>
             <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="ObjectAvoided" kind="local" source="__tZoACXDEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_BYp84CJ3EfCrcavl5iePQg" source="_UKqKsCJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_FzXNoCJ3EfCrcavl5iePQg" name="DetectObject" source="_aixjUCJ0EfCrcavl5iePQg" target="_7AwaECXAEfCvmdPbc739SQ"/>
@@ -495,4 +498,5 @@
   <Requirements:DeriveReqt xmi:id="_LeJoMCdDEfCu4suVTld_PQ" base_DirectedRelationship="_LeF90CdDEfCu4suVTld_PQ" base_Abstraction="_LeF90CdDEfCu4suVTld_PQ"/>
   <Requirements:Requirement xmi:id="_JcptsCdHEfCu4suVTld_PQ" base_NamedElement="_JcmDUCdHEfCu4suVTld_PQ" id="R1.1.02.1" text="The wiring shallhave soldered components" base_Class="_JcmDUCdHEfCu4suVTld_PQ"/>
   <Requirements:Refine xmi:id="_LFbCUCdHEfCu4suVTld_PQ" base_DirectedRelationship="_LFX_ACdHEfCu4suVTld_PQ" base_Abstraction="_LFX_ACdHEfCu4suVTld_PQ"/>
+  <ModelElements:Rationale xmi:id="_NYqPACfxEfCqKv3EvBUcHA" base_Comment="_NYWF8CfxEfCqKv3EvBUcHA"/>
 </xmi:XMI>
