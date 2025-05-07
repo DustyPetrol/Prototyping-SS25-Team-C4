@@ -56,11 +56,15 @@ void motorRight(short speed){
 void loop() {
   bool left = digitalRead(IR_LEFT);
   bool right = digitalRead(IR_RIGHT);
-  motorLeft(120);
-  motorRight(120);
-  if(left)
-    motorLeft(30);
-   if(right)
-    motorRight(30);
+  motorLeft(60);
+  motorRight(60);
+  if(left && !right){
+    motorLeft(0);
+    motorRight(60);
+  }
+    if(!left && right){
+    motorLeft(60);
+    motorRight(0);
+  }
   delay(1);
 }
