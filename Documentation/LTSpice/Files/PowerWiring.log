@@ -1,0 +1,21 @@
+LTspice 24.1.8 for Windows
+Circuit: C:\Users\petr.lavrenov\Documents\GitHub\Prototyping-SS25-Team-C4\Documentation\LTSpice\Files\PowerWiring.net
+Start Time: Wed May 14 15:45:35 2025
+C:\Users\petr.lavrenov\Documents\GitHub\Prototyping-SS25-Team-C4\Documentation\LTSpice\Files\PowerWiring.net(4): Undefined model "r".
+R1 N001 0 R
+          ^
+C:\Users\petr.lavrenov\Documents\GitHub\Prototyping-SS25-Team-C4\Documentation\LTSpice\Files\PowerWiring.net(6): Undefined model "r".
+R§Driver 0 N001 R
+                ^
+C:\Users\petr.lavrenov\Documents\GitHub\Prototyping-SS25-Team-C4\Documentation\LTSpice\Files\PowerWiring.net(7): Undefined model "r".
+R§IRSensor 0 N002 R
+                  ^
+C:\Users\petr.lavrenov\Documents\GitHub\Prototyping-SS25-Team-C4\Documentation\LTSpice\Files\PowerWiring.net(8): Undefined model "r".
+R§IRSensor1 0 N002 R
+                   ^
+C:\Users\petr.lavrenov\Documents\GitHub\Prototyping-SS25-Team-C4\Documentation\LTSpice\Files\PowerWiring.net(9): Undefined model "r".
+R§Servo 0 N002 R
+               ^
+C:\Users\petr.lavrenov\Documents\GitHub\Prototyping-SS25-Team-C4\Documentation\LTSpice\Files\PowerWiring.net(10): Undefined model "r".
+R§UltraSonicSensor 0 N002 R
+                          ^
