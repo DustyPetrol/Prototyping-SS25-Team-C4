@@ -31,6 +31,13 @@ void Robot::init() {
 void Robot::run() {
   switch (state) {
     case FOLLOW_LINE:
+	  if(checkDistance()) {
+        matrix.loadFrame(stopSign);
+        motorLeft(0);
+        motorRight(0);
+        state = INSPECT_OBSTACLE;
+        break;
+      }
       followLine();
       break;
     case INSPECT_OBSTACLE:
@@ -44,14 +51,6 @@ void Robot::run() {
 }
 
 void Robot::followLine() {
-  long distance = measureDistance();
-
-  if (distance < 20) {  // Obstacle detection (30cm threshold)
-    motorLeft(0);
-    motorRight(0);
-    matrix.loadFrame(stopSign);
-    delay(10);
-  } else {
     bool left = digitalRead(IR_LEFT);
     bool right = digitalRead(IR_RIGHT);
 
@@ -78,7 +77,6 @@ void Robot::followLine() {
       motorRight(100);
       myservo.write(90);
       matrix.loadFrame(forwardSign);
-    }
   }
 }
 
@@ -120,7 +118,7 @@ void Robot::motorRight(short speed) {
   analogWrite(ENB, abs(speed));
 }
 
-long Robot::measureDistance() {
+bool Robot::checkDistance() {
   // Trigger ultrasonic pulse
   digitalWrite(TRIGGER_PIN, LOW);
   delayMicroseconds(2);
@@ -131,6 +129,5 @@ long Robot::measureDistance() {
   // Measure echo duration
   long duration = pulseIn(ECHO_PIN, HIGH);
 
-  // Calculate distance in cm
-  return duration * 0.034 / 2;
+  return distance <= byte(duration * 0.034 / 2); // Calculate distance in cm
 }
