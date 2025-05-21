@@ -1,14 +1,14 @@
+#include <sys/_stdint.h>
 //
 // Created by eggcitedraccoon on 5/14/25.
 //
 #include "Robot.h"
 
-Robot::Robot(uint8_t ENA, uint8_t ENB, uint8_t IN1, uint8_t IN2,
-             uint8_t IN3, uint8_t IN4, uint8_t IR_LEFT, uint8_t IR_RIGHT,
-             uint8_t SERVO, uint8_t TRIGGER_PIN, uint8_t ECHO_PIN)
-  : ENA(ENA), ENB(ENB), IN1(IN1), IN2(IN2),
-    IN3(IN3), IN4(IN4), IR_LEFT(IR_LEFT), IR_RIGHT(IR_RIGHT),
-    SERVO(SERVO), TRIGGER_PIN(TRIGGER_PIN), ECHO_PIN(ECHO_PIN), state(FOLLOW_LINE) {}
+Robot::Robot(RobotArgs args)
+  : ENA(args.ENA), ENB(args.ENB), IN1(args.IN1), IN2(args.IN2),
+    IN3(args.IN3), IN4(args.IN4), IR_LEFT(args.IR_LEFT), IR_RIGHT(args.IR_RIGHT),
+    SERVO(args.SERVO), TRIGGER_PIN(args.TRIGGER_PIN), ECHO_PIN(args.ECHO_PIN), state(args.initState),
+    S0(args.S0), S1(args.S1), S2(args.S2), S3(args.S3), sensorOut(args.sensorOut) {}
 
 void Robot::init() {
   pinMode(ENA, OUTPUT);
@@ -26,12 +26,14 @@ void Robot::init() {
 
   myservo.attach(SERVO);
   matrix.begin();
+
+  timerError = millis();
 }
 
 void Robot::run() {
   switch (state) {
     case FOLLOW_LINE:
-	  if(checkDistance()) {
+      if (checkDistance()) {
         matrix.loadFrame(stopSign);
         motorLeft(0);
         motorRight(0);
@@ -51,32 +53,36 @@ void Robot::run() {
 }
 
 void Robot::followLine() {
-    bool left = digitalRead(IR_LEFT);
-    bool right = digitalRead(IR_RIGHT);
+  bool left = digitalRead(IR_LEFT);
+  bool right = digitalRead(IR_RIGHT);
 
-    if (left && !right) {
-      motorLeft(-100);
-      motorRight(170);
-      myservo.write(135);
-      matrix.loadFrame(leftSign);
-    }
-    if (!left && right) {
-      motorLeft(170);
-      motorRight(-100);
-      myservo.write(45);
-      matrix.loadFrame(rightSign);
-    }
-    if (!left && !right) {
-      motorLeft(150);
-      motorRight(150);
-      myservo.write(90);
-      matrix.loadFrame(forwardSign);
-    }
-    if (left && right) {
-      motorLeft(100);
-      motorRight(100);
-      myservo.write(90);
-      matrix.loadFrame(forwardSign);
+  if (left && !right) {
+    uint8_t speed = int(k * abs(millis() - timerError) / 100);
+    motorLeft(100);
+    motorRight(120 + speed);
+    myservo.write(135);
+    matrix.loadFrame(leftSign);
+  }
+  if (!left && right) {
+    uint8_t speed = int(k * abs(millis() - timerError) / 100);
+    motorLeft(120 + speed);
+    motorRight(100);
+    myservo.write(45);
+    matrix.loadFrame(rightSign);
+  }
+  if (!left && !right) {
+    motorLeft(100);
+    motorRight(100);
+    myservo.write(90);
+    timerError = millis();
+    matrix.loadFrame(forwardSign);
+  }
+  if (left && right) {
+    motorLeft(100);
+    motorRight(100);
+    myservo.write(90);
+    timerError = millis();
+    matrix.loadFrame(forwardSign);
   }
 }
 
@@ -84,6 +90,8 @@ void Robot::avoidObstacle() {
 }
 
 void Robot::inspectObstacle() {
+  if (!checkDistance())
+    state = FOLLOW_LINE;
 }
 
 void Robot::motorLeft(short speed) {
@@ -129,5 +137,9 @@ bool Robot::checkDistance() {
   // Measure echo duration
   long duration = pulseIn(ECHO_PIN, HIGH);
 
-  return distance <= byte(duration * 0.034 / 2); // Calculate distance in cm
+  return distance > byte(duration * 0.034 / 2);  // Calculate distance in cm
+}
+
+Colors Robot::checkColors(){
+  
 }
