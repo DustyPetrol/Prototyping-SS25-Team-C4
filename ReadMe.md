@@ -13,7 +13,7 @@
 | **7**  | Assembling            | Assemble the prototype: <br/> - fix 3D-printed parts on the chassis<br/> - solder power wires<br/> - connect everything | [Oleg Kelner](https://github.com/eggcitedraccoon) | 08.05.25 | ✅ *Done*                |
 | **8**  | 3D-modelling          | Model and submit parts for 3D-printing: <br/> - ultrasonic holder<br/> - servo holder                                   | [Oleg Kelner](https://github.com/eggcitedraccoon) | 05.05.25 | ✅ *Done*                |
 | **9**  | Programming           | Make it follow the line                                                                                                 | [Oleg Kelner](https://github.com/eggcitedraccoon) | 15.05.25 | ✅ *Done*                |
-| **10** | Sequence Diagram      | Create Sequence Diagram for the prototype                                                                               | [Turja Barua](https://github.com/TurjabaruaGit)   | 04.05.25 | 🔄 *In process*         |
+| **10** | Sequence Diagram      | Create Sequence Diagram for the prototype                                                                               | [Turja Barua](https://github.com/TurjabaruaGit)   | 04.05.25 | ✅ *Done*                |
 | **11** | 3D-modelling          | Model and submit parts for 3D-printing:<br/> - RGB-sensor holder                                                        | [Oleg Kelner](https://github.com/eggcitedraccoon) | 21.05.25 | ⚠️ *Not started*        |
 | **12** | Programming           | Make it process the obstacle                                                                                            | [Oleg Kelner](https://github.com/eggcitedraccoon) | 21.05.25 | 🔄 *In process*         |
 
