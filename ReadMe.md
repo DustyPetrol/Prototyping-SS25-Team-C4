@@ -65,3 +65,5 @@ Software/
 ## Additional materials
 
 Useful **[Led Matrix Editor](https://ledmatrix-editor.arduino.cc/)**
+
+**[Color sensor documentation](https://cdn-reichelt.de/documents/datenblatt/A300/SEN-COLOR_MANUAL_2021-08-18.pdf)**
