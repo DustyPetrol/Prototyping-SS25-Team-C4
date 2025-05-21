@@ -1,7 +1,3 @@
-//
-// Created by eggcitedraccoon on 5/14/25.
-//
-
 #ifndef ROBOT_H
 #define ROBOT_H
 
@@ -16,7 +12,7 @@ enum RobotState {
   AVOID_OBSTACLE
 };
 
-enum Colors{
+enum Colors {
   RED,
   GREEN,
   BLUE
@@ -32,8 +28,8 @@ private:
   uint8_t TRIGGER_PIN, ECHO_PIN;
   uint8_t S0, S1, S2, S3, sensorOut;
   uint32_t timerError;
-  uint8_t k = 2;
-  byte distance = 15;
+  uint8_t k;
+  uint8_t distance;
   void followLine();
   void avoidObstacle();
   void inspectObstacle();
@@ -42,7 +38,25 @@ private:
   bool checkDistance();
   Colors checkColors();
 public:
-  Robot(RobotArgs args);
+  Robot(uint8_t ENA,
+        uint8_t ENB,
+        uint8_t IN1,
+        uint8_t IN2,
+        uint8_t IN3,
+        uint8_t IN4,
+        uint8_t IR_LEFT,
+        uint8_t IR_RIGHT,
+        uint8_t SERVO,
+        uint8_t TRIGGER_PIN,
+        uint8_t ECHO_PIN,
+        uint8_t S0,
+        uint8_t S1,
+        uint8_t S2,
+        uint8_t S3,
+        uint8_t sensorOut,
+        RobotState initState,
+          uint8_t k,
+  uint8_t distance);
   void init();
   void run();
 };

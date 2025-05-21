@@ -4,11 +4,29 @@
 //
 #include "Robot.h"
 
-Robot::Robot(RobotArgs args)
-  : ENA(args.ENA), ENB(args.ENB), IN1(args.IN1), IN2(args.IN2),
-    IN3(args.IN3), IN4(args.IN4), IR_LEFT(args.IR_LEFT), IR_RIGHT(args.IR_RIGHT),
-    SERVO(args.SERVO), TRIGGER_PIN(args.TRIGGER_PIN), ECHO_PIN(args.ECHO_PIN), state(args.initState),
-    S0(args.S0), S1(args.S1), S2(args.S2), S3(args.S3), sensorOut(args.sensorOut) {}
+Robot::Robot(uint8_t ENA,
+             uint8_t ENB,
+             uint8_t IN1,
+             uint8_t IN2,
+             uint8_t IN3,
+             uint8_t IN4,
+             uint8_t IR_LEFT,
+             uint8_t IR_RIGHT,
+             uint8_t SERVO,
+             uint8_t TRIGGER_PIN,
+             uint8_t ECHO_PIN,
+             uint8_t S0,
+             uint8_t S1,
+             uint8_t S2,
+             uint8_t S3,
+             uint8_t sensorOut,
+             RobotState initState,
+             uint8_t k,
+             uint8_t distance)
+  : ENA(ENA), ENB(ENB), IN1(IN1), IN2(IN2),
+    IN3(IN3), IN4(IN4), IR_LEFT(IR_LEFT), IR_RIGHT(IR_RIGHT),
+    SERVO(SERVO), TRIGGER_PIN(TRIGGER_PIN), ECHO_PIN(ECHO_PIN), state(initState),
+    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance) {}
 
 void Robot::init() {
   pinMode(ENA, OUTPUT);
@@ -23,6 +41,15 @@ void Robot::init() {
 
   pinMode(TRIGGER_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
+
+  pinMode(S0, OUTPUT);
+  pinMode(S1, OUTPUT);
+  pinMode(S2, OUTPUT);
+  pinMode(S3, OUTPUT);
+  pinMode(sensorOut, INPUT);
+
+  digitalWrite(S0, HIGH);
+  digitalWrite(S1, HIGH);
 
   myservo.attach(SERVO);
   matrix.begin();
@@ -58,15 +85,15 @@ void Robot::followLine() {
 
   if (left && !right) {
     uint8_t speed = int(k * abs(millis() - timerError) / 100);
-    motorLeft(100);
-    motorRight(120 + speed);
+    motorLeft(0);
+    motorRight(170 + speed);
     myservo.write(135);
     matrix.loadFrame(leftSign);
   }
   if (!left && right) {
     uint8_t speed = int(k * abs(millis() - timerError) / 100);
-    motorLeft(120 + speed);
-    motorRight(100);
+    motorLeft(170 + speed);
+    motorRight(0);
     myservo.write(45);
     matrix.loadFrame(rightSign);
   }
@@ -140,6 +167,5 @@ bool Robot::checkDistance() {
   return distance > byte(duration * 0.034 / 2);  // Calculate distance in cm
 }
 
-Colors Robot::checkColors(){
-  
+Colors Robot::checkColors() {
 }

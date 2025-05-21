@@ -1,26 +1,25 @@
 #include "Robot.h"
+#define ENA 5
+#define ENB 10
+#define IN1 13
+#define IN2 12
+#define IN3 9
+#define IN4 8
+#define IR_LEFT 7
+#define IR_RIGHT 6
+#define SERVO 11
+#define TRIGGER_PIN 2
+#define ECHO_PIN 3
+#define S0 0
+#define S1 0
+#define S2 0
+#define S3 0
+#define sensorOut 0
+#define initState FOLLOW_LINE
+#define k 10
+#define distance 15
 
-struct RobotArgs {
-  uint8_t ENA = 5;
-  uint8_t ENB = 10;
-  uint8_t IN1 = 13;
-  uint8_t IN2 = 12;
-  uint8_t IN3 = 9;
-  uint8_t IN4 = 8;
-  uint8_t IR_LEFT = 7;
-  uint8_t IR_RIGHT = 6;
-  uint8_t SERVO = 11;
-  uint8_t TRIGGER_PIN = 2;
-  uint8_t ECHO_PIN = 3;
-  uint8_t S0 = 0;
-  uint8_t S1 = 0;
-  uint8_t S2 = 0;
-  uint8_t S3 = 0;
-  uint8_t sensorOut = 0;
-  RobotState initState = FOLLOW_LINE;
-};
-
-Robot robot({});
+Robot robot(ENA, ENB, IN1, IN2, IN3, IN4, IR_LEFT, IR_RIGHT, SERVO, TRIGGER_PIN, ECHO_PIN, S0, S1, S2, S3, sensorOut, initState, k, distance);
 
 void setup() {
   // put your setup code here, to run once:
