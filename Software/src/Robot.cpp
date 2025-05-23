@@ -124,32 +124,32 @@ void Robot::followLine() {
 
   // Left sensor on line, right sensor off line - turn left
   if (left && !right) {
-    //uint8_t speed = int(k * abs(millis() - timerError) / 100);
-    motorLeft(-50);  // Left motor backward
-    motorRight(50);  // Right motor forward
+    uint8_t speed = int( k * abs(millis() - timerError))/1000;
+    motorLeft(60-speed*200);  // Left motor backward
+    motorRight(50+abs(150-speed));  // Right motor forward
     myservo.write(135);  // Turn servo left
     matrix.loadFrame(leftSign);  // Display left arrow
   }
   // Right sensor on line, left sensor off line - turn right
   if (!left && right) {
-    //uint8_t speed = int(k * abs(millis() - timerError) / 100);
-    motorLeft(50);   // Left motor forward
-    motorRight(-50); // Right motor backward
+    uint8_t speed = int( k * abs(millis() - timerError) )/1000;
+    motorLeft(50+abs(150-speed));   // Left motor forward
+    motorRight(60-speed*200); // Right motor backward
     myservo.write(45);  // Turn servo right
     matrix.loadFrame(rightSign);  // Display right arrow
   }
   // Both sensors off line - go straight
   if (!left && !right) {
-    motorLeft(50);   // Left motor forward
-    motorRight(50);  // Right motor forward
+    motorLeft(150);   // Left motor forward
+    motorRight(150);  // Right motor forward
     myservo.write(90);  // Center servo
     timerError = millis();  // Reset error timer
     matrix.loadFrame(forwardSign);  // Display forward arrow
   }
   // Both sensors on line - go straight
   if (left && right) {
-    motorLeft(50);   // Left motor forward
-    motorRight(50);  // Right motor forward
+    motorLeft(150);   // Left motor forward
+    motorRight(150);  // Right motor forward
     myservo.write(90);  // Center servo
     timerError = millis();  // Reset error timer
     matrix.loadFrame(forwardSign);  // Display forward arrow

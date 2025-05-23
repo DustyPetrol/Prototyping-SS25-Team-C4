@@ -4,7 +4,6 @@
  * @author Group C4
  * @date 2025
  */
-
 #include "Robot.h"
 
 // Motor control pins
@@ -31,7 +30,7 @@
 
 // Robot parameters
 #define initState FOLLOW_LINE /**< Initial state of the robot */
-#define k 10                  /**< Proportional control constant */
+#define k 90                  /**< Proportional control constant */
 #define distance 15           /**< Threshold distance for obstacle detection in cm */
 
 /**
