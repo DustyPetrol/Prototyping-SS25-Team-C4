@@ -1,7 +1,3 @@
-#include <sys/_stdint.h>
-//
-// Created by eggcitedraccoon on 5/14/25.
-//
 #include "Robot.h"
 
 Robot::Robot(uint8_t ENA,
@@ -84,29 +80,29 @@ void Robot::followLine() {
   bool right = digitalRead(IR_RIGHT);
 
   if (left && !right) {
-    uint8_t speed = int(k * abs(millis() - timerError) / 100);
-    motorLeft(0);
-    motorRight(170 + speed);
+    //uint8_t speed = int(k * abs(millis() - timerError) / 100);
+    motorLeft(-50);
+    motorRight(50);
     myservo.write(135);
     matrix.loadFrame(leftSign);
   }
   if (!left && right) {
-    uint8_t speed = int(k * abs(millis() - timerError) / 100);
-    motorLeft(170 + speed);
-    motorRight(0);
+    //uint8_t speed = int(k * abs(millis() - timerError) / 100);
+    motorLeft(50);
+    motorRight(-50);
     myservo.write(45);
     matrix.loadFrame(rightSign);
   }
   if (!left && !right) {
-    motorLeft(100);
-    motorRight(100);
+    motorLeft(50);
+    motorRight(50);
     myservo.write(90);
     timerError = millis();
     matrix.loadFrame(forwardSign);
   }
   if (left && right) {
-    motorLeft(100);
-    motorRight(100);
+    motorLeft(50);
+    motorRight(50);
     myservo.write(90);
     timerError = millis();
     matrix.loadFrame(forwardSign);
@@ -122,33 +118,29 @@ void Robot::inspectObstacle() {
 }
 
 void Robot::motorLeft(short speed) {
-  if (speed > 10) {
+  if (speed > 0) {
     digitalWrite(IN1, HIGH);
     digitalWrite(IN2, LOW);
-  } else if (speed < -10) {
+  } else if (speed < 0) {
     digitalWrite(IN1, LOW);
     digitalWrite(IN2, HIGH);
   } else {
     digitalWrite(IN1, LOW);
     digitalWrite(IN2, LOW);
-    analogWrite(ENA, 0);
-    return;
   }
   analogWrite(ENA, abs(speed));
 }
 
 void Robot::motorRight(short speed) {
-  if (speed > 10) {
+  if (speed > 0) {
     digitalWrite(IN3, LOW);
     digitalWrite(IN4, HIGH);
-  } else if (speed < -10) {
+  } else if (speed < 0) {
     digitalWrite(IN3, HIGH);
     digitalWrite(IN4, LOW);
   } else {
     digitalWrite(IN3, LOW);
     digitalWrite(IN4, LOW);
-    analogWrite(ENB, 0);
-    return;
   }
   analogWrite(ENB, abs(speed));
 }

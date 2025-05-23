@@ -1,5 +1,3 @@
-// #include "Robot.h"
-
 const uint32_t stopSign[] = {
 	0xf010820,
 	0x42f42f42,
