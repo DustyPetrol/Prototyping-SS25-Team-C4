@@ -1,32 +1,59 @@
-#include "Robot.h"
-#define ENA 5
-#define ENB 10
-#define IN1 13
-#define IN2 12
-#define IN3 9
-#define IN4 8
-#define IR_LEFT 7
-#define IR_RIGHT 6
-#define SERVO 11
-#define TRIGGER_PIN 2
-#define ECHO_PIN 3
-#define S0 0
-#define S1 0
-#define S2 0
-#define S3 0
-#define sensorOut 0
-#define initState FOLLOW_LINE
-#define k 10
-#define distance 15
+/**
+ * @file src.ino
+ * @brief Main Arduino sketch for line-following robot with obstacle detection
+ * @author Group C4
+ * @date 2025
+ */
 
+#include "Robot.h"
+
+// Motor control pins
+#define ENA 5         /**< Enable pin for left motor (PWM) */
+#define ENB 10        /**< Enable pin for right motor (PWM) */
+#define IN1 13        /**< Direction control pin 1 for left motor */
+#define IN2 12        /**< Direction control pin 2 for left motor */
+#define IN3 9         /**< Direction control pin 1 for right motor */
+#define IN4 8         /**< Direction control pin 2 for right motor */
+
+// Sensor pins
+#define IR_LEFT 7     /**< Left infrared sensor pin */
+#define IR_RIGHT 6    /**< Right infrared sensor pin */
+#define SERVO 11      /**< Servo motor control pin */
+#define TRIGGER_PIN 2 /**< Ultrasonic sensor trigger pin */
+#define ECHO_PIN 3    /**< Ultrasonic sensor echo pin */
+
+// Color sensor pins (not connected in current implementation)
+#define S0 0          /**< Color sensor frequency scaling selection pin S0 */
+#define S1 0          /**< Color sensor frequency scaling selection pin S1 */
+#define S2 0          /**< Color sensor photodiode selection pin S2 */
+#define S3 0          /**< Color sensor photodiode selection pin S3 */
+#define sensorOut 0   /**< Color sensor output pin */
+
+// Robot parameters
+#define initState FOLLOW_LINE /**< Initial state of the robot */
+#define k 10                  /**< Proportional control constant */
+#define distance 15           /**< Threshold distance for obstacle detection in cm */
+
+/**
+ * @brief Robot instance with all pin and parameter configurations
+ */
 Robot robot(ENA, ENB, IN1, IN2, IN3, IN4, IR_LEFT, IR_RIGHT, SERVO, TRIGGER_PIN, ECHO_PIN, S0, S1, S2, S3, sensorOut, initState, k, distance);
 
+/**
+ * @brief Setup function, runs once at startup
+ * 
+ * Initializes serial communication and robot hardware
+ */
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  robot.init();
+  Serial.begin(9600);  // Initialize serial communication
+  robot.init();        // Initialize robot hardware
 }
 
+/**
+ * @brief Main loop function, runs repeatedly
+ * 
+ * Calls the robot's run method to execute the state machine
+ */
 void loop() {
-  robot.run();
+  robot.run();  // Run the robot's state machine
 }
