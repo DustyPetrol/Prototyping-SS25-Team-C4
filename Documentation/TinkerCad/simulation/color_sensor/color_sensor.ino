@@ -80,5 +80,5 @@ void loop() {
       Serial.println("UNKNOWN");
       break;
   }
-  delay(10);
+  delay(5);
 }
