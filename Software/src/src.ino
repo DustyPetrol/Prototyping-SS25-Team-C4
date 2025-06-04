@@ -30,7 +30,7 @@
 
 // Robot parameters
 #define initState FOLLOW_LINE /**< Initial state of the robot */
-#define k 90                  /**< Proportional control constant */
+#define k 20               /**< Proportional control constant */
 #define distance 15           /**< Threshold distance for obstacle detection in cm */
 
 /**
