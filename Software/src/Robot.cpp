@@ -125,16 +125,16 @@ void Robot::followLine() {
   // Left sensor on line, right sensor off line - turn left
   if (left && !right) {
     uint8_t speed = int( k * abs(millis() - timerError))/1000;
-    motorLeft(20+abs(speed));  // Left motor backward
-    motorRight(-40-abs(speed));  // Right motor forward
+    motorLeft(40+abs(speed));  // Left motor backward
+    motorRight(20-abs(speed*speed*10));  // Right motor forward
     myservo.write(135);  // Turn servo left
     matrix.loadFrame(leftSign);  // Display left arrow
   }
   // Right sensor on line, left sensor off line - turn right, the coefficients change because no two motors are the same in this world
   if (!left && right) {
     uint8_t speed = int( k * abs(millis() - timerError) )/1000;
-    motorLeft(-40-abs(speed));   // Left motor forward
-    motorRight(20+abs(speed)); // Right motor backward
+    motorLeft(20-abs(speed*speed*10));   // Left motor forward
+    motorRight(40+abs(speed)); // Right motor backward
     myservo.write(45);  // Turn servo right
     matrix.loadFrame(rightSign);  // Display right arrow
   }
