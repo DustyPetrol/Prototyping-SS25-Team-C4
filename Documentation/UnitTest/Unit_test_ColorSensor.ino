@@ -4,7 +4,7 @@
 #define S3 8
 #define sensorOut 4
 
-// ✅ Replace these with your real sensor readings
+
 int redMin = 1300, redMax = 1800;
 int greenMin = 1400, greenMax = 1750;
 int blueMin = 1500, blueMax = 2450;
@@ -34,7 +34,7 @@ int getColorValue(int freq, int minVal, int maxVal) {
 }
 
 void loop() {
-  Serial.println("----- UNIT TEST: COLOR SENSOR -----");
+  Serial.println("UNIT TEST: COLOR SENSOR");
 
   int rFreq = readColorFreq(LOW, LOW);   // RED
   int gFreq = readColorFreq(HIGH, HIGH); // GREEN
