@@ -136,14 +136,15 @@ void Robot::followLine() {
         if (lastMotionState != motionState)
           timerError = millis();
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
-        if (speed>=30)
-         speed=30;
+        if (speed >= 30)
+          speed = 30;
         motorLeft(0);                // Left motor backward
         motorRight(-60);             // Right motor forward
         myservo.write(135);          // Turn servo left
         matrix.loadFrame(leftSign);  // Display left arrow
 
         lastMotionState = motionState;
+        break;
       }
       // Right sensor on line, left sensor off line - turn right, the coefficients change because no two motors are the same in this world
     case RIGHT:
@@ -151,28 +152,30 @@ void Robot::followLine() {
         if (lastMotionState != motionState)
           timerError = millis();
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
-        if (speed>=30)
-         speed=30;
-        motorLeft(-60);               // Left motor forward
+        if (speed >= 30)
+          speed = 30;
+        motorLeft(-60-speed);               // Left motor forward
         motorRight(0);                // Right motor backward
         myservo.write(45);            // Turn servo right
         matrix.loadFrame(rightSign);  // Display right arrow
         lastMotionState = motionState;
+        break;
       }
     // Both sensors off line - go straight
     case FORWARD:
       {
         if (lastMotionState != motionState)
           timerError = millis();
-         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
-         if (speed>=30)
-         speed=30;
+        uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
+        if (speed >= 30)
+          speed = 30;
         motorLeft(-50);                 // Left motor forward
         motorRight(-50);                // Right motor forward
         myservo.write(90);              // Center servo
         timerError = millis();          // Reset error timer
         matrix.loadFrame(forwardSign);  // Display forward arrow
         lastMotionState = motionState;
+        break;
       }
   }
 }
@@ -183,91 +186,118 @@ void Robot::followLine() {
  * Currently not implemented
  */
 void Robot::avoidObstacle() {
-  // To be implemented
+  myservo.write(0);  // Turn servo all the way right
+  timerError = millis();
+  while (millis() - timerError < 1000) {  //turning right a lil bit
+    motorLeft(-80);                     // Left motor forward
+    motorRight(0);
+  }
+  timerError = millis();
+  while (millis() - timerError < 1000) {  //going forwrd a lil bit
+    motorLeft(-60);                     // Both motor forward
+    motorRight(-60);
+  }
+  //hopefully we are off the line at this point and we continue until we see the line
+  while (digitalRead(IR_LEFT) or digitalRead(IR_RIGHT)) {
+    while (!checkDistance()) {  //gently turning left until we see an obstacle a lil bit
+      motorLeft(0);             // right motor forward
+      motorRight(-60);
+    }
+    timerError = millis();
+    while (millis() - timerError < 1000) {  //going forwrd a lil bit
+      motorLeft(-60);                     // Both motor forward
+      motorRight(-60);
+    }
+    // here comes the fucking magic, have no idea how to push in on the line.
+    while (millis() - timerError < 1000) {  //turning right a lil bit
+    motorLeft(-80);                     // Left motor forward
+    motorRight(0);
+  }
+  }
+  state = FOLLOW_LINE;
 }
-
-/**
+  /**
  * @brief Inspect detected obstacle
  * 
  * Checks if obstacle is still present, returns to line following if not
  */
-void Robot::inspectObstacle() {
-  // If obstacle is no longer detected, return to line following
-  if (!checkDistance())
-    state = FOLLOW_LINE;
-}
+  void Robot::inspectObstacle() {
+    // If obstacle is no longer detected, return to line following
+    if (!checkDistance())
+      state = FOLLOW_LINE;
+  }
 
-/**
+  /**
  * @brief Control the left motor
  * @param speed Motor speed (-100 to 100, negative for reverse)
  */
-void Robot::motorLeft(short speed) {
-  if (speed > 0) {
-    // Forward direction
-    digitalWrite(IN1, HIGH);
-    digitalWrite(IN2, LOW);
-  } else if (speed < 0) {
-    // Reverse direction
-    digitalWrite(IN1, LOW);
-    digitalWrite(IN2, HIGH);
-  } else {
-    // Stop
-    digitalWrite(IN1, LOW);
-    digitalWrite(IN2, LOW);
+  void Robot::motorLeft(short speed) {
+    if (speed > 0) {
+      // Forward direction
+      digitalWrite(IN1, HIGH);
+      digitalWrite(IN2, LOW);
+    } else if (speed < 0) {
+      // Reverse direction
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, HIGH);
+    } else {
+      // Stop
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, LOW);
+    }
+    // Set motor speed using PWM
+    analogWrite(ENA, abs(speed));
   }
-  // Set motor speed using PWM
-  analogWrite(ENA, abs(speed));
-}
 
-/**
+  /**
  * @brief Control the right motor
  * @param speed Motor speed (-100 to 100, negative for reverse)
  */
-void Robot::motorRight(short speed) {
-  if (speed > 0) {
-    // Forward direction (note: pins are reversed compared to left motor)
-    digitalWrite(IN3, LOW);
-    digitalWrite(IN4, HIGH);
-  } else if (speed < 0) {
-    // Reverse direction
-    digitalWrite(IN3, HIGH);
-    digitalWrite(IN4, LOW);
-  } else {
-    // Stop
-    digitalWrite(IN3, LOW);
-    digitalWrite(IN4, LOW);
+  void Robot::motorRight(short speed) {
+    if (speed > 0) {
+      // Forward direction (note: pins are reversed compared to left motor)
+      digitalWrite(IN3, LOW);
+      digitalWrite(IN4, HIGH);
+    } else if (speed < 0) {
+      // Reverse direction
+      digitalWrite(IN3, HIGH);
+      digitalWrite(IN4, LOW);
+    } else {
+      // Stop
+      digitalWrite(IN3, LOW);
+      digitalWrite(IN4, LOW);
+    }
+    // Set motor speed using PWM
+    analogWrite(ENB, abs(speed));
   }
-  // Set motor speed using PWM
-  analogWrite(ENB, abs(speed));
-}
 
-/**
+  /**
  * @brief Check distance to obstacle using ultrasonic sensor
  * @return true if obstacle is detected within threshold distance
  */
-bool Robot::checkDistance() {
-  // Trigger ultrasonic pulse
-  digitalWrite(TRIGGER_PIN, LOW);
-  delayMicroseconds(2);
-  digitalWrite(TRIGGER_PIN, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIGGER_PIN, LOW);
+  bool Robot::checkDistance() {
+    // Trigger ultrasonic pulse
+    digitalWrite(TRIGGER_PIN, LOW);
+    delayMicroseconds(2);
+    digitalWrite(TRIGGER_PIN, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIGGER_PIN, LOW);
 
-  // Measure echo duration
-  long duration = pulseIn(ECHO_PIN, HIGH);
+    // Measure echo duration
+    long duration = pulseIn(ECHO_PIN, HIGH);
 
-  // Calculate distance in cm and compare with threshold
-  // Formula: distance = (duration * speed of sound) / 2
-  // Speed of sound = 0.034 cm/µs
-  return distance > byte(duration * 0.034 / 2);
-}
+    // Calculate distance in cm and compare with threshold
+    // Formula: distance = (duration * speed of sound) / 2
+    // Speed of sound = 0.034 cm/µs
+    return distance > byte(duration * 0.034 / 2);
+  }
 
-/**
+  /**
  * @brief Check color using RGB color sensor
  * @return Detected color (RED, GREEN, or BLUE)
  * 
  * Not yet implemented
  */
-Colors Robot::checkColors() {
-  // To be implemented
-}
+  Colors Robot::checkColors() {
+    // To be implemented
+  }
