@@ -34,7 +34,7 @@ Robot::Robot(uint8_t ENA,
   : ENA(ENA), ENB(ENB), IN1(IN1), IN2(IN2),
     IN3(IN3), IN4(IN4), IR_LEFT(IR_LEFT), IR_RIGHT(IR_RIGHT),
     SERVO(SERVO), TRIGGER_PIN(TRIGGER_PIN), ECHO_PIN(ECHO_PIN), state(initState),
-    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance), lastState(FORWARD) {}
+    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance), motionState(FORWARD) {}
 
 /**
  * @brief Initialize all pins and components
@@ -109,7 +109,7 @@ void Robot::run() {
       break;
   }
   // Small delay for stability
- //   delay(1);
+  //   delay(1);
 }
 
 /**
@@ -122,37 +122,58 @@ void Robot::followLine() {
   bool left = digitalRead(IR_LEFT);
   bool right = digitalRead(IR_RIGHT);
 
-  // Left sensor on line, right sensor off line - turn left
   if (left && !right) {
-    uint8_t speed = int( k * abs(millis() - timerError))/1000;
-    motorLeft(0);  // Left motor backward
-    motorRight(-60);  // Right motor forward
-    myservo.write(135);  // Turn servo left
-    matrix.loadFrame(leftSign);  // Display left arrow
+    motionState = LEFT;
+  } else if (!left && right) {
+    motionState = RIGHT;
+  } else {
+    motionState = FORWARD;
   }
-  // Right sensor on line, left sensor off line - turn right, the coefficients change because no two motors are the same in this world
-  if (!left && right) {
-    uint8_t speed = int( k * abs(millis() - timerError) )/1000;
-    motorLeft(-60);   // Left motor forward
-    motorRight(0); // Right motor backward
-    myservo.write(45);  // Turn servo right
-    matrix.loadFrame(rightSign);  // Display right arrow
-  }
-  // Both sensors off line - go straight
-  if (!left && !right) {
-    motorLeft(-60);   // Left motor forward
-    motorRight(-60);  // Right motor forward
-    myservo.write(90);  // Center servo
-    timerError = millis();  // Reset error timer
-    matrix.loadFrame(forwardSign);  // Display forward arrow
-  }
-  // Both sensors on line - go straight
-  if (left && right) {
-    motorLeft(-60);   // Left motor forward
-    motorRight(-60);  // Right motor forward
-    myservo.write(90);  // Center servo
-    timerError = millis();  // Reset error timer
-    matrix.loadFrame(forwardSign);  // Display forward arrow
+  switch (motionState) {
+    // Left sensor on line, right sensor off line - turn left
+    case LEFT:
+      {
+        if (lastMotionState != motionState)
+          timerError = millis();
+        uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
+        if (speed>=30)
+         speed=30;
+        motorLeft(0);                // Left motor backward
+        motorRight(-60);             // Right motor forward
+        myservo.write(135);          // Turn servo left
+        matrix.loadFrame(leftSign);  // Display left arrow
+
+        lastMotionState = motionState;
+      }
+      // Right sensor on line, left sensor off line - turn right, the coefficients change because no two motors are the same in this world
+    case RIGHT:
+      {
+        if (lastMotionState != motionState)
+          timerError = millis();
+        uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
+        if (speed>=30)
+         speed=30;
+        motorLeft(-60);               // Left motor forward
+        motorRight(0);                // Right motor backward
+        myservo.write(45);            // Turn servo right
+        matrix.loadFrame(rightSign);  // Display right arrow
+        lastMotionState = motionState;
+      }
+    // Both sensors off line - go straight
+    case FORWARD:
+      {
+        if (lastMotionState != motionState)
+          timerError = millis();
+         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
+         if (speed>=30)
+         speed=30;
+        motorLeft(-50);                 // Left motor forward
+        motorRight(-50);                // Right motor forward
+        myservo.write(90);              // Center servo
+        timerError = millis();          // Reset error timer
+        matrix.loadFrame(forwardSign);  // Display forward arrow
+        lastMotionState = motionState;
+      }
   }
 }
 
