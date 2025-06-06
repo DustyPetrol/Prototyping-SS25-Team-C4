@@ -34,6 +34,17 @@ enum Colors {
 };
 
 /**
+ * @enum Motion
+ * @brief Defines the motion direction of the robot
+ */
+enum Motion {
+  FORWARD,   /**< Forward */
+  LEFT, /**< Left */
+  RIGHT   /**< Right */
+};
+
+
+/**
  * @class Robot
  * @brief Main robot control class that handles line following, obstacle detection and avoidance
  */
@@ -49,7 +60,7 @@ private:
   uint32_t timerError;           /**< Timer for error correction */
   uint8_t k;                     /**< Proportional control constant */
   uint8_t distance;              /**< Threshold distance for obstacle detection */
-
+  Motion lastState;
   /**
    * @brief Follow the line using IR sensors
    */

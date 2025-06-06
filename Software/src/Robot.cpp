@@ -34,7 +34,7 @@ Robot::Robot(uint8_t ENA,
   : ENA(ENA), ENB(ENB), IN1(IN1), IN2(IN2),
     IN3(IN3), IN4(IN4), IR_LEFT(IR_LEFT), IR_RIGHT(IR_RIGHT),
     SERVO(SERVO), TRIGGER_PIN(TRIGGER_PIN), ECHO_PIN(ECHO_PIN), state(initState),
-    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance) {}
+    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance), lastState(FORWARD) {}
 
 /**
  * @brief Initialize all pins and components
