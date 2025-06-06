@@ -138,8 +138,8 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(0);                // Left motor backward
-        motorRight(-60);             // Right motor forward
+        motorLeft(-10+speed);                // Left motor backward
+        motorRight(-60-speed);             // Right motor forward
         myservo.write(135);          // Turn servo left
         matrix.loadFrame(leftSign);  // Display left arrow
 
@@ -155,7 +155,7 @@ void Robot::followLine() {
         if (speed >= 30)
           speed = 30;
         motorLeft(-60-speed);               // Left motor forward
-        motorRight(0);                // Right motor backward
+        motorRight(-10+speed);                // Right motor backward
         myservo.write(45);            // Turn servo right
         matrix.loadFrame(rightSign);  // Display right arrow
         lastMotionState = motionState;
@@ -169,8 +169,8 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(-50);                 // Left motor forward
-        motorRight(-50);                // Right motor forward
+        motorLeft(-50-speed);                 // Left motor forward
+        motorRight(-50-speed);                // Right motor forward
         myservo.write(90);              // Center servo
         timerError = millis();          // Reset error timer
         matrix.loadFrame(forwardSign);  // Display forward arrow
