@@ -277,9 +277,9 @@
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hYq6gSgOEfCNtZEc7R6khQ" name="Message29ReceiveEvent" covered="_Ldv7UCgOEfCNtZEc7R6khQ" message="_hYpFUCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jzZ3kCgOEfCNtZEc7R6khQ" name="Message32SendEvent" covered="_L73asCgOEfCNtZEc7R6khQ" message="_jzZQgCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jzbFsCgOEfCNtZEc7R6khQ" name="Message32ReceiveEvent" covered="_Ldv7UCgOEfCNtZEc7R6khQ" message="_jzZQgCgOEfCNtZEc7R6khQ"/>
-          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_P3JkgCgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification11Finish" covered="_L73asCgOEfCNtZEc7R6khQ" execution="_P3IWYCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_S3RtoCgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification17Start" covered="_MRKVQCgOEfCNtZEc7R6khQ" execution="_S3QfgCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_S3QfgCgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification17" covered="_MRKVQCgOEfCNtZEc7R6khQ" finish="_S3RtoSgOEfCNtZEc7R6khQ" start="_S3RtoCgOEfCNtZEc7R6khQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_P3JkgCgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification11Finish" covered="_L73asCgOEfCNtZEc7R6khQ" execution="_P3IWYCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_k8fmkCgOEfCNtZEc7R6khQ" name="Message35SendEvent" covered="_Ldv7UCgOEfCNtZEc7R6khQ" message="_k8dxYCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_RJMbMCgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification14" covered="_L73asCgOEfCNtZEc7R6khQ" finish="_RJRTsCgOEfCNtZEc7R6khQ" start="_k8fmkCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_k8gNoCgOEfCNtZEc7R6khQ" name="Message35ReceiveEvent" covered="_MRKVQCgOEfCNtZEc7R6khQ" message="_k8dxYCgOEfCNtZEc7R6khQ"/>
@@ -315,21 +315,21 @@
             <transition xmi:type="uml:Transition" xmi:id="_9Hmx0CXAEfCvmdPbc739SQ" source="_7AwaECXAEfCvmdPbc739SQ" target="_mjUFgCXAEfCvmdPbc739SQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_A9ArMCXDEfCvmdPbc739SQ" source="_36LDoCXAEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_T9HDwCXeEfClJ_1O2Xa4LA" source="_B66BYCXEEfCvmdPbc739SQ" target="_uqgI4CXdEfClJ_1O2Xa4LA"/>
-            <subvertex xmi:type="uml:State" xmi:id="_aixjUCJ0EfCrcavl5iePQg" name="Follow Line">
+            <subvertex xmi:type="uml:State" xmi:id="_aixjUCJ0EfCrcavl5iePQg" name="FOLLOW_LINE">
               <region xmi:type="uml:Region" xmi:id="_QtSp4CW_EfCvmdPbc739SQ" name="Region1">
                 <transition xmi:type="uml:Transition" xmi:id="_m2TvcCW_EfCvmdPbc739SQ" source="_WfTEwCW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_ok70cCW_EfCvmdPbc739SQ" name="IRDetectedOnTheRight" source="_WK2ewCW_EfCvmdPbc739SQ" target="_gbPwgCW_EfCvmdPbc739SQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_rnaG8CW_EfCvmdPbc739SQ" name="IRDetectedOnTheLeft" source="_WK2ewCW_EfCvmdPbc739SQ" target="_hOwRECW_EfCvmdPbc739SQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_1VOQECW_EfCvmdPbc739SQ" name="IRSeesNothing" source="_gbPwgCW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_5ExrACW_EfCvmdPbc739SQ" name="IRSeesNothing" source="_hOwRECW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
-                <subvertex xmi:type="uml:State" xmi:id="_WK2ewCW_EfCvmdPbc739SQ" name="GoForward"/>
+                <subvertex xmi:type="uml:State" xmi:id="_WK2ewCW_EfCvmdPbc739SQ" name="FORWARD"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_WfTEwCW_EfCvmdPbc739SQ" name="Initial2"/>
-                <subvertex xmi:type="uml:State" xmi:id="_gbPwgCW_EfCvmdPbc739SQ" name="GoRight"/>
-                <subvertex xmi:type="uml:State" xmi:id="_hOwRECW_EfCvmdPbc739SQ" name="GoLeft"/>
+                <subvertex xmi:type="uml:State" xmi:id="_gbPwgCW_EfCvmdPbc739SQ" name="RIGHT"/>
+                <subvertex xmi:type="uml:State" xmi:id="_hOwRECW_EfCvmdPbc739SQ" name="LEFT"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_BGL8sCXAEfCvmdPbc739SQ" name="LoseLine" kind="terminate"/>
               </region>
             </subvertex>
-            <subvertex xmi:type="uml:State" xmi:id="_hvPKACJ0EfCrcavl5iePQg" name="RecogniseObject">
+            <subvertex xmi:type="uml:State" xmi:id="_hvPKACJ0EfCrcavl5iePQg" name="INSPECT_OBSTACLE">
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_36LDoCXAEfCvmdPbc739SQ" name="Colour1" kind="exitPoint"/>
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_7AwaECXAEfCvmdPbc739SQ" name="DetectedObject" kind="entryPoint"/>
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_-KH-wCXAEfCvmdPbc739SQ" name="Colour2" kind="exitPoint"/>
@@ -342,7 +342,7 @@
                 <subvertex xmi:type="uml:State" xmi:id="_m-KOcCXAEfCvmdPbc739SQ" name="ReadColour"/>
               </region>
             </subvertex>
-            <subvertex xmi:type="uml:State" xmi:id="_n1sK4CJ0EfCrcavl5iePQg" name="AvoidObject">
+            <subvertex xmi:type="uml:State" xmi:id="_n1sK4CJ0EfCrcavl5iePQg" name="AVOID_OBSTACLE">
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="__tZoACXDEfCvmdPbc739SQ" name="ExitPoint2" kind="exitPoint"/>
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_B66BYCXEEfCvmdPbc739SQ" name="EntryPoint3" kind="entryPoint"/>
               <region xmi:type="uml:Region" xmi:id="_mgeskCXDEfCvmdPbc739SQ" name="Region1">
