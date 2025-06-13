@@ -28,9 +28,9 @@ enum RobotState {
  * @brief Defines the colors that can be detected by the color sensor
  */
 enum Colors {
-  RED,   /**< Red color */
-  GREEN, /**< Green color */
-  BLUE   /**< Blue color */
+  RED,    /**< Red color */
+  BLUE,   /**< Blue color */
+  UNKNOWN /**< Unknown color*/
 };
 
 /**
@@ -98,7 +98,7 @@ private:
    * @brief Check color using RGB color sensor
    * @return Detected color (RED, GREEN, or BLUE)
    */
-  Colors checkColors();
+  Colors checkColor();
 public:
   /**
    * @brief Constructor for Robot class

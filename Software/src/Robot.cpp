@@ -42,6 +42,8 @@ Robot::Robot(uint8_t ENA,
  * Sets up pin modes for motors, sensors, and initializes servo and LED matrix
  */
 void Robot::init() {
+  Serial.begin(9600);
+
   // Set motor control pins as outputs
   pinMode(ENA, OUTPUT);
   pinMode(ENB, OUTPUT);
@@ -65,9 +67,9 @@ void Robot::init() {
   pinMode(S3, OUTPUT);
   pinMode(sensorOut, INPUT);
 
-  // Set frequency scaling to 100% for color sensor
+  // Set frequency scaling to 20% for color sensor
   digitalWrite(S0, HIGH);
-  digitalWrite(S1, HIGH);
+  digitalWrite(S1, LOW);
 
   // Initialize servo and LED matrix
   myservo.attach(SERVO);
@@ -138,8 +140,8 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(-10+speed);                // Left motor backward
-        motorRight(-60-speed);             // Right motor forward
+        motorLeft(-10 + speed);      // Left motor backward
+        motorRight(-60 - speed);     // Right motor forward
         myservo.write(135);          // Turn servo left
         matrix.loadFrame(leftSign);  // Display left arrow
 
@@ -154,8 +156,8 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(-60-speed);               // Left motor forward
-        motorRight(-10+speed);                // Right motor backward
+        motorLeft(-60 - speed);       // Left motor forward
+        motorRight(-10 + speed);      // Right motor backward
         myservo.write(45);            // Turn servo right
         matrix.loadFrame(rightSign);  // Display right arrow
         lastMotionState = motionState;
@@ -169,8 +171,8 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(-50-speed);                 // Left motor forward
-        motorRight(-50-speed);                // Right motor forward
+        motorLeft(-50 - speed);         // Left motor forward
+        motorRight(-50 - speed);        // Right motor forward
         myservo.write(90);              // Center servo
         timerError = millis();          // Reset error timer
         matrix.loadFrame(forwardSign);  // Display forward arrow
@@ -189,12 +191,12 @@ void Robot::avoidObstacle() {
   myservo.write(0);  // Turn servo all the way right
   timerError = millis();
   while (millis() - timerError < 1000) {  //turning right a lil bit
-    motorLeft(-80);                     // Left motor forward
+    motorLeft(-80);                       // Left motor forward
     motorRight(0);
   }
   timerError = millis();
   while (millis() - timerError < 1000) {  //going forwrd a lil bit
-    motorLeft(-60);                     // Both motor forward
+    motorLeft(-60);                       // Both motor forward
     motorRight(-60);
   }
   //hopefully we are off the line at this point and we continue until we see the line
@@ -205,99 +207,151 @@ void Robot::avoidObstacle() {
     }
     timerError = millis();
     while (millis() - timerError < 1000) {  //going forwrd a lil bit
-      motorLeft(-60);                     // Both motor forward
+      motorLeft(-60);                       // Both motor forward
       motorRight(-60);
     }
     // here comes the fucking magic, have no idea how to push in on the line.
     while (millis() - timerError < 1000) {  //turning right a lil bit
-    motorLeft(-80);                     // Left motor forward
-    motorRight(0);
-  }
+      motorLeft(-80);                       // Left motor forward
+      motorRight(0);
+    }
   }
   state = FOLLOW_LINE;
 }
-  /**
+/**
  * @brief Inspect detected obstacle
  * 
  * Checks if obstacle is still present, returns to line following if not
  */
-  void Robot::inspectObstacle() {
-    // If obstacle is no longer detected, return to line following
-    if (!checkDistance())
-      state = FOLLOW_LINE;
-  }
+void Robot::inspectObstacle() {
+  // If obstacle is no longer detected, return to line following
+  if (!checkDistance())
+    state = FOLLOW_LINE;
+  else
+    switch (checkColor()) {
+      case RED:
+        Serial.println("RED");
+        break;
+      case BLUE:
+        Serial.println("BLUE");
+        break;
+      case UNKNOWN:
+        Serial.println("UNKNOWN");
+        break;
+    }
+}
 
-  /**
+/**
  * @brief Control the left motor
  * @param speed Motor speed (-100 to 100, negative for reverse)
  */
-  void Robot::motorLeft(short speed) {
-    if (speed > 0) {
-      // Forward direction
-      digitalWrite(IN1, HIGH);
-      digitalWrite(IN2, LOW);
-    } else if (speed < 0) {
-      // Reverse direction
-      digitalWrite(IN1, LOW);
-      digitalWrite(IN2, HIGH);
-    } else {
-      // Stop
-      digitalWrite(IN1, LOW);
-      digitalWrite(IN2, LOW);
-    }
-    // Set motor speed using PWM
-    analogWrite(ENA, abs(speed));
+void Robot::motorLeft(short speed) {
+  if (speed > 0) {
+    // Forward direction
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+  } else if (speed < 0) {
+    // Reverse direction
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+  } else {
+    // Stop
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
   }
+  // Set motor speed using PWM
+  analogWrite(ENA, abs(speed));
+}
 
-  /**
+/**
  * @brief Control the right motor
  * @param speed Motor speed (-100 to 100, negative for reverse)
  */
-  void Robot::motorRight(short speed) {
-    if (speed > 0) {
-      // Forward direction (note: pins are reversed compared to left motor)
-      digitalWrite(IN3, LOW);
-      digitalWrite(IN4, HIGH);
-    } else if (speed < 0) {
-      // Reverse direction
-      digitalWrite(IN3, HIGH);
-      digitalWrite(IN4, LOW);
-    } else {
-      // Stop
-      digitalWrite(IN3, LOW);
-      digitalWrite(IN4, LOW);
-    }
-    // Set motor speed using PWM
-    analogWrite(ENB, abs(speed));
+void Robot::motorRight(short speed) {
+  if (speed > 0) {
+    // Forward direction (note: pins are reversed compared to left motor)
+    digitalWrite(IN3, LOW);
+    digitalWrite(IN4, HIGH);
+  } else if (speed < 0) {
+    // Reverse direction
+    digitalWrite(IN3, HIGH);
+    digitalWrite(IN4, LOW);
+  } else {
+    // Stop
+    digitalWrite(IN3, LOW);
+    digitalWrite(IN4, LOW);
   }
+  // Set motor speed using PWM
+  analogWrite(ENB, abs(speed));
+}
 
-  /**
+/**
  * @brief Check distance to obstacle using ultrasonic sensor
  * @return true if obstacle is detected within threshold distance
  */
-  bool Robot::checkDistance() {
-    // Trigger ultrasonic pulse
-    digitalWrite(TRIGGER_PIN, LOW);
-    delayMicroseconds(2);
-    digitalWrite(TRIGGER_PIN, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(TRIGGER_PIN, LOW);
+bool Robot::checkDistance() {
+  // Trigger ultrasonic pulse
+  digitalWrite(TRIGGER_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIGGER_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIGGER_PIN, LOW);
 
-    // Measure echo duration
-    long duration = pulseIn(ECHO_PIN, HIGH);
+  // Measure echo duration
+  long duration = pulseIn(ECHO_PIN, HIGH);
 
-    // Calculate distance in cm and compare with threshold
-    // Formula: distance = (duration * speed of sound) / 2
-    // Speed of sound = 0.034 cm/µs
-    return distance > byte(duration * 0.034 / 2);
-  }
+  // Calculate distance in cm and compare with threshold
+  // Formula: distance = (duration * speed of sound) / 2
+  // Speed of sound = 0.034 cm/µs
+  return distance > byte(duration * 0.034 / 2);
+}
 
-  /**
+/**
  * @brief Check color using RGB color sensor
  * @return Detected color (RED, GREEN, or BLUE)
  * 
  * Not yet implemented
  */
-  Colors Robot::checkColors() {
-    // To be implemented
+Colors Robot::checkColor() {
+  int redFreq, greenFreq, blueFreq;
+
+  // Read Red frequency
+  digitalWrite(S2, LOW);
+  digitalWrite(S3, LOW);
+  redFreq = pulseIn(sensorOut, LOW);
+  delay(10);  // Small delay between readings
+
+  // Read Green frequency
+  digitalWrite(S2, HIGH);
+  digitalWrite(S3, HIGH);
+  greenFreq = pulseIn(sensorOut, LOW);
+  delay(10);
+
+  // Read Blue frequency
+  digitalWrite(S2, LOW);
+  digitalWrite(S3, HIGH);
+  blueFreq = pulseIn(sensorOut, LOW);
+
+  // DEBUG: Print all frequency values
+  Serial.print("R: ");
+  Serial.print(redFreq);
+  Serial.print(" G: ");
+  Serial.print(greenFreq);
+  Serial.print(" B: ");
+  Serial.print(blueFreq);
+  Serial.print(" -> ");
+
+  // Simple logic for Red, Blue, or Other
+  // Check if red is significantly lower (stronger) than others
+  if (redFreq < blueFreq * 0.7 && redFreq < greenFreq * 0.6) {
+    return RED;
   }
+  // Check if blue is significantly lower (stronger) than others
+  else if (blueFreq < redFreq * 0.7 && blueFreq < greenFreq * 0.7) {
+    return BLUE;
+  }
+  // Everything else (including green, white, nothing)
+  else {
+    return UNKNOWN;  // This represents "OTHER" in your case
+  }
+}

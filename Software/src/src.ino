@@ -22,16 +22,16 @@
 #define ECHO_PIN 3    /**< Ultrasonic sensor echo pin */
 
 // Color sensor pins (not connected in current implementation)
-#define S0 0          /**< Color sensor frequency scaling selection pin S0 */
-#define S1 0          /**< Color sensor frequency scaling selection pin S1 */
-#define S2 0          /**< Color sensor photodiode selection pin S2 */
-#define S3 0          /**< Color sensor photodiode selection pin S3 */
-#define sensorOut 0   /**< Color sensor output pin */
+#define S0 A0        /**< Color sensor frequency scaling selection pin S0 */
+#define S1 A1        /**< Color sensor frequency scaling selection pin S1 */
+#define S2 A2        /**< Color sensor photodiode selection pin S2 */
+#define S3 A3        /**< Color sensor photodiode selection pin S3 */
+#define sensorOut A4 /**< Color sensor output pin */
 
 // Robot parameters
 #define initState FOLLOW_LINE /**< Initial state of the robot */
 #define k 80               /**< Proportional control constant */
-#define distance 15           /**< Threshold distance for obstacle detection in cm */
+#define distance 3           /**< Threshold distance for obstacle detection in cm */
 
 /**
  * @brief Robot instance with all pin and parameter configurations
