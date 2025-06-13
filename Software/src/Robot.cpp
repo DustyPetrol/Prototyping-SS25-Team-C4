@@ -34,7 +34,7 @@ Robot::Robot(uint8_t ENA,
   : ENA(ENA), ENB(ENB), IN1(IN1), IN2(IN2),
     IN3(IN3), IN4(IN4), IR_LEFT(IR_LEFT), IR_RIGHT(IR_RIGHT),
     SERVO(SERVO), TRIGGER_PIN(TRIGGER_PIN), ECHO_PIN(ECHO_PIN), state(initState),
-    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance), motionState(FORWARD) {}
+    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance), motionState(FORWARD), lastMotionState(FORWARD), avoidMotion(RIGHT) {}
 
 /**
  * @brief Initialize all pins and components
@@ -89,11 +89,6 @@ void Robot::run() {
     case FOLLOW_LINE:
       // Check if obstacle is detected
       if (checkDistance()) {
-        // Display stop sign on LED matrix
-        matrix.loadFrame(stopSign);
-        // Stop motors
-        motorLeft(0);
-        motorRight(0);
         // Change state to inspect obstacle
         state = INSPECT_OBSTACLE;
         break;
@@ -140,9 +135,9 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(-10 + speed);      // Left motor backward
+        motorLeft(-20 + speed);      // Left motor backward
         motorRight(-60 - speed);     // Right motor forward
-        myservo.write(135);          // Turn servo left
+        myservo.write(105);          // Turn servo left
         matrix.loadFrame(leftSign);  // Display left arrow
 
         lastMotionState = motionState;
@@ -157,8 +152,8 @@ void Robot::followLine() {
         if (speed >= 30)
           speed = 30;
         motorLeft(-60 - speed);       // Left motor forward
-        motorRight(-10 + speed);      // Right motor backward
-        myservo.write(45);            // Turn servo right
+        motorRight(-20 + speed);      // Right motor backward
+        myservo.write(75);            // Turn servo right
         matrix.loadFrame(rightSign);  // Display right arrow
         lastMotionState = motionState;
         break;
@@ -190,29 +185,30 @@ void Robot::followLine() {
 void Robot::avoidObstacle() {
   myservo.write(0);  // Turn servo all the way right
   timerError = millis();
-  while (millis() - timerError < 1000) {  //turning right a lil bit
-    motorLeft(-80);                       // Left motor forward
+  while ((millis() - timerError) < 300) {  //turning right a lil bit
+    motorLeft(-60);                        // Left motor forward
     motorRight(0);
   }
   timerError = millis();
-  while (millis() - timerError < 1000) {  //going forwrd a lil bit
-    motorLeft(-60);                       // Both motor forward
+  while ((millis() - timerError) < 300) {  //going forwrd a lil bit
+    motorLeft(-60);                        // Both motor forward
     motorRight(-60);
   }
   //hopefully we are off the line at this point and we continue until we see the line
+  //shit triggers on white earth sometimes and screews everything up
   while (digitalRead(IR_LEFT) or digitalRead(IR_RIGHT)) {
     while (!checkDistance()) {  //gently turning left until we see an obstacle a lil bit
       motorLeft(0);             // right motor forward
       motorRight(-60);
     }
     timerError = millis();
-    while (millis() - timerError < 1000) {  //going forwrd a lil bit
-      motorLeft(-60);                       // Both motor forward
+    while ((millis() - timerError) < 300) {  //going forwrd a lil bit
+      motorLeft(-60);                        // Both motor forward
       motorRight(-60);
     }
     // here comes the fucking magic, have no idea how to push in on the line.
-    while (millis() - timerError < 1000) {  //turning right a lil bit
-      motorLeft(-80);                       // Left motor forward
+    while ((millis() - timerError) < 300) {  //turning right a lil bit
+      motorLeft(-80);                        // Left motor forward
       motorRight(0);
     }
   }
@@ -230,13 +226,17 @@ void Robot::inspectObstacle() {
   else
     switch (checkColor()) {
       case RED:
-        Serial.println("RED");
+        motorLeft(0);
+        motorRight(0);
+        delay(200);
+        state = AVOID_OBSTACLE;
+        avoidMotion = RIGHT;
         break;
       case BLUE:
-        Serial.println("BLUE");
+        followLine();
         break;
       case UNKNOWN:
-        Serial.println("UNKNOWN");
+        followLine();
         break;
     }
 }
@@ -333,13 +333,13 @@ Colors Robot::checkColor() {
   blueFreq = pulseIn(sensorOut, LOW);
 
   // DEBUG: Print all frequency values
-  Serial.print("R: ");
+  /*Serial.print("R: ");
   Serial.print(redFreq);
   Serial.print(" G: ");
   Serial.print(greenFreq);
   Serial.print(" B: ");
   Serial.print(blueFreq);
-  Serial.print(" -> ");
+  Serial.print(" -> ");*/
 
   // Simple logic for Red, Blue, or Other
   // Check if red is significantly lower (stronger) than others
