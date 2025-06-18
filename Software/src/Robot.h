@@ -59,7 +59,6 @@ private:
   uint8_t S0, S1, S2, S3, sensorOut;    /**< Color sensor pins */
   uint32_t timerError;           /**< Timer for error correction */
   uint8_t k;                     /**< Proportional control constant */
-  uint8_t distance;              /**< Threshold distance for obstacle detection */
   Motion lastMotionState;           /**< Previous motion state */
   Motion motionState;              /**< Current motion state */
   Motion avoidMotion;              /**< Motion direction for obstacle avoidance */
@@ -92,9 +91,10 @@ private:
 
   /**
    * @brief Check distance to obstacle using ultrasonic sensor
+   * @param distance Refference distance in cm
    * @return true if obstacle is detected within threshold distance
    */
-  bool checkDistance();
+  bool checkDistance(int distance);
 
   /**
    * @brief Check color using RGB color sensor
@@ -122,7 +122,6 @@ public:
    * @param sensorOut Color sensor output pin
    * @param initState Initial state of the robot
    * @param k Proportional control constant
-   * @param distance Threshold distance for obstacle detection in cm
    */
   Robot(uint8_t ENA,
         uint8_t ENB,
@@ -141,8 +140,7 @@ public:
         uint8_t S3,
         uint8_t sensorOut,
         RobotState initState,
-        uint8_t k,
-        uint8_t distance);
+        uint8_t k);
 
   /**
    * @brief Initialize robot hardware and pins

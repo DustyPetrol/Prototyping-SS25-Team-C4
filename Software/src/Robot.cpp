@@ -29,12 +29,11 @@ Robot::Robot(uint8_t ENA,
              uint8_t S3,
              uint8_t sensorOut,
              RobotState initState,
-             uint8_t k,
-             uint8_t distance)
+             uint8_t k)
   : ENA(ENA), ENB(ENB), IN1(IN1), IN2(IN2),
     IN3(IN3), IN4(IN4), IR_LEFT(IR_LEFT), IR_RIGHT(IR_RIGHT),
     SERVO(SERVO), TRIGGER_PIN(TRIGGER_PIN), ECHO_PIN(ECHO_PIN), state(initState),
-    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance), motionState(FORWARD), lastMotionState(FORWARD), avoidMotion(RIGHT) {}
+    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), motionState(FORWARD), lastMotionState(FORWARD), avoidMotion(RIGHT) {}
 
 /**
  * @brief Initialize all pins and components
@@ -88,7 +87,7 @@ void Robot::run() {
   switch (state) {
     case FOLLOW_LINE:
       // Check if obstacle is detected
-      if (checkDistance()) {
+      if (checkDistance(15)) {
         // Change state to inspect obstacle
         state = INSPECT_OBSTACLE;
         break;
@@ -135,8 +134,8 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(-20 + speed);      // Left motor backward
-        motorRight(-60 - speed);     // Right motor forward
+        motorLeft(30 - speed);      // Left motor backward
+        motorRight(-70 + speed);     // Right motor forward
         myservo.write(105);          // Turn servo left
         matrix.loadFrame(leftSign);  // Display left arrow
 
@@ -151,8 +150,8 @@ void Robot::followLine() {
         uint8_t speed = int(k * abs(millis() - timerError)) / 1000;
         if (speed >= 30)
           speed = 30;
-        motorLeft(-60 - speed);       // Left motor forward
-        motorRight(-20 + speed);      // Right motor backward
+        motorLeft(-70 + speed);       // Left motor forward
+        motorRight(30 - speed);      // Right motor backward
         myservo.write(75);            // Turn servo right
         matrix.loadFrame(rightSign);  // Display right arrow
         lastMotionState = motionState;
@@ -186,8 +185,8 @@ void Robot::avoidObstacle() {
   switch (avoidMotion) {
     case RIGHT:
       motorLeft(-60);
-      motorRight(0);
-      if ((millis() - timerError) > 300) {
+      motorRight(60);
+      if ((millis() - timerError) > 500) {
         avoidMotion = FORWARD;
         timerError = millis();
       }
@@ -195,16 +194,20 @@ void Robot::avoidObstacle() {
     case LEFT:
       motorLeft(0);
       motorRight(-60);
-      if (checkDistance()) {
+      if (checkDistance(20)) {
         avoidMotion = FORWARD;
         timerError = millis();
       }
-
+      if (digitalRead(IR_LEFT) || digitalRead(IR_RIGHT)) {
+        motorLeft(-60);
+        motorRight(60);
+        state = FOLLOW_LINE;
+      }
       break;
     case FORWARD:
       motorLeft(-60);
       motorRight(-60);
-      if ((millis() - timerError) > 300) {
+      if ((millis() - timerError) > 450) {
         avoidMotion = LEFT;
         timerError = millis();
       }
@@ -223,14 +226,14 @@ void Robot::avoidObstacle() {
  */
 void Robot::inspectObstacle() {
   // If obstacle is no longer detected, return to line following
-  if (!checkDistance())
+  if (!checkDistance(15))
     state = FOLLOW_LINE;
   else
     switch (checkColor()) {
       case RED:
-        motorLeft(0);
-        motorRight(0);
-        delay(200);
+        motorLeft(60);
+        motorRight(60);
+        delay(400);
         state = AVOID_OBSTACLE;
         avoidMotion = RIGHT;
         timerError = millis();
@@ -293,7 +296,7 @@ void Robot::motorRight(short speed) {
  * @brief Check distance to obstacle using ultrasonic sensor
  * @return true if obstacle is detected within threshold distance
  */
-bool Robot::checkDistance() {
+bool Robot::checkDistance(int distance) {
   // Trigger ultrasonic pulse
   digitalWrite(TRIGGER_PIN, LOW);
   delayMicroseconds(2);
