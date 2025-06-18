@@ -183,12 +183,12 @@ void Robot::followLine() {
  * Controls the robot's movement to navigate around detected obstacles
  */
 void Robot::avoidObstacle() {
-  switch (motionState) {
+  switch (avoidMotion) {
     case RIGHT:
       motorLeft(-60);
       motorRight(0);
       if ((millis() - timerError) > 300) {
-        motionState = FORWARD;
+        avoidMotion = FORWARD;
         timerError = millis();
       }
       break;
@@ -196,21 +196,22 @@ void Robot::avoidObstacle() {
       motorLeft(0);
       motorRight(-60);
       if (checkDistance()) {
-        motionState = FORWARD;
+        avoidMotion = FORWARD;
+        timerError = millis();
+      }
+
+      break;
+    case FORWARD:
+      motorLeft(-60);
+      motorRight(-60);
+      if ((millis() - timerError) > 300) {
+        avoidMotion = LEFT;
         timerError = millis();
       }
       if (digitalRead(IR_LEFT) || digitalRead(IR_RIGHT)) {
         motorLeft(-60);
         motorRight(60);
         state = FOLLOW_LINE;
-      }
-      break;
-    case FORWARD:
-      motorLeft(-60);
-      motorRight(-60);
-      if ((millis() - timerError) > 300) {
-        motionState = LEFT;
-        timerError = millis();
       }
       break;
   }
