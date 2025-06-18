@@ -6,13 +6,17 @@
  */
 #include "Robot.h"
 
-// Motor control pins
+/**
+ * @name Motor Control Pins
+ * @{
+ */
 #define ENA 5         /**< Enable pin for left motor (PWM) */
 #define ENB 10        /**< Enable pin for right motor (PWM) */
 #define IN1 13        /**< Direction control pin 1 for left motor */
 #define IN2 12        /**< Direction control pin 2 for left motor */
 #define IN3 9         /**< Direction control pin 1 for right motor */
 #define IN4 8         /**< Direction control pin 2 for right motor */
+/** @} */
 
 // Sensor pins
 #define IR_LEFT 7     /**< Left infrared sensor pin */

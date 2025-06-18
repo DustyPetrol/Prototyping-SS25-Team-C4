@@ -60,7 +60,9 @@ private:
   uint32_t timerError;           /**< Timer for error correction */
   uint8_t k;                     /**< Proportional control constant */
   uint8_t distance;              /**< Threshold distance for obstacle detection */
-  Motion lastMotionState, motionState, avoidMotion;
+  Motion lastMotionState;           /**< Previous motion state */
+  Motion motionState;              /**< Current motion state */
+  Motion avoidMotion;              /**< Motion direction for obstacle avoidance */
   /**
    * @brief Follow the line using IR sensors
    */

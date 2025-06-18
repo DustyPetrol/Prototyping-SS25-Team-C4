@@ -106,7 +106,7 @@ void Robot::run() {
       break;
   }
   // Small delay for stability
-  //   delay(1);
+  delay(1);
 }
 
 /**
@@ -180,39 +180,40 @@ void Robot::followLine() {
 /**
  * @brief Obstacle avoidance algorithm
  * 
- * Currently not implemented
+ * Controls the robot's movement to navigate around detected obstacles
  */
 void Robot::avoidObstacle() {
-  myservo.write(0);  // Turn servo all the way right
-  timerError = millis();
-  while ((millis() - timerError) < 300) {  //turning right a lil bit
-    motorLeft(-60);                        // Left motor forward
-    motorRight(0);
-  }
-  timerError = millis();
-  while ((millis() - timerError) < 300) {  //going forwrd a lil bit
-    motorLeft(-60);                        // Both motor forward
-    motorRight(-60);
-  }
-  //hopefully we are off the line at this point and we continue until we see the line
-  //shit triggers on white earth sometimes and screews everything up
-  while (digitalRead(IR_LEFT) or digitalRead(IR_RIGHT)) {
-    while (!checkDistance()) {  //gently turning left until we see an obstacle a lil bit
-      motorLeft(0);             // right motor forward
-      motorRight(-60);
-    }
-    timerError = millis();
-    while ((millis() - timerError) < 300) {  //going forwrd a lil bit
-      motorLeft(-60);                        // Both motor forward
-      motorRight(-60);
-    }
-    // here comes the fucking magic, have no idea how to push in on the line.
-    while ((millis() - timerError) < 300) {  //turning right a lil bit
-      motorLeft(-80);                        // Left motor forward
+  switch (motionState) {
+    case RIGHT:
+      motorLeft(-60);
       motorRight(0);
-    }
+      if ((millis() - timerError) > 300) {
+        motionState = FORWARD;
+        timerError = millis();
+      }
+      break;
+    case LEFT:
+      motorLeft(0);
+      motorRight(-60);
+      if (checkDistance()) {
+        motionState = FORWARD;
+        timerError = millis();
+      }
+      if (digitalRead(IR_LEFT) || digitalRead(IR_RIGHT)) {
+        motorLeft(-60);
+        motorRight(60);
+        state = FOLLOW_LINE;
+      }
+      break;
+    case FORWARD:
+      motorLeft(-60);
+      motorRight(-60);
+      if ((millis() - timerError) > 300) {
+        motionState = LEFT;
+        timerError = millis();
+      }
+      break;
   }
-  state = FOLLOW_LINE;
 }
 /**
  * @brief Inspect detected obstacle
@@ -231,6 +232,8 @@ void Robot::inspectObstacle() {
         delay(200);
         state = AVOID_OBSTACLE;
         avoidMotion = RIGHT;
+        timerError = millis();
+        myservo.write(0);
         break;
       case BLUE:
         followLine();
@@ -308,9 +311,9 @@ bool Robot::checkDistance() {
 
 /**
  * @brief Check color using RGB color sensor
- * @return Detected color (RED, GREEN, or BLUE)
+ * @return Detected color (RED, BLUE, or UNKNOWN)
  * 
- * Not yet implemented
+ * Reads RGB frequencies from the color sensor and determines the dominant color
  */
 Colors Robot::checkColor() {
   int redFreq, greenFreq, blueFreq;
@@ -331,15 +334,6 @@ Colors Robot::checkColor() {
   digitalWrite(S2, LOW);
   digitalWrite(S3, HIGH);
   blueFreq = pulseIn(sensorOut, LOW);
-
-  // DEBUG: Print all frequency values
-  /*Serial.print("R: ");
-  Serial.print(redFreq);
-  Serial.print(" G: ");
-  Serial.print(greenFreq);
-  Serial.print(" B: ");
-  Serial.print(blueFreq);
-  Serial.print(" -> ");*/
 
   // Simple logic for Red, Blue, or Other
   // Check if red is significantly lower (stronger) than others
