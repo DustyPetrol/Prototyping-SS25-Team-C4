@@ -35,12 +35,11 @@
 // Robot parameters
 #define initState FOLLOW_LINE /**< Initial state of the robot */
 #define k 80               /**< Proportional control constant */
-#define distance 10           /**< Threshold distance for obstacle detection in cm */
 
 /**
  * @brief Robot instance with all pin and parameter configurations
  */
-Robot robot(ENA, ENB, IN1, IN2, IN3, IN4, IR_LEFT, IR_RIGHT, SERVO, TRIGGER_PIN, ECHO_PIN, S0, S1, S2, S3, sensorOut, initState, k, distance);
+Robot robot(ENA, ENB, IN1, IN2, IN3, IN4, IR_LEFT, IR_RIGHT, SERVO, TRIGGER_PIN, ECHO_PIN, S0, S1, S2, S3, sensorOut, initState, k);
 
 /**
  * @brief Setup function, runs once at startup
