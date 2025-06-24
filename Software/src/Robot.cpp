@@ -33,7 +33,8 @@ Robot::Robot(uint8_t ENA,
   : ENA(ENA), ENB(ENB), IN1(IN1), IN2(IN2),
     IN3(IN3), IN4(IN4), IR_LEFT(IR_LEFT), IR_RIGHT(IR_RIGHT),
     SERVO(SERVO), TRIGGER_PIN(TRIGGER_PIN), ECHO_PIN(ECHO_PIN), state(initState),
-    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), motionState(FORWARD), lastMotionState(FORWARD), avoidMotion(RIGHT) {}
+    S0(S0), S1(S1), S2(S2), S3(S3), sensorOut(sensorOut), k(k), distance(distance), motionState(FORWARD), lastMotionState(FORWARD),lastSeenDirection(FORWARD), avoidMotion(RIGHT) {}
+
 
 /**
  * @brief Initialize all pins and components
@@ -118,13 +119,19 @@ void Robot::followLine() {
   bool left = digitalRead(IR_LEFT);
   bool right = digitalRead(IR_RIGHT);
 
-  if (left && !right) {
-    motionState = LEFT;
-  } else if (!left && right) {
-    motionState = RIGHT;
-  } else {
-    motionState = FORWARD;
-  }
+ if (left && !right) {
+  motionState = LEFT;
+  lastSeenDirection = LEFT;
+} else if (!left && right) {
+  motionState = RIGHT;
+  lastSeenDirection = RIGHT;
+} else if (!left && !right) {
+  // Use lastSeenDirection instead
+  motionState = lastSeenDirection;
+} else {
+  // Both on line 
+  motionState = FORWARD;
+}
   switch (motionState) {
     // Left sensor on line, right sensor off line - turn left
     case LEFT:
@@ -142,7 +149,7 @@ void Robot::followLine() {
         lastMotionState = motionState;
         break;
       }
-      // Right sensor on line, left sensor off line - turn right, the coefficients change because no two motors are the same in this world
+    // Right sensor on line, left sensor off line - turn right, the coefficients change because no two motors are the same in this world
     case RIGHT:
       {
         if (lastMotionState != motionState)
@@ -185,8 +192,8 @@ void Robot::avoidObstacle() {
   switch (avoidMotion) {
     case RIGHT:
       motorLeft(-60);
-      motorRight(60);
-      if ((millis() - timerError) > 500) {
+      motorRight(40);
+      if ((millis() - timerError) > 600) {
         avoidMotion = FORWARD;
         timerError = millis();
       }
@@ -194,6 +201,11 @@ void Robot::avoidObstacle() {
     case LEFT:
       motorLeft(0);
       motorRight(-60);
+       if (digitalRead(IR_LEFT) || digitalRead(IR_RIGHT)) {
+        motorLeft(-60);
+        motorRight(60);
+        state = FOLLOW_LINE;
+      }
       if (checkDistance(20)) {
         avoidMotion = FORWARD;
         timerError = millis();
@@ -207,7 +219,7 @@ void Robot::avoidObstacle() {
     case FORWARD:
       motorLeft(-60);
       motorRight(-60);
-      if ((millis() - timerError) > 450) {
+      if ((millis() - timerError) > 800) {
         avoidMotion = LEFT;
         timerError = millis();
       }
@@ -232,7 +244,7 @@ void Robot::inspectObstacle() {
     switch (checkColor()) {
       case RED:
         motorLeft(60);
-        motorRight(60);
+        motorRight(80);
         delay(400);
         state = AVOID_OBSTACLE;
         avoidMotion = RIGHT;

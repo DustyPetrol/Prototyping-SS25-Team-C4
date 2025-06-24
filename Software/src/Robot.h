@@ -60,6 +60,7 @@ private:
   uint32_t timerError;           /**< Timer for error correction */
   uint8_t k;                     /**< Proportional control constant */
   Motion lastMotionState;           /**< Previous motion state */
+  Motion lastSeenDirection;   /**<in case we lose a line*/
   Motion motionState;              /**< Current motion state */
   Motion avoidMotion;              /**< Motion direction for obstacle avoidance */
   /**
