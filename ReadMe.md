@@ -5,10 +5,10 @@
 | №      | Task                  | Short summary                                                                                                           | Responsible person                                | Deadline | Status                  |
 |:-------|:----------------------|:------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------|:---------|:------------------------|
 | **1**  | 3D-modelling          | Model and submit parts for 3D-printing: <br/> - motor holders<br/> - IR-sensor holders<br/> - battery/breadboard holder | [Oleg Kelner](https://github.com/eggcitedraccoon) | 24.04.25 | ✅ *Done*                |
-| **2**  | Requirements Diagram  | Create Requirements Diagram for the prototype                                                                           | [Petr Lavrenov](https://github.com/DustyPetrol)   | 27.04.25 | ✅ *Done, to be refined* |
+| **2**  | Requirements Diagram  | Create Requirements Diagram for the prototype                                                                           | [Petr Lavrenov](https://github.com/DustyPetrol)   | 27.04.25 | ✅ *Done* |
 | **3**  | Use Case Diagram      | Create Use Case Diagram for the prototype                                                                               | [Petr Lavrenov](https://github.com/DustyPetrol)   | 04.05.25 | ✅ *Done*                |
 | **4**  | Structure Diagram     | Create Structure diagram for the prototype                                                                              | [Petr Lavrenov](https://github.com/DustyPetrol)   | 04.05.25 | ✅ *Done*                |
-| **5**  | State Machine Diagram | Create State Machine Diagram for the prototype                                                                          | [Petr Lavrenov](https://github.com/DustyPetrol)   | 04.05.25 | ✅ *Done, to be refined* |
+| **5**  | State Machine Diagram | Create State Machine Diagram for the prototype                                                                          | [Petr Lavrenov](https://github.com/DustyPetrol)   | 04.05.25 | ✅ *Done* |
 | **6**  | Tinkercad Simulation  | Create Tinkercad simulation of the prototype                                                                            | [Oleg Kelner](https://github.com/eggcitedraccoon) | 04.05.25 | ✅ *Done*                |
 | **7**  | Assembling            | Assemble the prototype: <br/> - fix 3D-printed parts on the chassis<br/> - solder power wires<br/> - connect everything | [Oleg Kelner](https://github.com/eggcitedraccoon) | 08.05.25 | ✅ *Done*                |
 | **8**  | 3D-modelling          | Model and submit parts for 3D-printing: <br/> - ultrasonic holder<br/> - servo holder                                   | [Oleg Kelner](https://github.com/eggcitedraccoon) | 05.05.25 | ✅ *Done*                |
@@ -18,7 +18,7 @@
 | **12** | Programming           | Unit tests                                                                                                              | [Turja Barua](https://github.com/TurjabaruaGit)   | 21.05.25 | ✅ *Done*                |
 | **13** | Programming           | Implement `checkColor()` function                                                                                       | [Oleg Kelner](https://github.com/eggcitedraccoon) | 30.05.25 | ✅ *Done*                |
 | **14** | Programming           | Implement *follow line* state machine                                                                                   | [Petr Lavrenov](https://github.com/DustyPetrol)   | 30.05.25 | ✅ *Done*                |
-| **15** | Report                | Prepare final project report                                                                                            | [Turja Barua](https://github.com/TurjabaruaGit)   | 22.06.25 | *In progress*           |
+| **15** | Report                | Prepare final project report                                                                                            | [Turja Barua](https://github.com/TurjabaruaGit)   | 22.06.25 | ✅ *Done*           |
 
 
 ## Project structure
