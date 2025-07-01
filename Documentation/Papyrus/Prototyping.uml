@@ -260,19 +260,19 @@
           <ownedComment xmi:type="uml:Comment" xmi:id="_ln3F8FOLEfC0wPSEH4USmA">
             <body>Obstacle Detected Within Range</body>
           </ownedComment>
-          <lifeline xmi:type="uml:Lifeline" xmi:id="_Kx464CgOEfCNtZEc7R6khQ" name="Autonomous Vehicle" coveredBy="_BzojsVOCEfC0wPSEH4USmA _Ge9N4FODEfC0wPSEH4USmA _NlcnoSgOEfCNtZEc7R6khQ _NlbZgCgOEfCNtZEc7R6khQ _bW3MsFOKEfC0wPSEH4USmA _bW3zwFOKEfC0wPSEH4USmA _KO7YMFOGEfC0wPSEH4USmA _0pL3cFOIEfC0wPSEH4USmA _QQpDAFOGEfC0wPSEH4USmA _IImvcVOHEfC0wPSEH4USmA _iEZtoFOIEfC0wPSEH4USmA _XZS10FOIEfC0wPSEH4USmA _l61zsFOIEfC0wPSEH4USmA"/>
-          <lifeline xmi:type="uml:Lifeline" xmi:id="_DeOSsFOBEfC0wPSEH4USmA" name="Sensor Module" coveredBy="_8QLiMFOBEfC0wPSEH4USmA _8QJtAFOBEfC0wPSEH4USmA _BzsOEFOCEfC0wPSEH4USmA _IP3AQFOCEfC0wPSEH4USmA _OBpYsFOCEfC0wPSEH4USmA _Z6IpoFOCEfC0wPSEH4USmA _gkwHgVOCEfC0wPSEH4USmA _3PzjIFOCEfC0wPSEH4USmA _7CRvMFOCEfC0wPSEH4USmA _Ge8m0FODEfC0wPSEH4USmA _8QLiMVOBEfC0wPSEH4USmA _PDcTQFOKEfC0wPSEH4USmA _PDbFIFOKEfC0wPSEH4USmA _QQ4WwFOKEfC0wPSEH4USmA _PDc6UFOKEfC0wPSEH4USmA _SUJ2EFOKEfC0wPSEH4USmA"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_Kx464CgOEfCNtZEc7R6khQ" name="Autonomous Vehicle" coveredBy="_BzojsVOCEfC0wPSEH4USmA _Ge9N4FODEfC0wPSEH4USmA _bW3MsFOKEfC0wPSEH4USmA _bW3zwFOKEfC0wPSEH4USmA _KO7YMFOGEfC0wPSEH4USmA _0pL3cFOIEfC0wPSEH4USmA _QQpDAFOGEfC0wPSEH4USmA _IImvcVOHEfC0wPSEH4USmA _iEZtoFOIEfC0wPSEH4USmA _XZS10FOIEfC0wPSEH4USmA _l61zsFOIEfC0wPSEH4USmA _NlcnoSgOEfCNtZEc7R6khQ _NlbZgCgOEfCNtZEc7R6khQ"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_DeOSsFOBEfC0wPSEH4USmA" name="Sensor Module" coveredBy="_8QLiMFOBEfC0wPSEH4USmA _8QJtAFOBEfC0wPSEH4USmA _BzsOEFOCEfC0wPSEH4USmA _IP3AQFOCEfC0wPSEH4USmA _OBpYsFOCEfC0wPSEH4USmA _Z6IpoFOCEfC0wPSEH4USmA _gkwHgVOCEfC0wPSEH4USmA _3PzjIFOCEfC0wPSEH4USmA _7CRvMFOCEfC0wPSEH4USmA _Ge8m0FODEfC0wPSEH4USmA _8QLiMVOBEfC0wPSEH4USmA _QQ4WwFOKEfC0wPSEH4USmA _PDcTQFOKEfC0wPSEH4USmA _PDbFIFOKEfC0wPSEH4USmA _PDc6UFOKEfC0wPSEH4USmA _SUJ2EFOKEfC0wPSEH4USmA"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_FjlcsFOBEfC0wPSEH4USmA" name="IR Sensor" coveredBy="_9xztAFOBEfC0wPSEH4USmA _9xzF8FOBEfC0wPSEH4USmA _IP3nUFOCEfC0wPSEH4USmA _OBoxoFOCEfC0wPSEH4USmA _9xztAVOBEfC0wPSEH4USmA _NxEscFOKEfC0wPSEH4USmA _NxEFYFOKEfC0wPSEH4USmA _QQ490FOKEfC0wPSEH4USmA _SUJPAFOKEfC0wPSEH4USmA"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_I69BIFOBEfC0wPSEH4USmA" name="Ultrasonic Sensor" coveredBy="_WPYPIFOCEfC0wPSEH4USmA _WPXoEFOCEfC0wPSEH4USmA _Z6IpoVOCEfC0wPSEH4USmA _gkwHgFOCEfC0wPSEH4USmA _WPY2MFOCEfC0wPSEH4USmA _aR4ecFOGEfC0wPSEH4USmA _aR33YFOGEfC0wPSEH4USmA _IImvcFOHEfC0wPSEH4USmA _aR5FgFOGEfC0wPSEH4USmA"/>
-          <lifeline xmi:type="uml:Lifeline" xmi:id="_YA_zMFOBEfC0wPSEH4USmA" name="Motor Controller" coveredBy="_KO7YMVOGEfC0wPSEH4USmA _OKPhwFOHEfC0wPSEH4USmA _OKOToFOHEfC0wPSEH4USmA _OKQI0FOHEfC0wPSEH4USmA _tZsAUFOHEfC0wPSEH4USmA _tZrZQFOHEfC0wPSEH4USmA _QQpqEFOGEfC0wPSEH4USmA _iEaUsFOIEfC0wPSEH4USmA _XZTc4FOIEfC0wPSEH4USmA _l61zsVOIEfC0wPSEH4USmA"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_YA_zMFOBEfC0wPSEH4USmA" name="Motor Controller" coveredBy="_OKPhwFOHEfC0wPSEH4USmA _OKOToFOHEfC0wPSEH4USmA _KO7YMVOGEfC0wPSEH4USmA _OKQI0FOHEfC0wPSEH4USmA _tZsAUFOHEfC0wPSEH4USmA _tZrZQFOHEfC0wPSEH4USmA _QQpqEFOGEfC0wPSEH4USmA _iEaUsFOIEfC0wPSEH4USmA _XZTc4FOIEfC0wPSEH4USmA _l61zsVOIEfC0wPSEH4USmA"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_cJ3tEFOBEfC0wPSEH4USmA" name="Servo Motor" coveredBy="_yb3rUFOIEfC0wPSEH4USmA _yb2dMFOIEfC0wPSEH4USmA _0pMegFOIEfC0wPSEH4USmA _yb4SYFOIEfC0wPSEH4USmA"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_exJ4YFOBEfC0wPSEH4USmA" name="Color Sensor" coveredBy="_0hMn0FOCEfC0wPSEH4USmA _0hMAwFOCEfC0wPSEH4USmA _3PzjIVOCEfC0wPSEH4USmA _7CRIIFOCEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_8QLiMFOBEfC0wPSEH4USmA" name="ActionExecutionSpecification11Start" covered="_DeOSsFOBEfC0wPSEH4USmA" execution="_8QJtAFOBEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_8QJtAFOBEfC0wPSEH4USmA" name="ActionExecutionSpecification11" covered="_DeOSsFOBEfC0wPSEH4USmA" finish="_8QLiMVOBEfC0wPSEH4USmA" start="_8QLiMFOBEfC0wPSEH4USmA"/>
-          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_9xztAFOBEfC0wPSEH4USmA" name="ActionExecutionSpecification14Start" covered="_FjlcsFOBEfC0wPSEH4USmA" execution="_9xzF8FOBEfC0wPSEH4USmA"/>
-          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_9xzF8FOBEfC0wPSEH4USmA" name="ActionExecutionSpecification14" covered="_FjlcsFOBEfC0wPSEH4USmA" finish="_9xztAVOBEfC0wPSEH4USmA" start="_9xztAFOBEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BzojsVOCEfC0wPSEH4USmA" name="Message17SendEvent" covered="_Kx464CgOEfCNtZEc7R6khQ" message="_BzojsFOCEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_NlbZgCgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification5" covered="_Kx464CgOEfCNtZEc7R6khQ" finish="_NlcnoSgOEfCNtZEc7R6khQ" start="_BzojsVOCEfC0wPSEH4USmA"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_9xztAFOBEfC0wPSEH4USmA" name="ActionExecutionSpecification14Start" covered="_FjlcsFOBEfC0wPSEH4USmA" execution="_9xzF8FOBEfC0wPSEH4USmA"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_9xzF8FOBEfC0wPSEH4USmA" name="ActionExecutionSpecification14" covered="_FjlcsFOBEfC0wPSEH4USmA" finish="_9xztAVOBEfC0wPSEH4USmA" start="_9xztAFOBEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BzsOEFOCEfC0wPSEH4USmA" name="Message17ReceiveEvent" covered="_DeOSsFOBEfC0wPSEH4USmA" message="_BzojsFOCEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IP3AQFOCEfC0wPSEH4USmA" name="Message19SendEvent" covered="_DeOSsFOBEfC0wPSEH4USmA" message="_IP2ZMFOCEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IP3nUFOCEfC0wPSEH4USmA" name="Message19ReceiveEvent" covered="_FjlcsFOBEfC0wPSEH4USmA" message="_IP2ZMFOCEfC0wPSEH4USmA"/>
@@ -295,14 +295,13 @@
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ge8m0FODEfC0wPSEH4USmA" name="Message42SendEvent" covered="_DeOSsFOBEfC0wPSEH4USmA" message="_Ge7_wFODEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ge9N4FODEfC0wPSEH4USmA" name="Message42ReceiveEvent" covered="_Kx464CgOEfCNtZEc7R6khQ" message="_Ge7_wFODEfC0wPSEH4USmA"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_8QLiMVOBEfC0wPSEH4USmA" name="ActionExecutionSpecification11Finish" covered="_DeOSsFOBEfC0wPSEH4USmA" execution="_8QJtAFOBEfC0wPSEH4USmA"/>
-          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_NlcnoSgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification5Finish" covered="_Kx464CgOEfCNtZEc7R6khQ" execution="_NlbZgCgOEfCNtZEc7R6khQ"/>
           <fragment xmi:type="uml:CombinedFragment" xmi:id="_bW3MsFOKEfC0wPSEH4USmA" name="CombinedFragment88" covered="_Kx464CgOEfCNtZEc7R6khQ" interactionOperator="alt">
             <operand xmi:type="uml:InteractionOperand" xmi:id="_bW3zwFOKEfC0wPSEH4USmA" visibility="public" covered="_Kx464CgOEfCNtZEc7R6khQ">
               <name xsi:nil="true"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KO7YMFOGEfC0wPSEH4USmA" name="Message45SendEvent" covered="_Kx464CgOEfCNtZEc7R6khQ" message="_KO6xIFOGEfC0wPSEH4USmA"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KO7YMVOGEfC0wPSEH4USmA" name="Message45ReceiveEvent" covered="_YA_zMFOBEfC0wPSEH4USmA" message="_KO6xIFOGEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_OKPhwFOHEfC0wPSEH4USmA" name="ActionExecutionSpecification48Start" covered="_YA_zMFOBEfC0wPSEH4USmA" execution="_OKOToFOHEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_OKOToFOHEfC0wPSEH4USmA" name="ActionExecutionSpecification48" covered="_YA_zMFOBEfC0wPSEH4USmA" finish="_OKQI0FOHEfC0wPSEH4USmA" start="_OKPhwFOHEfC0wPSEH4USmA"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KO7YMVOGEfC0wPSEH4USmA" name="Message45ReceiveEvent" covered="_YA_zMFOBEfC0wPSEH4USmA" message="_KO6xIFOGEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_OKQI0FOHEfC0wPSEH4USmA" name="ActionExecutionSpecification48Finish" covered="_YA_zMFOBEfC0wPSEH4USmA" execution="_OKOToFOHEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_yb3rUFOIEfC0wPSEH4USmA" name="ActionExecutionSpecification71Start" covered="_cJ3tEFOBEfC0wPSEH4USmA" execution="_yb2dMFOIEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_yb2dMFOIEfC0wPSEH4USmA" name="ActionExecutionSpecification71" covered="_cJ3tEFOBEfC0wPSEH4USmA" finish="_yb4SYFOIEfC0wPSEH4USmA" start="_yb3rUFOIEfC0wPSEH4USmA"/>
@@ -324,17 +323,18 @@
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XZTc4FOIEfC0wPSEH4USmA" name="Message66ReceiveEvent" covered="_YA_zMFOBEfC0wPSEH4USmA" message="_XZSOwFOIEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_l61zsFOIEfC0wPSEH4USmA" name="Message69SendEvent" covered="_Kx464CgOEfCNtZEc7R6khQ" message="_l60lkFOIEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_l61zsVOIEfC0wPSEH4USmA" name="Message69ReceiveEvent" covered="_YA_zMFOBEfC0wPSEH4USmA" message="_l60lkFOIEfC0wPSEH4USmA"/>
-              <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_NxEscFOKEfC0wPSEH4USmA" name="ActionExecutionSpecification77Start" covered="_FjlcsFOBEfC0wPSEH4USmA" execution="_NxEFYFOKEfC0wPSEH4USmA"/>
-              <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_NxEFYFOKEfC0wPSEH4USmA" name="ActionExecutionSpecification77" covered="_FjlcsFOBEfC0wPSEH4USmA" finish="_SUJPAFOKEfC0wPSEH4USmA" start="_NxEscFOKEfC0wPSEH4USmA"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QQ4WwFOKEfC0wPSEH4USmA" name="Message83SendEvent" covered="_DeOSsFOBEfC0wPSEH4USmA" message="_QQ3vsFOKEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_PDcTQFOKEfC0wPSEH4USmA" name="ActionExecutionSpecification80Start" covered="_DeOSsFOBEfC0wPSEH4USmA" execution="_PDbFIFOKEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_PDbFIFOKEfC0wPSEH4USmA" name="ActionExecutionSpecification80" covered="_DeOSsFOBEfC0wPSEH4USmA" finish="_PDc6UFOKEfC0wPSEH4USmA" start="_PDcTQFOKEfC0wPSEH4USmA"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QQ4WwFOKEfC0wPSEH4USmA" name="Message83SendEvent" covered="_DeOSsFOBEfC0wPSEH4USmA" message="_QQ3vsFOKEfC0wPSEH4USmA"/>
+              <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_NxEscFOKEfC0wPSEH4USmA" name="ActionExecutionSpecification77Start" covered="_FjlcsFOBEfC0wPSEH4USmA" execution="_NxEFYFOKEfC0wPSEH4USmA"/>
+              <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_NxEFYFOKEfC0wPSEH4USmA" name="ActionExecutionSpecification77" covered="_FjlcsFOBEfC0wPSEH4USmA" finish="_SUJPAFOKEfC0wPSEH4USmA" start="_NxEscFOKEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QQ490FOKEfC0wPSEH4USmA" name="Message83ReceiveEvent" covered="_FjlcsFOBEfC0wPSEH4USmA" message="_QQ3vsFOKEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SUJPAFOKEfC0wPSEH4USmA" name="Message86SendEvent" covered="_FjlcsFOBEfC0wPSEH4USmA" message="_SUIn8FOKEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_PDc6UFOKEfC0wPSEH4USmA" name="ActionExecutionSpecification80Finish" covered="_DeOSsFOBEfC0wPSEH4USmA" execution="_PDbFIFOKEfC0wPSEH4USmA"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SUJ2EFOKEfC0wPSEH4USmA" name="Message86ReceiveEvent" covered="_DeOSsFOBEfC0wPSEH4USmA" message="_SUIn8FOKEfC0wPSEH4USmA"/>
             </operand>
           </fragment>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_NlcnoSgOEfCNtZEc7R6khQ" name="ActionExecutionSpecification5Finish" covered="_Kx464CgOEfCNtZEc7R6khQ" execution="_NlbZgCgOEfCNtZEc7R6khQ"/>
           <message xmi:type="uml:Message" xmi:id="_BzojsFOCEfC0wPSEH4USmA" name="Active sensor" messageSort="asynchCall" receiveEvent="_BzsOEFOCEfC0wPSEH4USmA" sendEvent="_BzojsVOCEfC0wPSEH4USmA"/>
           <message xmi:type="uml:Message" xmi:id="_IP2ZMFOCEfC0wPSEH4USmA" name="Detect Line" messageSort="asynchCall" receiveEvent="_IP3nUFOCEfC0wPSEH4USmA" sendEvent="_IP3AQFOCEfC0wPSEH4USmA"/>
           <message xmi:type="uml:Message" xmi:id="_OBnjgFOCEfC0wPSEH4USmA" name="Line Detected/Not Detected" messageSort="reply" receiveEvent="_OBpYsFOCEfC0wPSEH4USmA" sendEvent="_OBoxoFOCEfC0wPSEH4USmA"/>
@@ -361,31 +361,50 @@
             <ownedComment xmi:type="uml:Comment" xmi:id="_NYWF8CfxEfCqKv3EvBUcHA">
               <body>No need to leave line to push</body>
             </ownedComment>
-            <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="ObjectAvoided" kind="local" source="__tZoACXDEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_qhTqEFZdEfCEroaISALMkg">
+              <body>There is no application to have LOST_STATE as there is no way to know, if we lost the line, or just stay on the either side of it for a prolonged period of time, no reason for '&#xD;
+any sort of time out was also given throughout the semester</body>
+            </ownedComment>
+            <transition xmi:type="uml:Transition" xmi:id="_lXi4ACJ1EfCrcavl5iePQg" name="IRSensorsTriggered=LineFound" kind="local" source="__tZoACXDEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_BYp84CJ3EfCrcavl5iePQg" source="_UKqKsCJ0EfCrcavl5iePQg" target="_aixjUCJ0EfCrcavl5iePQg"/>
-            <transition xmi:type="uml:Transition" xmi:id="_FzXNoCJ3EfCrcavl5iePQg" name="DetectObject" source="_aixjUCJ0EfCrcavl5iePQg" target="_7AwaECXAEfCvmdPbc739SQ"/>
-            <transition xmi:type="uml:Transition" xmi:id="_M74vgCJ3EfCrcavl5iePQg" name="Color2" source="_-KH-wCXAEfCvmdPbc739SQ" target="_B66BYCXEEfCvmdPbc739SQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_FzXNoCJ3EfCrcavl5iePQg" name="checkDistance(15)" source="_aixjUCJ0EfCrcavl5iePQg" target="_7AwaECXAEfCvmdPbc739SQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_M74vgCJ3EfCrcavl5iePQg" name="RED" source="_-KH-wCXAEfCvmdPbc739SQ" target="_B66BYCXEEfCvmdPbc739SQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_9Hmx0CXAEfCvmdPbc739SQ" source="_7AwaECXAEfCvmdPbc739SQ" target="_mjUFgCXAEfCvmdPbc739SQ"/>
             <transition xmi:type="uml:Transition" xmi:id="_A9ArMCXDEfCvmdPbc739SQ" source="_36LDoCXAEfCvmdPbc739SQ" target="_aixjUCJ0EfCrcavl5iePQg"/>
             <transition xmi:type="uml:Transition" xmi:id="_T9HDwCXeEfClJ_1O2Xa4LA" source="_B66BYCXEEfCvmdPbc739SQ" target="_uqgI4CXdEfClJ_1O2Xa4LA"/>
             <subvertex xmi:type="uml:State" xmi:id="_aixjUCJ0EfCrcavl5iePQg" name="FOLLOW_LINE">
+              <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_ZTpcgFZjEfClEcMnTKUu6A" name="ObjectDetected" kind="exitPoint"/>
               <region xmi:type="uml:Region" xmi:id="_QtSp4CW_EfCvmdPbc739SQ" name="Region1">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_JbSuoFZhEfCEroaISALMkg">
+                  <body>Object detecteed</body>
+                </ownedComment>
+                <ownedComment xmi:type="uml:Comment" xmi:id="_a4nhIFZhEfCEroaISALMkg">
+                  <body>No need for RECOVERY as if we lose the line, we store the last triggered sensors position and move accordingly</body>
+                </ownedComment>
                 <transition xmi:type="uml:Transition" xmi:id="_m2TvcCW_EfCvmdPbc739SQ" source="_WfTEwCW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_ok70cCW_EfCvmdPbc739SQ" name="IRDetectedOnTheRight" source="_WK2ewCW_EfCvmdPbc739SQ" target="_gbPwgCW_EfCvmdPbc739SQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_rnaG8CW_EfCvmdPbc739SQ" name="IRDetectedOnTheLeft" source="_WK2ewCW_EfCvmdPbc739SQ" target="_hOwRECW_EfCvmdPbc739SQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_1VOQECW_EfCvmdPbc739SQ" name="IRSeesNothing" source="_gbPwgCW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
-                <transition xmi:type="uml:Transition" xmi:id="_5ExrACW_EfCvmdPbc739SQ" name="IRSeesNothing" source="_hOwRECW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_ok70cCW_EfCvmdPbc739SQ" name="left &amp;&amp; !right" source="_WK2ewCW_EfCvmdPbc739SQ" target="_gbPwgCW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_rnaG8CW_EfCvmdPbc739SQ" name="!left &amp;&amp; right" source="_WK2ewCW_EfCvmdPbc739SQ" target="_hOwRECW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_1VOQECW_EfCvmdPbc739SQ" name="!left &amp;&amp; !right" source="_gbPwgCW_EfCvmdPbc739SQ" target="_fh2A8FZfEfCEroaISALMkg"/>
+                <transition xmi:type="uml:Transition" xmi:id="_5ExrACW_EfCvmdPbc739SQ" name="!left &amp;&amp; !right" source="_hOwRECW_EfCvmdPbc739SQ" target="_fh2A8FZfEfCEroaISALMkg"/>
+                <transition xmi:type="uml:Transition" xmi:id="_PIk3AFZgEfCEroaISALMkg" name="left &amp;&amp; !right" source="_fh2A8FZfEfCEroaISALMkg" target="_gbPwgCW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_S01tYFZgEfCEroaISALMkg" name="left &amp;&amp; !right" source="_fh2A8FZfEfCEroaISALMkg" target="_hOwRECW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_YFsjAFZgEfCEroaISALMkg" name="!left &amp;&amp; !right" source="_WK2ewCW_EfCvmdPbc739SQ" target="_fh2A8FZfEfCEroaISALMkg"/>
+                <transition xmi:type="uml:Transition" xmi:id="_hGi4cFZgEfCEroaISALMkg" name="left &amp;&amp; right" source="_fh2A8FZfEfCEroaISALMkg" target="_WK2ewCW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_70wyEFZhEfClEcMnTKUu6A" name="left &amp;&amp; right" source="_hOwRECW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_n3xpwFZiEfClEcMnTKUu6A" name="left &amp;&amp; right" source="_gbPwgCW_EfCvmdPbc739SQ" target="_WK2ewCW_EfCvmdPbc739SQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_aQQOsFZjEfClEcMnTKUu6A" source="_B0Qr0FZhEfCEroaISALMkg" target="_aixjUCJ0EfCrcavl5iePQg"/>
                 <subvertex xmi:type="uml:State" xmi:id="_WK2ewCW_EfCvmdPbc739SQ" name="FORWARD"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_WfTEwCW_EfCvmdPbc739SQ" name="Initial2"/>
                 <subvertex xmi:type="uml:State" xmi:id="_gbPwgCW_EfCvmdPbc739SQ" name="RIGHT"/>
                 <subvertex xmi:type="uml:State" xmi:id="_hOwRECW_EfCvmdPbc739SQ" name="LEFT"/>
-                <subvertex xmi:type="uml:Pseudostate" xmi:id="_BGL8sCXAEfCvmdPbc739SQ" name="LoseLine" kind="terminate"/>
+                <subvertex xmi:type="uml:State" xmi:id="_fh2A8FZfEfCEroaISALMkg" name="State=LastTriggeredState"/>
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_B0Qr0FZhEfCEroaISALMkg" name="checkDistance(15)" kind="terminate"/>
               </region>
             </subvertex>
             <subvertex xmi:type="uml:State" xmi:id="_hvPKACJ0EfCrcavl5iePQg" name="INSPECT_OBSTACLE">
-              <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_36LDoCXAEfCvmdPbc739SQ" name="Colour1" kind="exitPoint"/>
+              <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_36LDoCXAEfCvmdPbc739SQ" name="BLUE or UNKNOWN" kind="exitPoint"/>
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_7AwaECXAEfCvmdPbc739SQ" name="DetectedObject" kind="entryPoint"/>
-              <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_-KH-wCXAEfCvmdPbc739SQ" name="Colour2" kind="exitPoint"/>
+              <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_-KH-wCXAEfCvmdPbc739SQ" name="RED" kind="exitPoint"/>
               <region xmi:type="uml:Region" xmi:id="_Qz39kCXAEfCvmdPbc739SQ" name="Region1">
                 <transition xmi:type="uml:Transition" xmi:id="_woLcsCXAEfCvmdPbc739SQ" name="TryToReadColour" source="_mjUFgCXAEfCvmdPbc739SQ" target="_m-KOcCXAEfCvmdPbc739SQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_zcjo0CXAEfCvmdPbc739SQ" name="ColourNotRecognised" source="_m-KOcCXAEfCvmdPbc739SQ" target="_mjUFgCXAEfCvmdPbc739SQ"/>
@@ -399,6 +418,9 @@
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="__tZoACXDEfCvmdPbc739SQ" name="ExitPoint2" kind="exitPoint"/>
               <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_B66BYCXEEfCvmdPbc739SQ" name="EntryPoint3" kind="entryPoint"/>
               <region xmi:type="uml:Region" xmi:id="_mgeskCXDEfCvmdPbc739SQ" name="Region1">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_h5MvUFZeEfCEroaISALMkg">
+                  <body>No Need for recovery state, as if it triggers the FOLLOW_LINE it will oscilate to it eventually </body>
+                </ownedComment>
                 <transition xmi:type="uml:Transition" xmi:id="_U8T28CXeEfClJ_1O2Xa4LA" name="time" source="_uqgI4CXdEfClJ_1O2Xa4LA" target="_z4nzkCXdEfClJ_1O2Xa4LA"/>
                 <transition xmi:type="uml:Transition" xmi:id="_VYUdgCXeEfClJ_1O2Xa4LA" name="time" source="_z4nzkCXdEfClJ_1O2Xa4LA" target="_2wLPgCXdEfClJ_1O2Xa4LA"/>
                 <transition xmi:type="uml:Transition" xmi:id="_X0FVUCXeEfClJ_1O2Xa4LA" name="Completion" source="_2wLPgCXdEfClJ_1O2Xa4LA" target="_9GTEECXdEfClJ_1O2Xa4LA"/>
