@@ -9,49 +9,147 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{listings}
+\usepackage{float}
 
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\newcommand{\BibTeX}{\textrm{B \kern -.05em \textsc{i \kern -.025em b} \kern -.08em
+T \kern -.1667em \lower .7ex \hbox{E} \kern -.125emX}}
 
 \begin{document}
 
-\title{Design and Implementation of a Line Following and Obstacle Avoidance Robot}
+    \title{Design and Implementation of a Line Following and Obstacle Avoidance Robot}
 
-\author{
-\IEEEauthorblockN{Oleg Kelner\IEEEauthorrefmark{1}, Petr Lavrenov\IEEEauthorrefmark{1}, Turja Barua\IEEEauthorrefmark{1}}
-\IEEEauthorblockA{\IEEEauthorrefmark{1}Systems Engineering and Prototyping, BSc Electronic Engineering\\
-Hochschule Hamm-Lippstadt, Lippstadt, Germany\\
-\{oleg.kelner, petr.lavrenov, turja.barua\}@stud.hshl.de}
-}
+    \author{
+        \IEEEauthorblockN{Oleg Kelner\IEEEauthorrefmark{1}, Petr Lavrenov\IEEEauthorrefmark{1}, Turja Barua\IEEEauthorrefmark{1}}
+        \IEEEauthorblockA{\IEEEauthorrefmark{1}Systems Engineering and Prototyping, BSc Electronic Engineering\\
+        Hochschule Hamm-Lippstadt, Lippstadt, Germany\\
+        \{oleg.kelner, petr.lavrenov, turja.barua\}@stud.hshl.de}
+    }
 
-\maketitle
+    \maketitle
 
-\begin{abstract}
-This paper presents the result of out work during Prototyping course.
-\end{abstract}
+    \begin{abstract}
+        This paper presents the design, development, and implementation of an autonomous mobile robot capable of both line following and obstacle avoidance. The project was conducted as part of a university prototyping course, focusing on integrating hardware components such as infrared sensors, ultrasonic modules, and servo motors with an Arduino-based control system. The robot’s behavior is governed by a state machine model to ensure reliable navigation and quick response to environmental changes. Supporting tools like 3D modeling for hardware mounting, Tinkercad for simulation, and SysML for system-level design were used throughout the development process. The final prototype demonstrates effective performance in real-time scenarios, providing a practical understanding of embedded systems, control logic, and systems engineering principles.
+    \end{abstract}
 
-\begin{IEEEkeywords}
-Line follower robot, Arduino
-\end{IEEEkeywords}
+    \begin{IEEEkeywords}
+        Autonomous robot, Line following, Obstacle avoidance, Arduino, Embedded systems, Infrared sensor, Ultrasonic sensor.
+    \end{IEEEkeywords}
 
-\section{Introduction}
+    \section{Introduction}
 
-\section{System Design and Engineering}
+    This project focuses on building a simple autonomous robot that can follow a line and avoid obstacles using basic sensors. The robot is controlled by an Arduino Uno and uses infrared sensors to detect the line and an ultrasonic sensor to measure distance from obstacles. We used a step-by-step design process that included system modeling, 3D printing of parts, and simulation in Tinkercad. A state machine was used in the software to control how the robot switches between line-following and obstacle-avoidance modes. The goal was to learn how to combine hardware and software to create a working prototype.
+    \section{System Design and Engineering}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.0\linewidth]{../Papyrus/DiagramExports/PNG/ProfessorsRequirementDiagram}
+        \caption{ProfessorsRequirementDiagram}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{../Papyrus/DiagramExports/PNG/UseCaseStudent}
+            \caption{Use Case Diagram(Student)}
+            \label{fig:usecase_student}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{../Papyrus/DiagramExports/PNG/ObjectUseCase}
+            \caption{Use Case Diagram(Object-Oriented)}
+            \label{fig:object_usecase}
+        \end{minipage}
+    \end{figure}
 
-\section{Prototyping and Design}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../Papyrus/DiagramExports/PNG/LineUseCase}
+        \caption{LineUseCase}
+        \label{fig:line_usecase}
+    \end{figure}
 
-\subsection{Electronic Components}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{../Papyrus/DiagramExports/PNG/ModelCarInternalWiringBlockDiagram}
+        \caption{ModelCarInternalWiringBlockDiagram}
+        \label{fig:ModelCarInternalWiring_BlockDiagraml}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{../Papyrus/DiagramExports/PNG/MechanicalInternalBlockDiagram}
+            \caption{Mechanical Internal Block Diagram}
+            \label{fig:MechanicalInternal_BlockDiagram}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{../Papyrus/DiagramExports/PNG/ModelCarBlockDefinitionDiagram}
+            \caption{Model Car Block Definition Diagram}
+            \label{fig:ModelCarDiagram_BlockDefinition}
+        \end{minipage}
+    \end{figure}
 
-\subsection{Virtual and Physical Prototypes}
+    \section{Prototyping and Design}
+    \subsection{Electronic Components}
+    The robot was built using a combination of basic electronic components. An Arduino Uno served as the central controller, processing sensor inputs and controlling the motors. Infrared (IR) sensors were used to detect the line path, while an ultrasonic sensor was employed for obstacle detection. A pair of DC motors provided movement, and the motor driver controlled their direction and speed. A breadboard and jumper wires were used to connect all components during testing and prototyping.
+
+    \subsection{Virtual and Physical Prototypes}
+    All components were mounted onto a custom laser-cut wooden chassis. The Arduino board, breadboard, and motor driver were securely placed, and wiring was organized for stable operation. The ultrasonic sensor is mounted on a servo motor to allow directional scanning. The wheels are driven by DC motors placed at the rear, and all parts are powered via a shared voltage rail.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{robot_assembly}
+        \caption{Robot Assembly}
+    \end{figure}
+
+    \subsection{Hardware Assembly}
+    All components were securely mounted on a custom-designed chassis and connected according to the system schematic. The IR sensors, ultrasonic sensor, motor driver, and Arduino Uno were all arranged for optimal functionality and accessibility.
+    To better suit the physical layout and wiring constraints, the entire robot assembly was reversed, meaning the front-facing sensors and drive motors were reoriented to face the opposite direction. This design change ensured improved cable management, balanced weight distribution, and more efficient component interaction during operation.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{Assembly}
+        \caption{Assembly}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{C4_IRsensorHolder}
+            \caption{IR Sensor Holder 1}
+            \label{fig:IRsensorHolder1}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{C4_IRsensorHolder2}
+            \caption{IR Sensor Holder 2}
+            \label{fig:IRsensorHolder2}
+        \end{minipage}
+    \end{figure}
+
+    \section{Circuit Design}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{TinkerCad_Simulation}
+        \caption{TinkerCad Simulation}
+    \end{figure}
+    \subsection*{Circuit Simulation Layout:}
+    The TinkerCad simulation shows the practical wiring of the robot's components on a breadboard. The Arduino Uno is connected to an motor driver IC for motor control, while IR sensors detect line position and the ultrasonic sensor handles distance measurement. All connections are routed through the breadboard with clear separation between power and control lines for easy testing and debugging.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{PowerWiring}
+        \caption{Power Wiring}
+    \end{figure}
+    \subsection*{Power Supply Configuration}
+    The power wiring diagram models the voltage distribution of the system. A 12.4V battery supplies power to the motor driver, while the Arduino Uno regulates and provides a 5V output to power the sensors and other components. The IR sensors, ultrasonic sensor, and servo motor are connected in parallel to the Arduino's 5V and GND pins. Proper wiring and current distribution ensure safe and stable operation of all modules.
 
 
-\subsection{Hardware Assembly}
-All components were mounted on a chassis and connected as per the schematic.
-
-\section{Circuit Design}
 %\begin{itemize}
- %   \item The schematic includes sensors, motor driver, Arduino, and power source.
-  %  \item Wiring includes proper voltage connections and pin mappings for sensors and motors.
+    %   \item The schematic includes sensors, motor driver, Arduino, and power source.
+    %  \item Wiring includes proper voltage connections and pin mappings for sensors and motors.
 %\end{itemize}
 
 %\begin{figure}[htbp]
@@ -60,57 +158,91 @@ All components were mounted on a chassis and connected as per the schematic.
 %\label{fig:circuit}
 %\end{figure}
 
-\section{Software Implementation}
-\label{soft}
+    \section{Software Implementation}
+    \label{soft}
 
-\subsection{Initialization of Sensors and Actuators}
-Pins for sensors were defined and initialized in the `setup()` function. Below is a snippet:
-\begin{lstlisting}[language=C++, caption=Sensor Initialization Code]
+    \subsection{Initialization of Sensors and Actuators}
+    Pins for sensors were defined and initialized in the `setup()` function. Below is a snippet:
+    \begin{lstlisting}[language=C++, caption=Sensor Initialization Code]
 void setup() {
   pinMode(2, INPUT);  // IR sensor
   pinMode(9, OUTPUT); // Motor
   Serial.begin(9600);
 }
-\end{lstlisting}
+    \end{lstlisting}
 
-\subsection{Movement Control Algorithms}
+    \subsection{Movement Control Algorithms}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{../Papyrus/DiagramExports/PNG/FollowLineStateMachine}
+        \caption{FollowLineStateMachine}
+        \label{fig:enter-label}
+    \end{figure}
+    \textbf{1. Follow Line State Machine:}
+    This state machine guides the robot along a line using infrared sensors. It starts in the \texttt{GoForward} state. If the left sensor detects the line, it transitions to \texttt{GoLeft}; if the right sensor detects the line, it moves to \texttt{GoRight}. If neither sensor sees the line, it returns to \texttt{GoForward}. The state \texttt{LoseLine} represents a failure to detect the path entirely.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{../Papyrus/DiagramExports/PNG/RecogniseObjectStateMachine}
+        \caption{Recognise Object State Machine}
+        \label{fig:recogniseobject_statemachine}
+    \end{figure}
+    \textbf{2. Recognise Object State Machine:}
+    This logic is activated when the robot detects an object. It first enters the \texttt{ApproachObjectOnTheLine} state, then attempts to read the color in \texttt{ReadColour}. Based on the result, it transitions to either \texttt{Colour1} or \texttt{Colour2}, or loops back if the color is not recognized. This helps determine how the robot should react to different objects.
+
+    \subsection{Behavioral Decision Logic}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{../Papyrus/DiagramExports/PNG/SequenceDiagram}
+        \caption{SequenceDiagram}
+        \label{fig:Sequence_Diagram}
+    \end{figure}
+    \textbf{1. Sequence Diagram:}
+    This diagram illustrates how components interact over time. The IR sensor detects line positions, while the ultrasonic sensor checks for obstacles. Both send data to the microcontroller, which processes it to control the motors. If an obstacle is detected, the system initiates an avoidance routine and then resumes line following, ensuring continuous decision-making.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{../Papyrus/DiagramExports/PNG/ModelCarStateMachine}
+        \caption{ModelCarStateMachine}
+        \label{fig:modelcar_statemachine}
+    \end{figure}
+    \textbf{2. Model Car State Machine:}
+    The state machine shows high-level decision-making. The robot starts in the \texttt{Follow Line} state. Upon detecting an object, it transitions to \texttt{RecogniseObject}. Based on the detected color, it either continues pushing (Color1) or avoids the object (Color2). After avoiding, it returns to line following. This logic enables adaptive behavior based on environmental inputs.
+    \section{Git Usage and Collaboration}
+    Project development was tracked using GitHub. Each member's contribution should be explained.
+
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{l|c}
+            \hline
+            \textbf{Team Member} & \textbf{Number of Commits} \\
+            \hline
+            Oleg Kelner     & 57 \\
+            Petr Lavrenov     & 40  \\
+            Turja Barua     & 6  \\
+            \hline
+            \textbf{Total} & \textbf{103} \\
+            \hline
+        \end{tabular}
+        \caption{GitHub Commits by Team Members}
+        \label{table:commit}
+    \end{table}
+
+    \section{Key Achievements}
+    \begin{itemize}
+        \item The robot successfully follows a predefined path using IR sensors.
+        \item It can accurately differentiate between colors using an onboard color sensor.
+        \item It is capable of detecting and avoiding obstacles in real-time using an ultrasonic sensor.
+    \end{itemize}
+    \section*{Acknowledgment}
+    We would like to express our sincere gratitude to our course instructor and project supervisor for their continuous guidance and valuable feedback throughout the development of this project. We are also thankful to Hochschule Hamm-Lippstadt for providing the tools, resources, and a collaborative environment that made this work possible. Lastly, we appreciate the teamwork and commitment of all group members in bringing this project to completion.
 
 
-\subsection{Behavioral Decision Logic}
+    \begin{thebibliography}{00}
+        \bibitem{arduino} Arduino Documentation. \url{https://www.arduino.cc/en/Guide}
+        \bibitem{tinkercad} Tinkercad Simulation. \url{https://www.tinkercad.com}
+        \bibitem{uppaal} Uppaal Model Checker. \url{http://www.uppaal.org/}
+    \end{thebibliography}
 
-
-\section{Git Usage and Collaboration}
-Project development was tracked using GitHub. Each member's contribution should be explained.
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{l|c}
-\hline
-\textbf{Team Member} & \textbf{Number of Commits} \\
-\hline
-Oleg Kelner     & 57 \\
-Petr Lavrenov     & 40  \\
-Turja Barua     & 6  \\
-\hline
-\textbf{Total} & \textbf{103} \\
-\hline
-\end{tabular}
-\caption{GitHub Commits by Team Members}
-\label{table:commit}
-\end{table}
-
-\section{Key Achievements}
-
-
-\section*{Acknowledgment}
-
-\begin{thebibliography}{00}
-\bibitem{arduino} Arduino Documentation. \url{https://www.arduino.cc/en/Guide}
-\bibitem{tinkercad} Tinkercad Simulation. \url{https://www.tinkercad.com}
-\bibitem{uppaal} Uppaal Model Checker. \url{http://www.uppaal.org/}
-\end{thebibliography}
-
-\section*{Declaration of Originality}
-We hereby declare that this report is our own work and that we have acknowledged all sources used.
-
+    \section*{Declaration of Originality}
+    We hereby declare that this report is our own work and that we have acknowledged all sources used.
 \end{document}
